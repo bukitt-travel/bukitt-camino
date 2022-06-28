@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-thin.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-thin-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-ultralight.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-ultralight-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-light.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-light-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-italic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-medium-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-bold-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-ultrabold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-ultrabold-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-heavy.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Editorial New';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/fonts/editorial-new/editorial-new-heavy-italic.woff2)
+        format('woff2');
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-thin.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-thin-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-light.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-light-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-book.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-book-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-italic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-medium-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-semibold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-bold-italic.woff2)
+        format('woff2');
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/neue-montreal/neue-montreal-bold-italic.woff2)
+        format('woff2');
+}
+
+@font-face {
+    font-family: 'Fuji Sans';
+    font-style: regular;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/fuji/fuji-light.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Fuji Sans';
+    font-style: regular;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/fuji/fuji-regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Fuji Sans';
+    font-style: regular;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/fuji/fuji-medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Fuji Sans';
+    font-style: regular;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/fuji/fuji-bold.woff2) format('woff2');
+}

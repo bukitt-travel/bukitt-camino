@@ -1,0 +1,48 @@
+{
+    "name": "web",
+    "version": "0.0.1",
+    "description": "Frontend repo for bukittcamino.com",
+    "main": "index.js",
+    "repository": "git@github.com:bukitt-travel/bukitt-camino.git",
+    "author": "Bukitt Camino <hello@bukitt.com>",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "eslint": "eslint . --cache",
+        "ts": "tsc",
+        "prettier": "prettier --check . --ignore-path ../../.prettierignore",
+        "test": "pnpm prettier && pnpm eslint && pnpm ts"
+    },
+    "dependencies": {
+        "@headlessui/react": "^1.6.5",
+        "@heroicons/react": "^1.0.6",
+        "@sanity/client": "^3.3.2",
+        "@sanity/image-url": "^1.0.1",
+        "autoprefixer": "^10.4.7",
+        "classnames": "^2.3.1",
+        "next": "^12.1.6",
+        "next-sanity": "^0.5.2",
+        "postcss": "^8.4.14",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.4.0",
+        "react-photo-gallery": "^8.0.0",
+        "react-youtube": "^9.0.2"
+    },
+    "devDependencies": {
+        "@sanity-codegen/types": "^1.0.0-alpha.13",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/typography": "^0.5.2",
+        "@types/node": "^18.0.0",
+        "@types/react": "^18.0.14",
+        "config": "workspace:*",
+        "prettier-plugin-tailwindcss": "^0.1.11",
+        "sanity-codegen": "^0.9.8",
+        "tailwindcss": "^3.1.4",
+        "tsconfig": "workspace:*",
+        "typescript": "^4.7.4"
+    }
+}
