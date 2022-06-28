@@ -8,6 +8,8 @@ import classNames from 'classnames';
 
 import { urlForImage } from '@/lib/sanity';
 
+import Services from '@/components/adventure/Services';
+
 const SlideOver = ({ open, setOpen, adventure }) => {
     const includedServices = adventure?.services?.filter(
         (service) => service?.category === 'included',
@@ -49,14 +51,14 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                     >
                                         <div className="px-4 sm:px-6">
                                             <div className="flex items-start justify-between">
-                                                <Dialog.Title className="text-lg font-medium text-white">
+                                                <Dialog.Title className="text-lg font-medium uppercase text-black">
                                                     {' '}
                                                     Trip Details{' '}
                                                 </Dialog.Title>
                                                 <div className="ml-3 flex h-7 items-center">
                                                     <button
                                                         type="button"
-                                                        className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                                                        className="tw-transition rounded-md text-black hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                                                         onClick={() => setOpen(false)}
                                                     >
                                                         <span className="sr-only">Close panel</span>
@@ -68,65 +70,7 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                            <h2 className="font-serif text-4xl font-medium">
-                                                Included
-                                            </h2>
-                                            <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-                                                {includedServices &&
-                                                    includedServices?.map((service) => (
-                                                        <Disclosure
-                                                            as="div"
-                                                            key={service._key}
-                                                            className="pt-6"
-                                                        >
-                                                            {({ open }) => (
-                                                                <>
-                                                                    <dt className="text-lg">
-                                                                        <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
-                                                                            <div className="flex items-center gap-x-2">
-                                                                                <div className="h-6 w-6">
-                                                                                    <Image
-                                                                                        src={urlForImage(
-                                                                                            service.icon,
-                                                                                        ).url()}
-                                                                                        alt="Icon"
-                                                                                        layout="responsive"
-                                                                                        width={1}
-                                                                                        height={1}
-                                                                                    />
-                                                                                </div>
-                                                                                <span className="font-medium text-gray-900">
-                                                                                    {service.title}
-                                                                                </span>
-                                                                            </div>
-                                                                            <span className="ml-6 flex h-7 items-center">
-                                                                                <ChevronDownIcon
-                                                                                    className={classNames(
-                                                                                        open
-                                                                                            ? '-rotate-180'
-                                                                                            : 'rotate-0',
-                                                                                        'h-6 w-6 transform',
-                                                                                    )}
-                                                                                    aria-hidden="true"
-                                                                                />
-                                                                            </span>
-                                                                        </Disclosure.Button>
-                                                                    </dt>
-                                                                    <Disclosure.Panel
-                                                                        as="dd"
-                                                                        className="mt-2 pr-12"
-                                                                    >
-                                                                        <p className="text-base text-gray-500">
-                                                                            {service.description}
-                                                                        </p>
-                                                                    </Disclosure.Panel>
-                                                                </>
-                                                            )}
-                                                        </Disclosure>
-                                                    ))}
-                                            </dl>
-                                        </div>
+                                        <Services label="Included" services={includedServices} />
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>

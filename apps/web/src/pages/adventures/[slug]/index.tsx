@@ -82,5 +82,6 @@ export async function getStaticProps({ params }) {
         props: {
             adventure,
         },
+        revalidate: 10,
     };
 }

@@ -84,5 +84,6 @@ export async function getStaticProps() {
         props: {
             adventures: data.adventures,
         },
+        revalidate: 10,
     };
 }
