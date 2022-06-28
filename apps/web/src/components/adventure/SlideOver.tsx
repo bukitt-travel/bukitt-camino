@@ -9,8 +9,8 @@ import classNames from 'classnames';
 import { urlForImage } from '@/lib/sanity';
 
 const SlideOver = ({ open, setOpen, adventure }) => {
-    const includedServices = adventure.services.filter(
-        (service) => service.category === 'included',
+    const includedServices = adventure?.services?.filter(
+        (service) => service?.category === 'included',
     );
 
     return (
@@ -73,57 +73,58 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                                 Included
                                             </h2>
                                             <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-                                                {includedServices?.map((service) => (
-                                                    <Disclosure
-                                                        as="div"
-                                                        key={service._key}
-                                                        className="pt-6"
-                                                    >
-                                                        {({ open }) => (
-                                                            <>
-                                                                <dt className="text-lg">
-                                                                    <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
-                                                                        <div className="flex items-center gap-x-2">
-                                                                            <div className="h-6 w-6">
-                                                                                <Image
-                                                                                    src={urlForImage(
-                                                                                        service.icon,
-                                                                                    ).url()}
-                                                                                    alt="Icon"
-                                                                                    layout="responsive"
-                                                                                    width={1}
-                                                                                    height={1}
-                                                                                />
+                                                {includedServices &&
+                                                    includedServices?.map((service) => (
+                                                        <Disclosure
+                                                            as="div"
+                                                            key={service._key}
+                                                            className="pt-6"
+                                                        >
+                                                            {({ open }) => (
+                                                                <>
+                                                                    <dt className="text-lg">
+                                                                        <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
+                                                                            <div className="flex items-center gap-x-2">
+                                                                                <div className="h-6 w-6">
+                                                                                    <Image
+                                                                                        src={urlForImage(
+                                                                                            service.icon,
+                                                                                        ).url()}
+                                                                                        alt="Icon"
+                                                                                        layout="responsive"
+                                                                                        width={1}
+                                                                                        height={1}
+                                                                                    />
+                                                                                </div>
+                                                                                <span className="font-medium text-gray-900">
+                                                                                    {service.title}
+                                                                                </span>
                                                                             </div>
-                                                                            <span className="font-medium text-gray-900">
-                                                                                {service.title}
+                                                                            <span className="ml-6 flex h-7 items-center">
+                                                                                <ChevronDownIcon
+                                                                                    className={classNames(
+                                                                                        open
+                                                                                            ? '-rotate-180'
+                                                                                            : 'rotate-0',
+                                                                                        'h-6 w-6 transform',
+                                                                                    )}
+                                                                                    aria-hidden="true"
+                                                                                />
                                                                             </span>
-                                                                        </div>
-                                                                        <span className="ml-6 flex h-7 items-center">
-                                                                            <ChevronDownIcon
-                                                                                className={classNames(
-                                                                                    open
-                                                                                        ? '-rotate-180'
-                                                                                        : 'rotate-0',
-                                                                                    'h-6 w-6 transform',
-                                                                                )}
-                                                                                aria-hidden="true"
-                                                                            />
-                                                                        </span>
-                                                                    </Disclosure.Button>
-                                                                </dt>
-                                                                <Disclosure.Panel
-                                                                    as="dd"
-                                                                    className="mt-2 pr-12"
-                                                                >
-                                                                    <p className="text-base text-gray-500">
-                                                                        {service.description}
-                                                                    </p>
-                                                                </Disclosure.Panel>
-                                                            </>
-                                                        )}
-                                                    </Disclosure>
-                                                ))}
+                                                                        </Disclosure.Button>
+                                                                    </dt>
+                                                                    <Disclosure.Panel
+                                                                        as="dd"
+                                                                        className="mt-2 pr-12"
+                                                                    >
+                                                                        <p className="text-base text-gray-500">
+                                                                            {service.description}
+                                                                        </p>
+                                                                    </Disclosure.Panel>
+                                                                </>
+                                                            )}
+                                                        </Disclosure>
+                                                    ))}
                                             </dl>
                                         </div>
                                     </div>
