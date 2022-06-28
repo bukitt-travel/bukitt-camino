@@ -12,12 +12,6 @@ const SlideOver = ({ open, setOpen, adventure }) => {
     const includedServices = adventure.services.filter(
         (service) => service.category === 'included',
     );
-    // const notIncludedServices = adventure.services.filter(
-    //     (service) => service.category === 'not-included',
-    // );
-    // const addedOnServices = adventure.services.filter(
-    //     (service) => service.category === 'add-on',
-    // );
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -63,13 +57,9 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                                     <button
                                                         type="button"
                                                         className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                                                        onClick={() =>
-                                                            setOpen(false)
-                                                        }
+                                                        onClick={() => setOpen(false)}
                                                     >
-                                                        <span className="sr-only">
-                                                            Close panel
-                                                        </span>
+                                                        <span className="sr-only">Close panel</span>
                                                         <XIcon
                                                             className="h-6 w-6"
                                                             aria-hidden="true"
@@ -83,67 +73,57 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                                 Included
                                             </h2>
                                             <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-                                                {includedServices.map(
-                                                    (service) => (
-                                                        <Disclosure
-                                                            as="div"
-                                                            key={service._key}
-                                                            className="pt-6"
-                                                        >
-                                                            {({ open }) => (
-                                                                <>
-                                                                    <dt className="text-lg">
-                                                                        <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
-                                                                            <div className="flex items-center gap-x-2">
-                                                                                <div className="h-6 w-6">
-                                                                                    <Image
-                                                                                        src={urlForImage(
-                                                                                            service.icon,
-                                                                                        ).url()}
-                                                                                        alt="Icon"
-                                                                                        layout="responsive"
-                                                                                        width={
-                                                                                            1
-                                                                                        }
-                                                                                        height={
-                                                                                            1
-                                                                                        }
-                                                                                    />
-                                                                                </div>
-                                                                                <span className="font-medium text-gray-900">
-                                                                                    {
-                                                                                        service.title
-                                                                                    }
-                                                                                </span>
-                                                                            </div>
-                                                                            <span className="ml-6 flex h-7 items-center">
-                                                                                <ChevronDownIcon
-                                                                                    className={classNames(
-                                                                                        open
-                                                                                            ? '-rotate-180'
-                                                                                            : 'rotate-0',
-                                                                                        'h-6 w-6 transform',
-                                                                                    )}
-                                                                                    aria-hidden="true"
+                                                {includedServices?.map((service) => (
+                                                    <Disclosure
+                                                        as="div"
+                                                        key={service._key}
+                                                        className="pt-6"
+                                                    >
+                                                        {({ open }) => (
+                                                            <>
+                                                                <dt className="text-lg">
+                                                                    <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
+                                                                        <div className="flex items-center gap-x-2">
+                                                                            <div className="h-6 w-6">
+                                                                                <Image
+                                                                                    src={urlForImage(
+                                                                                        service.icon,
+                                                                                    ).url()}
+                                                                                    alt="Icon"
+                                                                                    layout="responsive"
+                                                                                    width={1}
+                                                                                    height={1}
                                                                                 />
+                                                                            </div>
+                                                                            <span className="font-medium text-gray-900">
+                                                                                {service.title}
                                                                             </span>
-                                                                        </Disclosure.Button>
-                                                                    </dt>
-                                                                    <Disclosure.Panel
-                                                                        as="dd"
-                                                                        className="mt-2 pr-12"
-                                                                    >
-                                                                        <p className="text-base text-gray-500">
-                                                                            {
-                                                                                service.description
-                                                                            }
-                                                                        </p>
-                                                                    </Disclosure.Panel>
-                                                                </>
-                                                            )}
-                                                        </Disclosure>
-                                                    ),
-                                                )}
+                                                                        </div>
+                                                                        <span className="ml-6 flex h-7 items-center">
+                                                                            <ChevronDownIcon
+                                                                                className={classNames(
+                                                                                    open
+                                                                                        ? '-rotate-180'
+                                                                                        : 'rotate-0',
+                                                                                    'h-6 w-6 transform',
+                                                                                )}
+                                                                                aria-hidden="true"
+                                                                            />
+                                                                        </span>
+                                                                    </Disclosure.Button>
+                                                                </dt>
+                                                                <Disclosure.Panel
+                                                                    as="dd"
+                                                                    className="mt-2 pr-12"
+                                                                >
+                                                                    <p className="text-base text-gray-500">
+                                                                        {service.description}
+                                                                    </p>
+                                                                </Disclosure.Panel>
+                                                            </>
+                                                        )}
+                                                    </Disclosure>
+                                                ))}
                                             </dl>
                                         </div>
                                     </div>
