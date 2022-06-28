@@ -6,9 +6,9 @@ import { urlForImage } from '@/lib/sanity';
 import { sanityClient } from '@/lib/sanity.server';
 import { individualAdventureQuery, adventuresPathsQuery } from '@/lib/queries';
 
-import Page from '@/components/Page';
-import Navigation from '@/components/Navigation';
-import SlideOver from '@/components/SlideOver';
+import Page from '@/components/shared/Page';
+import Navigation from '@/components/navigation/Navigation';
+import SlideOver from '@/components/adventure/SlideOver';
 
 const AdventurePage = ({ adventure }) => {
     const [open, setOpen] = useState(false);
@@ -54,9 +54,7 @@ const AdventurePage = ({ adventure }) => {
                         className="flex justify-center gap-x-2 text-2xl"
                     >
                         <InformationCircleIcon className="w-6" />
-                        <span className="font-serif text-2xl">
-                            Trip Details
-                        </span>
+                        <span className="font-serif text-2xl">Trip Details</span>
                     </button>
                 </div>
             </section>

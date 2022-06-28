@@ -5,8 +5,8 @@ import { sanityClient } from '@/lib/sanity.server';
 import { homePageQuery } from '@/lib/queries';
 import { urlForImage } from '@/lib/sanity';
 
-import Page from '@/components/Page';
-import Navigation from '@/components/Navigation';
+import Page from '@/components/shared/Page';
+import Navigation from '@/components/navigation/Navigation';
 
 const HomePage = ({ adventures }) => {
     return (
@@ -37,9 +37,7 @@ const HomePage = ({ adventures }) => {
                                     <div className="z-0 -mt-12 px-24">
                                         {adventure.image && (
                                             <Image
-                                                src={urlForImage(
-                                                    adventure.image,
-                                                ).url()}
+                                                src={urlForImage(adventure.image).url()}
                                                 alt="Camino de Santiago"
                                                 layout="responsive"
                                                 width={4}
@@ -54,15 +52,11 @@ const HomePage = ({ adventures }) => {
                             </Link>
                             <div className="mt-12 text-center">
                                 <div>
-                                    <h4 className="font-bold uppercase">
-                                        Curated Gear
-                                    </h4>
+                                    <h4 className="font-bold uppercase">Curated Gear</h4>
                                 </div>
                                 <div className="mt-2">
                                     <p className="text-2xl">
-                                        <span className="font-serif font-light">
-                                            starting from
-                                        </span>{' '}
+                                        <span className="font-serif font-light">starting from</span>{' '}
                                         <span className="font-medium">
                                             ${adventure.startingPrice}
                                         </span>
@@ -76,9 +70,7 @@ const HomePage = ({ adventures }) => {
 
             <section className="flex min-h-screen flex-col items-center justify-center bg-stone-200">
                 <h4>Curated Gear</h4>
-                <p className="font-serif text-6xl">
-                    We take care of your ride and the gear
-                </p>
+                <p className="font-serif text-6xl">We take care of your ride and the gear</p>
             </section>
         </Page>
     );

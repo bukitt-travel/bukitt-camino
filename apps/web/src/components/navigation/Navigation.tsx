@@ -1,14 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ButtonLink } from './Button';
 
-const NavLink = ({
-    children,
-    href,
-}: {
-    children: React.ReactNode;
-    href: string;
-}) => (
+const NavLink = ({ children, href }: { children: React.ReactNode; href: string }) => (
     <Link href={href}>
         <a
             className={[
@@ -25,14 +18,6 @@ const Navigation = () => (
         <div className="flex justify-start space-x-6">
             <NavLink href="/om-oss">About us</NavLink>
             <NavLink href="/bilder">Help</NavLink>
-            {/* <NavLink href="/historien">Historien</NavLink> */}
-            {/* <NavLink href="/kontakt">Kontakt</NavLink> */}
-            {/* <ButtonLink
-                href="/soknadsskjema"
-                className="hidden sm:inline-block"
-            >
-                Søk nå
-            </ButtonLink> */}
         </div>
 
         <div className="flex justify-center">
@@ -50,9 +35,6 @@ const Navigation = () => (
                     />
                 </a>
             </Link>
-            {/* <ButtonLink href="/soknadsskjema" className="mr-3 sm:hidden">
-                Søk nå
-            </ButtonLink> */}
         </div>
 
         <div className="flex justify-end">
