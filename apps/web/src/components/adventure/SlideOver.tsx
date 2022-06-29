@@ -14,6 +14,10 @@ const SlideOver = ({ open, setOpen, adventure }) => {
     const includedServices = adventure?.services?.filter(
         (service) => service?.category === 'included',
     );
+    const notIncludedServices = adventure?.services?.filter(
+        (service) => service?.category === 'not-included',
+    );
+    const addOnServices = adventure?.services?.filter((service) => service?.category === 'add-on');
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -71,6 +75,11 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                             </div>
                                         </div>
                                         <Services label="Included" services={includedServices} />
+                                        <Services
+                                            label="Not Included"
+                                            services={notIncludedServices}
+                                        />
+                                        <Services label="Add-Ons" services={addOnServices} />
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>
