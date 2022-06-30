@@ -8,6 +8,7 @@
     "license": "MIT",
     "scripts": {
         "start": "sanity start",
+        "deploy": "sanity deploy",
         "build": "sanity build public -y",
         "dev": "sanity start",
         "eslint": "eslint --cache .",
