@@ -19,8 +19,7 @@ export default {
             options: {
                 source: 'title',
                 maxLength: 200, // will be ignored if slugify is set
-                slugify: (input) =>
-                    input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+                slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
             },
         },
         {
@@ -31,17 +30,6 @@ export default {
                 hotspot: true,
             },
         },
-        {
-            name: 'bgColor',
-            title: 'Background color',
-            type: 'color',
-        },
-        {
-            name: 'txtColor',
-            title: 'Text color',
-            type: 'color',
-        },
-
         {
             name: 'startingPrice',
             title: 'Starting Price',
@@ -83,6 +71,11 @@ export default {
             title: 'Services',
             type: 'array',
             of: [{ type: 'service' }],
+        },
+        {
+            name: 'bgColor',
+            title: 'Background Color',
+            type: 'color',
         },
     ],
 };

@@ -18,10 +18,9 @@ const HomePage = ({ adventures }) => {
                     return (
                         <div
                             key={adventure.id}
-                            className={`h-fit py-24 text-${adventure.txtColor} even:mt-48 even:text-right`}
+                            className={`h-fit py-24 even:mt-48 even:text-right`}
                             style={{
                                 backgroundColor: adventure.bgColor,
-                                color: adventure.txtColor,
                             }}
                         >
                             <h3 className="relative z-10 flex flex-col px-12 font-serif text-2xl font-light italic">

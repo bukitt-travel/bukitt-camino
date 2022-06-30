@@ -1,3 +1,26 @@
+![Bukitt Camino logo](/apps/web/public/logo.png)
+
+1. pnpm init -y
+2. In repo root, touch pnpm-workspace.yaml with the following:
+   <code>
+   packages:
+
+-   "packages/\*"
+-   "apps/\*"
+    </code>
+
+3. pnpm i -Dw turbo
+4. touch turbo.json
+5. pnpx create-next-app app --typescript
+6. rm -rf .git
+7. rm -rf node_modules/
+8. rm -rf package-lock.json
+9. pnpm init vite@latest
+10. pnpm i -r
+
+pnpm add <package> --filter <workspace>
+pnpm up <package> --filter <workspace>
+
 ![Feriekolonien logo](/apps/web/public/logo.png)
 
 This is the (new!) main repo for [Feriekolonien.no](https://feriekolonien.no)

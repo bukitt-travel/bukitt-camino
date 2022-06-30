@@ -9,7 +9,6 @@ const adventureFields = groq`
 	"slug": slug.current,
 	"image": image.asset->url,
 	"bgColor": bgColor.hex,
-	"txtColor": txtColor.hex,
 	startingPrice,
 	"services": services[]{
 		title,

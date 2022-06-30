@@ -9,6 +9,7 @@ import { individualAdventureQuery, adventuresPathsQuery } from '@/lib/queries';
 import Page from '@/components/shared/Page';
 import Navigation from '@/components/navigation/Navigation';
 import SlideOver from '@/components/adventure/SlideOver';
+import Tabs from '@/components/adventure/Tabs';
 
 const AdventurePage = ({ adventure }) => {
     const [open, setOpen] = useState(false);
@@ -23,7 +24,6 @@ const AdventurePage = ({ adventure }) => {
                 className="flex min-h-screen flex-col py-24"
                 style={{
                     backgroundColor: adventure.bgColor,
-                    color: adventure.txtColor,
                 }}
             >
                 <div className="text-center">
@@ -58,6 +58,10 @@ const AdventurePage = ({ adventure }) => {
                     </button>
                 </div>
             </section>
+
+            {/* <Tabs /> */}
+
+            <section></section>
         </Page>
     );
 };

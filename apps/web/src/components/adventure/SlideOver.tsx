@@ -1,14 +1,9 @@
 import { Fragment } from 'react';
-import Image from 'next/image';
-import { Disclosure } from '@headlessui/react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import { ChevronDownIcon } from '@heroicons/react/solid';
-import classNames from 'classnames';
-
-import { urlForImage } from '@/lib/sanity';
 
 import Services from '@/components/adventure/Services';
+import Price from '@/components/adventure/Price';
 
 const SlideOver = ({ open, setOpen, adventure }) => {
     const includedServices = adventure?.services?.filter(
@@ -31,7 +26,7 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-hidden">
@@ -46,23 +41,19 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                 leaveFrom="translate-x-0"
                                 leaveTo="translate-x-full"
                             >
-                                <Dialog.Panel className="pointer-events-auto w-screen max-w-2xl">
-                                    <div
-                                        className="overflow-y-scrole flex h-full flex-col py-6 shadow-xl"
-                                        style={{
-                                            backgroundColor: adventure.bgColor,
-                                        }}
-                                    >
-                                        <div className="px-4 sm:px-6">
+                                <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-stone-300 py-6 shadow-xl">
+                                        <div className="border-b-2 border-black px-4 pb-6 sm:px-6">
                                             <div className="flex items-start justify-between">
-                                                <Dialog.Title className="text-lg font-medium uppercase text-black">
+                                                <Dialog.Title className="font-serif text-lg font-medium">
                                                     {' '}
-                                                    Trip Details{' '}
+                                                    {adventure.title} Details{' '}
                                                 </Dialog.Title>
+
                                                 <div className="ml-3 flex h-7 items-center">
                                                     <button
                                                         type="button"
-                                                        className="tw-transition rounded-md text-black hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                                                        className="tw-transition hover:opacity-50"
                                                         onClick={() => setOpen(false)}
                                                     >
                                                         <span className="sr-only">Close panel</span>
@@ -74,12 +65,35 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <Services label="Included" services={includedServices} />
-                                        <Services
-                                            label="Not Included"
-                                            services={notIncludedServices}
-                                        />
-                                        <Services label="Add-Ons" services={addOnServices} />
+
+                                        <div className="px-6">
+                                            {includedServices?.length ? (
+                                                <Services
+                                                    label="Included"
+                                                    services={includedServices}
+                                                />
+                                            ) : (
+                                                <></>
+                                            )}
+
+                                            {notIncludedServices?.length ? (
+                                                <Services
+                                                    label="Not Included"
+                                                    services={notIncludedServices}
+                                                />
+                                            ) : (
+                                                <></>
+                                            )}
+
+                                            {addOnServices?.length ? (
+                                                <Services
+                                                    label="Add-Ons"
+                                                    services={addOnServices}
+                                                />
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </div>
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>

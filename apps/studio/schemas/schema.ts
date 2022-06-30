@@ -6,10 +6,6 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Document types
-import album from './documents/album';
-import author from './documents/author';
-import category from './documents/category';
-import post from './documents/post';
 import adventure from './documents/adventure';
 import contacts from './documents/contacts';
 import socials from './documents/socials';
@@ -32,10 +28,6 @@ export default createSchema({
     types: schemaTypes.concat([
         // The following are document types which will appear
         // in the studio.
-        album,
-        post,
-        author,
-        category,
         adventure,
         service,
         socials,

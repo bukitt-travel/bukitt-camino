@@ -4,7 +4,7 @@
 
 @import 'fonts.css';
 
-body {
+/* body {
     font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
@@ -21,9 +21,9 @@ summary {
 p {
     font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial',
         sans-serif;
-}
+} */
 
-.blue-primary {
+/* .blue-primary {
     color: #2c72ac;
 }
 .blue-dark {
@@ -43,11 +43,11 @@ p {
 
 .gallery-image {
     margin: 2px !important;
-}
+} */
 
 /* Reset <summary> styles */
 
-summary {
+/* summary {
     list-style-image: none;
     list-style: none;
 }
@@ -64,7 +64,7 @@ summary {
 }
 summary::-webkit-details-marker {
     display: none;
-}
+} */
 
 @layer components {
     .tw-transition {
