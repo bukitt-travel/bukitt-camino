@@ -1,37 +1,40 @@
 {
-	"name": "bukitt-camino",
-	"version": "0.0.0",
-	"private": true,
-	"workspaces": [
-		"apps/*",
-		"packages/*"
-	],
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev --parallel",
-		"test": "turbo run test",
-		"lint": "turbo run lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"deploy-studio": "cd apps/studio && sanity deploy",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"turbo": "latest"
-	},
-	"engines": {
-		"npm": ">=7.0.0",
-		"node": ">=14.0.0"
-	},
-	"packageManager": "pnpm@6.29.2",
-	"lint-staged": {
-		"apps/**/*.{js,ts,jsx,tsx}": [
-			"eslint --fix"
-		],
-		"*.json": [
-			"prettier --write"
-		]
-	}
+  "name": "bukitt-camino",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy-studio": "cd apps/studio && sanity deploy",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@6.29.2",
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
 }
