@@ -5,11 +5,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en-US">
                 <Head>
-                    <link
-                        rel="shortcut icon"
-                        type="image/x-icon"
-                        href="/favicon.ico"
-                    />
+                    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
                     {/* Editorial New */}
                     <link
                         rel="preload"
@@ -250,10 +246,7 @@ class MyDocument extends Document {
                         property="og:image"
                         content="https://feriekolonien.no/static/img/social-card.jpg"
                     />
-                    <meta
-                        property="og:url"
-                        content="https://feriekolonien.no"
-                    />
+                    <meta property="og:url" content="https://feriekolonien.no" />
                     <meta name="twitter:card" content="summary_large_image" />
                     <meta
                         property="twitter:image"

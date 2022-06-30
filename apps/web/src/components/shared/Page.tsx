@@ -13,22 +13,11 @@ const Page = ({ children, title = 'Bukitt Camino' }: PageProps) => {
             <Head>
                 <title>{title}</title>
                 <meta charSet="utf-8" />
-                <meta
-                    name="viewport"
-                    content="initial-scale=1.0, width=device-width"
-                />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
                 <meta key="og:title" property="og:title" content={title} />
-                <meta
-                    key="description"
-                    property="description"
-                    content={description}
-                />
-                <meta
-                    key="og:description"
-                    property="og:description"
-                    content={description}
-                />
+                <meta key="description" property="description" content={description} />
+                <meta key="og:description" property="og:description" content={description} />
             </Head>
             {children}
         </main>

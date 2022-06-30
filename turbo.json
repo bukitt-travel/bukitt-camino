@@ -6,11 +6,7 @@
 			"outputs": ["dist/**", ".next/**"]
 		},
 		"web#build": {
-			"dependsOn": [
-				"^build",
-				"$NEXT_PUBLIC_SANITY_DATASET",
-				"$NEXT_PUBLIC_SANITY_PROJECT_ID"
-			],
+			"dependsOn": ["^build", "$NEXT_PUBLIC_SANITY_DATASET", "$NEXT_PUBLIC_SANITY_PROJECT_ID"],
 			"outputs": [".next/**"]
 		},
 		"studio#build": {

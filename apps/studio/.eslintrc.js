@@ -4,5 +4,4 @@ module.exports = {
     // This doesn't work for some reason
     // require.resolve('config/eslint-preset'),
 	],
-	"eslint.workingDirectories": ["./web", "./studio"]
 };
