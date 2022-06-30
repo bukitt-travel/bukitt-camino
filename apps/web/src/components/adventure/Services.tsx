@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { urlForImage } from '@/lib/sanity';
 
-const Services = ({ label, services, color }) => {
+const Services = ({ label, services }) => {
     return (
         <div className="mt-6 border-b border-dashed border-black py-6">
             <h2 className="font-serif text-3xl font-bold uppercase">{label}</h2>
