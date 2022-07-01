@@ -32,6 +32,7 @@ export default {
     preview: {
         select: {
             title: 'title',
+            subtitle: 'category',
             media: 'icon',
         },
     },

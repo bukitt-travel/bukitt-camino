@@ -3,16 +3,15 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 
 import Services from '@/components/adventure/Services';
-import Price from '@/components/adventure/Price';
 
-const SlideOver = ({ open, setOpen, adventure }) => {
+const ServicesSlideOver = ({ open, setOpen, adventure }) => {
     const includedServices = adventure?.services?.filter(
         (service) => service?.category === 'included',
     );
     const notIncludedServices = adventure?.services?.filter(
-        (service) => service?.category === 'not-included',
+        (service) => service?.category === 'not included',
     );
-    const addOnServices = adventure?.services?.filter((service) => service?.category === 'add-on');
+    const addOnServices = adventure?.services?.filter((service) => service?.category === 'add on');
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -26,7 +25,7 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" />
+                    <div className="fixed inset-0 bg-stone-900 bg-opacity-50 transition-opacity" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-hidden">
@@ -42,8 +41,8 @@ const SlideOver = ({ open, setOpen, adventure }) => {
                                 leaveTo="translate-x-full"
                             >
                                 <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-stone-300 py-6 shadow-xl">
-                                        <div className="border-b-2 border-black px-4 pb-6 sm:px-6">
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 py-6 shadow-xl">
+                                        <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-6">
                                             <div className="flex items-start justify-between">
                                                 <Dialog.Title className="font-serif text-lg font-medium">
                                                     {' '}
@@ -105,4 +104,4 @@ const SlideOver = ({ open, setOpen, adventure }) => {
     );
 };
 
-export default SlideOver;
+export default ServicesSlideOver;

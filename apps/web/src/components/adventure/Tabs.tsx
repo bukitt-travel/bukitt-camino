@@ -60,17 +60,17 @@ export default function Example() {
     return (
         <div className="w-full">
             <Tab.Group>
-                <Tab.List className="flex space-x-1 bg-black p-1">
+                <Tab.List className="flex space-x-1 bg-stone-900 p-1">
                     {Object.keys(categories).map((category) => (
                         <Tab
                             key={category}
                             className={({ selected }) =>
                                 classNames(
                                     'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
-                                    'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                                    'ring-stone-100 ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                                     selected
-                                        ? 'bg-white shadow'
-                                        : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
+                                        ? 'bg-stone-100 shadow'
+                                        : 'text-blue-100 hover:bg-stone-100/[0.12] hover:text-stone-100',
                                 )
                             }
                         >
@@ -83,8 +83,8 @@ export default function Example() {
                         <Tab.Panel
                             key={idx}
                             className={classNames(
-                                'rounded-xl bg-white p-3',
-                                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                                'rounded-xl bg-stone-100 p-3',
+                                'ring-stone-100 ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                             )}
                         >
                             <ul>

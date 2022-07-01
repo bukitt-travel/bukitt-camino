@@ -7,9 +7,9 @@ import { urlForImage } from '@/lib/sanity';
 
 const Services = ({ label, services }) => {
     return (
-        <div className="mt-6 border-b border-dashed border-black py-6">
+        <div className="mt-6 border-b border-dashed border-stone-900 py-6">
             <h2 className="font-serif text-3xl font-bold uppercase">{label}</h2>
-            <dl className="mt-6 space-y-6 divide-y divide-dashed divide-black divide-opacity-50">
+            <dl className="mt-6 space-y-6 divide-y divide-dashed divide-stone-900 divide-opacity-50">
                 {services &&
                     services?.map((service) => (
                         <Disclosure as="div" key={service._key} className="pt-6">

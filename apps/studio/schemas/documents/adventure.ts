@@ -1,5 +1,5 @@
 import { RiBookOpenLine } from 'react-icons/ri';
-import { difficulty } from '../../data';
+import { difficulty, status } from '../../data';
 
 export default {
     name: 'adventure',
@@ -31,22 +31,45 @@ export default {
             },
         },
         {
-            name: 'startingPrice',
-            title: 'Starting Price',
+            name: 'location',
+            title: 'Location',
+            type: 'string',
+        },
+        {
+            name: 'price',
+            title: 'Price',
             type: 'number',
         },
         {
-            name: 'level',
-            title: 'Level',
+            name: 'group',
+            title: 'Group',
+            type: 'number',
+        },
+        {
+            name: 'difficulty',
+            title: 'Difficulty',
             type: 'string',
             options: {
                 list: [...difficulty],
             },
         },
         {
-            name: 'group',
-            title: 'Group',
+            name: 'duration',
+            title: 'Duration',
             type: 'number',
+        },
+        {
+            name: 'distance',
+            title: 'Distance',
+            type: 'number',
+        },
+        {
+            name: 'availability',
+            title: 'Availability',
+            type: 'string',
+            options: {
+                list: [...status],
+            },
         },
         {
             name: 'startDate',
@@ -73,8 +96,18 @@ export default {
             of: [{ type: 'service' }],
         },
         {
-            name: 'bgColor',
-            title: 'Background Color',
+            name: 'tagline',
+            title: 'Tagline',
+            type: 'string',
+        },
+        {
+            name: 'summary',
+            title: 'Summary',
+            type: 'complexPortableText',
+        },
+        {
+            name: 'color',
+            title: 'Color',
             type: 'color',
         },
     ],

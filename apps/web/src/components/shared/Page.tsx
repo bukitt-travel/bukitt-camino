@@ -9,7 +9,7 @@ const Page = ({ children, title = 'Bukitt Camino' }: PageProps) => {
         'Experience a Camino de Santiago with no hassle and total comfort with the luxury packages of Bukitt Camino.';
 
     return (
-        <main className="overflow-hidden px-3">
+        <main className="mb-24 overflow-hidden">
             <Head>
                 <title>{title}</title>
                 <meta charSet="utf-8" />
