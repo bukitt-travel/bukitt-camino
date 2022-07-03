@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**"]
+      "outputs": ["dist/**", ".next/**"]
     },
     "web#build": {
       "dependsOn": [
@@ -12,6 +12,10 @@
         "$NEXT_PUBLIC_SANITY_PROJECT_ID"
       ],
       "outputs": [".next/**"]
+    },
+    "studio#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["public/**"]
     },
     "lint": {
       "outputs": []
