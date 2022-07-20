@@ -125,7 +125,9 @@ const Itinerary = ({ itinerary, color }) => {
                                                     <div>
                                                         <div className="flex items-baseline gap-x-2 text-2xl font-medium">
                                                             <RiWalkLine />
-                                                            <span>Route {stage.stageNumber}:</span>
+                                                            <span className="font-semibold">
+                                                                Stage {stage.stageNumber}:
+                                                            </span>
                                                             <span>{stage.distance} km</span>
                                                         </div>
                                                         <hr className="border-b-0.5 my-2 border-stone-900" />

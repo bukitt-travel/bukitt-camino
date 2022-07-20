@@ -42,6 +42,7 @@ const AdventurePage = ({ adventure }) => {
                 summary={adventure.summary}
                 group={adventure.group}
                 price={adventure.price}
+                priceAddon={adventure.priceAddon}
                 difficulty={adventure.difficulty}
                 color={adventure.color}
                 duration={adventure.duration}

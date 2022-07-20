@@ -4,7 +4,7 @@ import getCenter from 'geolib/es/getCenter';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { RiMapPin2Fill } from 'react-icons/ri';
 
-import Pin from '@/components/adventure/Map/Pin';
+// // import Pin from '@/components/adventure/Map/Pin';
 import { useMemo } from 'react';
 
 const RouteMap = ({ routeMap, color }) => {
@@ -53,6 +53,7 @@ const RouteMap = ({ routeMap, color }) => {
                 bearing: 0,
                 pitch: 0,
             }}
+            scrollZoom={false}
             // // minZoom={1}
             // // maxZoom={7.5}
         >

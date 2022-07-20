@@ -8,7 +8,7 @@ const Services = ({ includedServices, notIncludedServices, addOnServices, color 
             className="mx-auto max-w-3xl py-20 sm:py-32"
         >
             <h2 id="services-title" className="tw-subheading text-center" style={{ color: color }}>
-                What you get
+                Trip Details
             </h2>
             {includedServices?.length ? (
                 <ServiceCategory label="Included" services={includedServices} />
