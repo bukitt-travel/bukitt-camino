@@ -15,3 +15,22 @@ export const status = [
     { title: 'Coming Soon', value: 'coming soon' },
     { title: 'Sold Out', value: 'sold out' },
 ];
+
+export const storyCategory = [
+    { title: 'Guides', value: 'guides' },
+    { title: 'Spotlight', value: 'spotlight' },
+    { title: 'Customer', value: 'customer' },
+];
+
+export const transportation = [
+    { title: 'Walk', value: 'walk' },
+    { title: 'Car', value: 'car' },
+    { title: 'Train', value: 'train' },
+    { title: 'Plane', value: 'plane' },
+];
+
+export const activity = [
+    { title: 'Stage', value: 'stage' },
+    { title: 'Excursion', value: 'excursion' },
+    { title: 'Transfer', value: 'transfer' },
+];

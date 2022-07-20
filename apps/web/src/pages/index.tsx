@@ -2,19 +2,27 @@ import { sanityClient } from '@/lib/sanity.server';
 import { homePageQuery } from '@/lib/queries';
 
 import Page from '@/components/shared/Page';
-import Navigation from '@/components/navigation/Navigation';
+import Hero from '@/components/home/Hero';
 import Adventures from '@/components/adventure/List';
+import Testimonials from '@/components/home/Testimonials';
+import Gear from '@/components/home/Gear';
 
-const HomePage = ({ adventures }) => {
+const HomePage = ({ adventures, testimonials, gear }) => {
+    // // const SLIDE_COUNT = testimonials.length;
+    // // const slides = Array.from(Array(SLIDE_COUNT).keys());
+
     return (
-        <Page>
-            <Navigation />
+        <Page
+            metaTitle="Home"
+            metaDescription="Experience luxury and tradition of el Camino de Santiago."
+        >
+            <Hero />
+
             <Adventures adventures={adventures} />
 
-            <section className="flex min-h-screen flex-col items-center justify-center bg-stone-100">
-                <h4>Curated Gear</h4>
-                <p className="font-serif text-6xl">We take care of your ride and the gear</p>
-            </section>
+            <Testimonials testimonials={testimonials} />
+
+            <Gear gear={gear} />
         </Page>
     );
 };
@@ -26,6 +34,8 @@ export async function getStaticProps() {
     return {
         props: {
             adventures: data.adventures,
+            testimonials: data.testimonials,
+            gear: data.gear,
         },
         revalidate: 10,
     };

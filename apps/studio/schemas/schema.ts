@@ -9,6 +9,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import adventure from './documents/adventure';
 import contacts from './documents/contacts';
 import socials from './documents/socials';
+import faq from './documents/faq';
+import testimonial from './documents/testimonial';
+import gear from './documents/gear';
+import story from './documents/story';
 
 // Module types
 
@@ -17,7 +21,11 @@ import socials from './documents/socials';
 
 // Object types
 import portableComplex from './objects/portableComplex';
+import portableSimple from './objects/portableSimple';
 import service from './objects/service';
+import feature from './objects/feature';
+import stage from './objects/stage';
+import place from './objects/place';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,8 +40,16 @@ export default createSchema({
         service,
         socials,
         contacts,
+        faq,
+        testimonial,
+        gear,
+        story,
+        place,
         // When added to this list, object types can be used as
         // { type: 'typename' } in other document schemas
+        feature,
+        stage,
         portableComplex,
+        portableSimple,
     ]),
 });

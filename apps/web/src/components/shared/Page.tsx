@@ -1,26 +1,28 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
+
+import { pageVariants } from '@/utils/framer';
 
 type PageProps = {
     children: React.ReactNode;
-    title?: string;
+    metaTitle: string;
+    metaDescription: string;
 };
-const Page = ({ children, title = 'Bukitt Camino' }: PageProps) => {
-    const description =
-        'Experience a Camino de Santiago with no hassle and total comfort with the luxury packages of Bukitt Camino.';
-
+const Page = ({ children, metaTitle, metaDescription }: PageProps) => {
     return (
-        <main className="mb-24 overflow-hidden">
-            <Head>
-                <title>{title}</title>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-                <meta key="og:title" property="og:title" content={title} />
-                <meta key="description" property="description" content={description} />
-                <meta key="og:description" property="og:description" content={description} />
-            </Head>
-            {children}
-        </main>
+        <>
+            <NextSeo title={metaTitle} description={metaDescription} />
+            <motion.main
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ type: 'easeInOut' }}
+                className="mx-auto mb-24 min-h-screen max-w-screen-2xl overflow-hidden"
+            >
+                {children}
+            </motion.main>
+        </>
     );
 };
 

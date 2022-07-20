@@ -2,17 +2,16 @@ import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 
-import Services from '@/components/adventure/Services';
+import ServiceCategory from '@/components/adventure/Services/ServiceCategory';
 
-const ServicesSlideOver = ({ open, setOpen, adventure }) => {
-    const includedServices = adventure?.services?.filter(
-        (service) => service?.category === 'included',
-    );
-    const notIncludedServices = adventure?.services?.filter(
-        (service) => service?.category === 'not included',
-    );
-    const addOnServices = adventure?.services?.filter((service) => service?.category === 'add on');
-
+const ServicesSlideOver = ({
+    title,
+    includedServices,
+    notIncludedServices,
+    addOnServices,
+    open,
+    setOpen,
+}) => {
     return (
         <Transition.Root show={open} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -46,7 +45,7 @@ const ServicesSlideOver = ({ open, setOpen, adventure }) => {
                                             <div className="flex items-start justify-between">
                                                 <Dialog.Title className="font-serif text-lg font-medium">
                                                     {' '}
-                                                    {adventure.title} Details{' '}
+                                                    {title} Details{' '}
                                                 </Dialog.Title>
 
                                                 <div className="ml-3 flex h-7 items-center">
@@ -67,7 +66,7 @@ const ServicesSlideOver = ({ open, setOpen, adventure }) => {
 
                                         <div className="px-6">
                                             {includedServices?.length ? (
-                                                <Services
+                                                <ServiceCategory
                                                     label="Included"
                                                     services={includedServices}
                                                 />
@@ -76,7 +75,7 @@ const ServicesSlideOver = ({ open, setOpen, adventure }) => {
                                             )}
 
                                             {notIncludedServices?.length ? (
-                                                <Services
+                                                <ServiceCategory
                                                     label="Not Included"
                                                     services={notIncludedServices}
                                                 />
@@ -85,7 +84,7 @@ const ServicesSlideOver = ({ open, setOpen, adventure }) => {
                                             )}
 
                                             {addOnServices?.length ? (
-                                                <Services
+                                                <ServiceCategory
                                                     label="Add-Ons"
                                                     services={addOnServices}
                                                 />

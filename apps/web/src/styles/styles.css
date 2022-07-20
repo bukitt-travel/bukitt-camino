@@ -76,4 +76,18 @@ summary::-webkit-details-marker {
     .tw-transition {
         @apply transition duration-300 ease-in-out;
     }
+    .tw-embla-container {
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .tw-subheading {
+        @apply text-4xl font-bold uppercase md:text-5xl;
+    }
+    .tw-summary {
+        @apply prose font-serif prose-p:text-lg md:prose-p:text-3xl;
+    }
+    .tw-hero-full {
+        min-height: calc(100vh - 96px);
+    }
 }

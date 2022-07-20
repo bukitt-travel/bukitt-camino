@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import { urlForImage } from '@/lib/sanity';
 
-const Services = ({ label, services }) => {
+const ServiceCategory = ({ label, services }) => {
     return (
         <div className="mt-6 border-b border-dashed border-stone-900 py-6">
             <h2 className="font-serif text-3xl font-bold uppercase">{label}</h2>
@@ -33,7 +33,7 @@ const Services = ({ label, services }) => {
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
                                                 <ChevronDownIcon
-                                                    className={classNames(
+                                                    className={clsx(
                                                         open ? '-rotate-180' : 'rotate-0',
                                                         'tw-transition h-6 w-6 hover:opacity-50',
                                                     )}
@@ -63,4 +63,4 @@ const Services = ({ label, services }) => {
     );
 };
 
-export default Services;
+export default ServiceCategory;

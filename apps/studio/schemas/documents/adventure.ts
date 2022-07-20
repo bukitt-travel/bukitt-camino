@@ -1,11 +1,11 @@
-import { RiBookOpenLine } from 'react-icons/ri';
+import { RiCompass3Line } from 'react-icons/ri';
 import { difficulty, status } from '../../data';
 
 export default {
     name: 'adventure',
     title: 'Adventure',
     type: 'document',
-    icon: RiBookOpenLine,
+    icon: RiCompass3Line,
     fields: [
         {
             name: 'title',
@@ -34,16 +34,25 @@ export default {
             name: 'location',
             title: 'Location',
             type: 'string',
+            description: 'What Camino route will be walked?',
         },
         {
             name: 'price',
             title: 'Price',
             type: 'number',
+            description: 'Price of the main package.',
+        },
+        {
+            name: 'priceAddon',
+            title: 'Add-On Price',
+            type: 'number',
+            description: 'Price of each add-on.',
         },
         {
             name: 'group',
             title: 'Group',
             type: 'number',
+            description: 'Min. number of person per group.',
         },
         {
             name: 'difficulty',
@@ -53,6 +62,7 @@ export default {
                 list: [...difficulty],
             },
         },
+
         {
             name: 'duration',
             title: 'Duration',
@@ -109,6 +119,24 @@ export default {
             name: 'color',
             title: 'Color',
             type: 'color',
+        },
+        {
+            name: 'features',
+            title: 'Features',
+            type: 'array',
+            of: [{ type: 'feature' }],
+        },
+        {
+            name: 'itinerary',
+            title: 'Itinerary',
+            type: 'array',
+            of: [{ type: 'stage' }],
+        },
+        {
+            name: 'routeMap',
+            title: 'Route Map',
+            type: 'array',
+            of: [{ type: 'place' }],
         },
     ],
 };

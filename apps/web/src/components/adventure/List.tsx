@@ -18,7 +18,7 @@ const List = ({ adventures }) => {
                     >
                         <Link href={`/adventures/${adventure.slug}`} passHref>
                             <a className="group">
-                                <h3 className="px-6 font-serif text-lg font-light italic md:px-12 md:text-2xl">
+                                <h3 className="px-6 font-serif text-lg font-light italic md:px-12 md:text-xl">
                                     {adventure.location}
                                 </h3>
 
@@ -28,17 +28,17 @@ const List = ({ adventures }) => {
                                     ))}
                                 </h2>
 
-                                <div className="z-0 -mt-6 px-6 md:-mt-12 md:px-24">
+                                <div className="z-0 -mt-6 px-6 md:-mt-12">
                                     {adventure.image && (
                                         <Image
                                             src={urlForImage(adventure.image).url()}
                                             alt="Camino de Santiago"
                                             layout="responsive"
                                             width={4}
-                                            height={3}
+                                            height={4}
                                             objectFit="cover"
                                             objectPosition="center"
-                                            className="tw-transition md:grayscale md:group-hover:grayscale-0"
+                                            className="tw-transition rounded-full md:grayscale md:group-hover:grayscale-0"
                                         />
                                     )}
                                 </div>

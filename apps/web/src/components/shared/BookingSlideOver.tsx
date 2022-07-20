@@ -1,14 +1,17 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition, Switch } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
-const BookingSlideOver = ({ open, setOpen }) => {
+import { useStore } from '@/lib/store';
+
+const BookingSlideOver = () => {
+    const { bookingIsOpen, toggleBooking } = useStore();
     const [agreed, setAgreed] = useState(false);
 
     return (
-        <Transition.Root show={open} as={Fragment}>
-            <Dialog as="div" className="relative z-10" onClose={setOpen}>
+        <Transition.Root show={bookingIsOpen} as={Fragment}>
+            <Dialog as="div" className="relative z-10" onClose={() => toggleBooking(false)}>
                 <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-500"
@@ -37,14 +40,14 @@ const BookingSlideOver = ({ open, setOpen }) => {
                                     <div className="flex items-start justify-between">
                                         <Dialog.Title className="font-serif text-lg font-medium">
                                             {' '}
-                                            xxx{' '}
+                                            Contact Us{' '}
                                         </Dialog.Title>
 
                                         <div className="ml-3 flex h-7 items-center">
                                             <button
                                                 type="button"
                                                 className="tw-transition hover:opacity-50"
-                                                onClick={() => setOpen(false)}
+                                                onClick={() => toggleBooking(false)}
                                             >
                                                 <span className="sr-only">Close panel</span>
                                                 <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -121,12 +124,12 @@ const BookingSlideOver = ({ open, setOpen }) => {
                                         />
                                     </svg>
                                     <div className="text-center">
-                                        <h2 className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">
-                                            Contact sales
+                                        <h2 className="font-serif text-3xl font-bold uppercase">
+                                            Get a Quote!
                                         </h2>
                                         <p className="mt-4 text-lg leading-6 text-stone-500">
-                                            Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                                            volutpat massa dictumst amet. Sapien tortor lacus arcu.
+                                            Fill the form with your details and our travel concierge
+                                            will get in contact with you in the next 72 hrs.
                                         </p>
                                     </div>
                                     <div className="mt-12">
@@ -261,7 +264,7 @@ const BookingSlideOver = ({ open, setOpen }) => {
                                                         <Switch
                                                             checked={agreed}
                                                             onChange={setAgreed}
-                                                            className={classNames(
+                                                            className={clsx(
                                                                 agreed
                                                                     ? 'bg-stone-600'
                                                                     : 'bg-stone-200',
@@ -273,7 +276,7 @@ const BookingSlideOver = ({ open, setOpen }) => {
                                                             </span>
                                                             <span
                                                                 aria-hidden="true"
-                                                                className={classNames(
+                                                                className={clsx(
                                                                     agreed
                                                                         ? 'translate-x-5'
                                                                         : 'translate-x-0',

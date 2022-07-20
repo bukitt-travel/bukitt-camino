@@ -13,9 +13,7 @@ const Card = ({ adventure, title, className }) => {
                         backgroundColor: adventure.color,
                     }}
                 >
-                    <h3 className="px-12 font-serif text-2xl font-light italic">
-                        {adventure.location}
-                    </h3>
+                    <h3 className="px-12 text-2xl font-light italic">{adventure.location}</h3>
 
                     <h2 className="relative z-10 mt-3 flex flex-col px-12 font-serif text-8xl font-bold uppercase">
                         {title.map((word, idx) => (

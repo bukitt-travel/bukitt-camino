@@ -1,3 +1,4 @@
+import { transportation } from './../../../studio/data/index';
 import { groq } from 'next-sanity';
 
 // Fields
@@ -10,6 +11,7 @@ const adventureFields = groq`
 	"image": image.asset->url,
 	"color": color.hex,
 	price,
+	priceAddon,
 	group,
 	difficulty,
 	location,
@@ -23,7 +25,66 @@ const adventureFields = groq`
 		description,
 		category,
 		"icon": icon.asset->url
+	},
+	"features": features[]{
+		title,
+		description,
+		"icon": icon.asset->url,
+		"image": image.asset->url
+	},
+	"itinerary": itinerary[]{
+		"id": itinerary._key,
+		locationFrom,
+		locationTo,
+		distance,
+		dayTo,
+		dayFrom,
+		transportation,
+		activity,
+		description,
+		image
+	},
+	"routeMap": routeMap[]{
+		"id": routeMap._key,
+		order,
+		location,
+		coordinates,
+		description,
 	}
+`;
+
+const faqFields = groq`
+	"id": _id,
+	_updatedAt,
+	question,
+	answer
+`;
+
+const storyFields = groq`
+	"id": _id,
+	_updatedAt,
+	title,
+	"slug": slug.current,
+	category,
+	"image": image.asset->url,
+	content
+`;
+
+const testimonialFields = groq`
+	"id": _id,
+	_updatedAt,
+	name,
+	location,
+	quote,
+	"image": image.asset->url
+`;
+
+const gearFields = groq`
+	"id": _id,
+	_updatedAt,
+	name,
+	description,
+	"image": image.asset->url
 `;
 
 // Queries
@@ -32,7 +93,13 @@ export const homePageQuery = groq`
 {
 "adventures": *[_type == "adventure"] {
 	${adventureFields}
-	}
+	},
+"testimonials": *[_type == "testimonial"] {
+	${testimonialFields}
+	},
+"gear": *[_type == "gear"] {
+	${gearFields}
+	},
 }`;
 
 export const individualAdventureQuery = groq`
@@ -43,4 +110,18 @@ export const individualAdventureQuery = groq`
 }`;
 
 export const adventuresPathsQuery = groq`*[_type == "adventure" && defined(slug.current)][].slug.current
+`;
+export const faqPageQuery = groq`
+{
+"faq": *[_type == "faq"] {
+	${faqFields}
+	}
+}`;
+
+export const storiesPageQuery = groq`
+{
+"stories": *[_type == "story"] {
+	${storyFields}
+	}
+}
 `;
