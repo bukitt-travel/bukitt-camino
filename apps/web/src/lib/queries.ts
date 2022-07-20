@@ -41,6 +41,7 @@ const adventureFields = groq`
 		dayFrom,
 		transportation,
 		activity,
+		stageNumber,
 		description,
 		image
 	},

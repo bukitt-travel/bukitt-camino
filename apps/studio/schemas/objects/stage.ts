@@ -46,6 +46,12 @@ export default {
             description: 'Type of activity.',
         },
         {
+            name: 'stageNumber',
+            title: 'Stage Number',
+            type: 'number',
+            description: 'Number of the route stage.',
+        },
+        {
             name: 'distance',
             title: 'Distance',
             type: 'number',

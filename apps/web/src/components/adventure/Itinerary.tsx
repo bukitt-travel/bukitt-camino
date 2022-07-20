@@ -2,8 +2,7 @@ import { useEffect, useId, useState } from 'react';
 import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
-import { MdHiking } from 'react-icons/md';
-import { RiTrainLine, RiBus2Line } from 'react-icons/ri';
+import { RiTrainLine, RiBus2Line, RiPlaneLine, RiWalkLine } from 'react-icons/ri';
 
 import { urlForImage } from '@/lib/sanity';
 
@@ -122,37 +121,66 @@ const Itinerary = ({ itinerary, color }) => {
                                         </div>
                                         <div className="col-span-1">
                                             <div>
-                                                {stage.transportation === 'walk' &&
-                                                    stage.activity === 'stage' &&
-                                                    stage.distance && (
-                                                        <div>
-                                                            <div className="flex items-baseline gap-x-2 text-2xl font-medium">
-                                                                <MdHiking />
-                                                                <span>{stage.distance} km</span>
-                                                            </div>
-                                                            <hr className="border-b-0.5 my-2 border-stone-900" />
-                                                        </div>
-                                                    )}
-                                                {stage.transportation === 'train' &&
-                                                    stage.activity === 'transfer' && (
-                                                        <div>
-                                                            <div className="flex items-center gap-x-2 text-2xl font-medium">
-                                                                <RiTrainLine />
-                                                                <span>Transfer</span>
-                                                            </div>
-                                                            <hr className="border-b-0.5 my-2 border-stone-900" />
-                                                        </div>
-                                                    )}
-                                                {stage.transportation === 'car' && (
+                                                {stage.activity === 'route stage' && (
                                                     <div>
-                                                        <div className="flex gap-x-2 text-2xl font-medium">
-                                                            <RiBus2Line />
-                                                            {stage.activity === 'transfer' && (
-                                                                <span>Transfer</span>
+                                                        <div className="flex items-baseline gap-x-2 text-2xl font-medium">
+                                                            <RiWalkLine />
+                                                            <span>Route {stage.stageNumber}:</span>
+                                                            <span>{stage.distance} km</span>
+                                                        </div>
+                                                        <hr className="border-b-0.5 my-2 border-stone-900" />
+                                                    </div>
+                                                )}
+                                                {stage.activity === 'check-in and transfer' && (
+                                                    <div>
+                                                        <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                            {stage.transportation === 'train' && (
+                                                                <RiTrainLine />
                                                             )}
-                                                            {stage.activity === 'excursion' && (
-                                                                <span>Excursion</span>
+                                                            {stage.transportation === 'car' && (
+                                                                <RiBus2Line />
                                                             )}
+                                                            {stage.transportation === 'plane' && (
+                                                                <RiPlaneLine />
+                                                            )}
+                                                            <span>Check-in and Transfer</span>
+                                                        </div>
+                                                        <hr className="border-b-0.5 my-2 border-stone-900" />
+                                                    </div>
+                                                )}
+                                                {stage.activity === 'check-out and transfer' && (
+                                                    <div>
+                                                        <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                            {stage.transportation === 'train' && (
+                                                                <RiTrainLine />
+                                                            )}
+                                                            {stage.transportation === 'car' && (
+                                                                <RiBus2Line />
+                                                            )}
+                                                            {stage.transportation === 'plane' && (
+                                                                <RiPlaneLine />
+                                                            )}
+                                                            <span>Check-out and Transfer</span>
+                                                        </div>
+                                                        <hr className="border-b-0.5 my-2 border-stone-900" />
+                                                    </div>
+                                                )}
+                                                {stage.activity === 'day trip' && (
+                                                    <div>
+                                                        <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                            {stage.transportation === 'train' && (
+                                                                <RiTrainLine />
+                                                            )}
+                                                            {stage.transportation === 'car' && (
+                                                                <RiBus2Line />
+                                                            )}
+                                                            {stage.transportation === 'plane' && (
+                                                                <RiPlaneLine />
+                                                            )}
+                                                            {stage.transportation === 'walk' && (
+                                                                <RiWalkLine />
+                                                            )}
+                                                            <span>Day Trip</span>
                                                         </div>
                                                         <hr className="border-b-0.5 my-2 border-stone-900" />
                                                     </div>

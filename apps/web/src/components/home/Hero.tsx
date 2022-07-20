@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import { RiArrowDownSLine } from 'react-icons/ri';
 import CaminoIcon from '@/components/icons/CaminoIcon';
 
 const Hero = () => {
@@ -15,8 +13,9 @@ const Hero = () => {
                 <h2 className="text-lg font-medium uppercase tracking-widest lg:text-xl">
                     Luxury Pilgrimages for the modern traveler
                 </h2>
-                <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-50 hover:scale-105 hover:fill-stone-900" />
             </div>
+
+            <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-50 hover:scale-105 hover:fill-stone-900" />
         </section>
     );
 };

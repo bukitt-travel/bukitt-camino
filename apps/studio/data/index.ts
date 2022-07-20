@@ -30,7 +30,8 @@ export const transportation = [
 ];
 
 export const activity = [
-    { title: 'Stage', value: 'stage' },
-    { title: 'Excursion', value: 'excursion' },
-    { title: 'Transfer', value: 'transfer' },
+    { title: 'Route Stage', value: 'route stage' },
+    { title: 'Day Trip', value: 'day trip' },
+    { title: 'Check-in and Transfer', value: 'check-in and transfer' },
+    { title: 'Check-out and Transfer', value: 'check-out and transfer' },
 ];

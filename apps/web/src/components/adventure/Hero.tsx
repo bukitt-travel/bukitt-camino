@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { RiMapPin3Line, RiInformationLine } from 'react-icons/ri';
+import { RiMapPin3Line } from 'react-icons/ri';
+
+import CaminoIcon from '@/components/icons/CaminoIcon';
 
 import { urlForImage } from '@/lib/sanity';
 
@@ -38,13 +40,9 @@ const Hero = ({ adventure, setOpen }) => {
                 />
             </div>
 
-            <button
-                className="mt-12 flex items-center justify-center text-2xl font-medium md:gap-x-2 md:text-3xl"
-                onClick={() => setOpen(true)}
-            >
-                <RiInformationLine className="tw-transition hover:scale-105" />
-                Trip Details
-            </button>
+            <div className="mt-12 flex justify-center">
+                <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
+            </div>
         </section>
     );
 };

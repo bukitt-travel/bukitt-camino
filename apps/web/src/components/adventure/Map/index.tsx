@@ -32,7 +32,9 @@ const RouteMap = ({ routeMap, color }) => {
                 >
                     <div className="flex cursor-pointer flex-col items-center">
                         <RiMapPin2Fill className="h-6 w-6" style={{ color: color }} />
-                        <div className="text-xs font-bold text-stone-900">{stage.order}</div>
+                        <div className="mt-1 rounded-full bg-stone-50 py-0.5 px-2 text-xs font-bold text-stone-900">
+                            {stage.order}
+                        </div>
                     </div>
                 </Marker>
             )),
