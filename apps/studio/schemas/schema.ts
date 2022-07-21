@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Document types
 import adventure from './documents/adventure';
+import about from './documents/about';
 import contacts from './documents/contacts';
 import socials from './documents/socials';
 import faq from './documents/faq';
@@ -26,6 +27,7 @@ import service from './objects/service';
 import feature from './objects/feature';
 import stage from './objects/stage';
 import place from './objects/place';
+import section from './objects/section';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -38,6 +40,7 @@ export default createSchema({
         // in the studio.
         adventure,
         service,
+        about,
         socials,
         contacts,
         faq,
@@ -49,6 +52,7 @@ export default createSchema({
         // { type: 'typename' } in other document schemas
         feature,
         stage,
+        section,
         portableComplex,
         portableSimple,
     ]),

@@ -8,7 +8,7 @@ import { urlForImage } from '@/lib/sanity';
 const ServiceCategory = ({ label, services }) => {
     return (
         <div className="mt-6 border-b border-dashed border-stone-900 py-6">
-            <h2 className="font-serif text-3xl font-bold uppercase">{label}</h2>
+            <h2 className="font-serif text-2xl font-medium lg:text-3xl">{label}</h2>
             <dl className="mt-6 space-y-6 divide-y divide-dashed divide-stone-900 divide-opacity-50">
                 {services &&
                     services?.map((service) => (
@@ -18,7 +18,7 @@ const ServiceCategory = ({ label, services }) => {
                                     <dt className="text-lg">
                                         <Disclosure.Button className="flex w-full items-start justify-between text-left">
                                             <div className="flex items-center gap-x-2">
-                                                <div className="h-6 w-6">
+                                                <div className="h-6 w-6 lg:h-8 lg:w-8">
                                                     <Image
                                                         src={urlForImage(service.icon).url()}
                                                         alt="Icon"
@@ -27,7 +27,7 @@ const ServiceCategory = ({ label, services }) => {
                                                         height={1}
                                                     />
                                                 </div>
-                                                <span className="text-lg font-semibold">
+                                                <span className="text-base font-medium lg:text-lg">
                                                     {service.title}
                                                 </span>
                                             </div>

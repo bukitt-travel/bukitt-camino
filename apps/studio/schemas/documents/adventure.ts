@@ -43,10 +43,10 @@ export default {
             description: 'Price of the main package.',
         },
         {
-            name: 'priceAddon',
-            title: 'Add-On Price',
+            name: 'priceSingleSupplement',
+            title: 'Single Supplement Price',
             type: 'number',
-            description: 'Price of each add-on.',
+            description: 'Price of a single supplement.',
         },
         {
             name: 'group',

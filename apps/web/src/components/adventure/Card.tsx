@@ -8,7 +8,7 @@ const Card = ({ adventure, title, className }) => {
         <Link href={`/adventures/${adventure.slug}`} passHref className={className}>
             <a>
                 <div
-                    className="group h-fit py-24"
+                    className="group h-fit py-32"
                     style={{
                         backgroundColor: adventure.color,
                     }}

@@ -7,9 +7,9 @@ import { urlForImage } from '@/lib/sanity';
 
 const Features = ({ features, color }) => {
     return (
-        <div className="mx-auto w-full max-w-5xl px-2 py-16 sm:px-0">
+        <div className="mx-auto w-full max-w-5xl px-3 py-16 md:py-32 md:px-0">
             <h2
-                className="tw-subheading mb-12 text-center md:mb-24"
+                className="tw-subheading mb-6 text-center md:mb-24 lg:mb-12"
                 style={{
                     color: color,
                 }}
@@ -31,7 +31,7 @@ const Features = ({ features, color }) => {
                                 )
                             }
                         >
-                            <div className="w-6 md:w-12">
+                            <div className="w-8">
                                 <Image
                                     src={urlForImage(feature.icon).url()}
                                     alt=""
@@ -40,7 +40,7 @@ const Features = ({ features, color }) => {
                                     height={1}
                                 />
                             </div>
-                            <div className="hidden text-xl font-medium uppercase md:block">
+                            <div className="mt-2 hidden text-lg font-medium uppercase md:block">
                                 {feature.title}
                             </div>
                         </Tab>
@@ -51,11 +51,11 @@ const Features = ({ features, color }) => {
                         <Tab.Panel
                             key={feature._key}
                             className={clsx(
-                                'flex flex-col gap-x-12 gap-y-6 bg-stone-50 p-3 md:flex-row md:gap-y-0',
+                                'grid grid-cols-1 gap-x-12 gap-y-6 bg-stone-50 p-3 md:gap-y-0 lg:grid-cols-2',
                                 'ring-stone-50 ring-opacity-60 ring-offset-2 ring-offset-stone-400 focus:outline-none focus:ring-2',
                             )}
                         >
-                            <div className="w-full bg-stone-100 md:w-1/2">
+                            <div className="col-span-1 bg-stone-200">
                                 {feature.image && (
                                     <Image
                                         src={feature?.image}
@@ -65,15 +65,21 @@ const Features = ({ features, color }) => {
                                         height={1}
                                         objectFit="cover"
                                         objectPosition="center"
-                                        className="bg-stone-100"
+                                        className="bg-stone-200"
                                     />
                                 )}
                             </div>
-                            {feature.image && (
-                                <div className="prose col-span-1 w-full prose-p:text-xl md:w-1/2">
-                                    <PortableText value={feature.description} />
+
+                            <div className="col-span-1">
+                                <div className="mb-2 text-2xl font-semibold uppercase md:hidden">
+                                    {feature.title}
                                 </div>
-                            )}
+                                {feature.image && (
+                                    <div className="prose w-full prose-p:text-xl">
+                                        <PortableText value={feature.description} />
+                                    </div>
+                                )}
+                            </div>
                         </Tab.Panel>
                     ))}
                 </Tab.Panels>

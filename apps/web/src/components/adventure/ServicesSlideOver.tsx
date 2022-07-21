@@ -41,7 +41,7 @@ const ServicesSlideOver = ({
                             >
                                 <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
                                     <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 py-6 shadow-xl">
-                                        <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-6">
+                                        <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-3">
                                             <div className="flex items-start justify-between">
                                                 <Dialog.Title className="font-serif text-lg font-medium">
                                                     {' '}
@@ -64,7 +64,7 @@ const ServicesSlideOver = ({
                                             </div>
                                         </div>
 
-                                        <div className="px-6">
+                                        <div className="px-3">
                                             {includedServices?.length ? (
                                                 <ServiceCategory
                                                     label="Included"

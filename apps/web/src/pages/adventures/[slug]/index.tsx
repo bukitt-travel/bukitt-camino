@@ -26,15 +26,6 @@ const AdventurePage = ({ adventure }) => {
 
     return (
         <Page metaTitle={adventure?.title} metaDescription={adventure?.summary}>
-            <ServicesSlideOver
-                title={adventure.title}
-                includedServices={includedServices}
-                notIncludedServices={notIncludedServices}
-                addOnServices={addOnServices}
-                open={openServices}
-                setOpen={setOpenServices}
-            />
-
             <Hero adventure={adventure} setOpen={setOpenServices} />
 
             <Introduction
@@ -42,7 +33,7 @@ const AdventurePage = ({ adventure }) => {
                 summary={adventure.summary}
                 group={adventure.group}
                 price={adventure.price}
-                priceAddon={adventure.priceAddon}
+                priceSingleSupplement={adventure.priceSingleSupplement}
                 difficulty={adventure.difficulty}
                 color={adventure.color}
                 duration={adventure.duration}
@@ -56,7 +47,7 @@ const AdventurePage = ({ adventure }) => {
 
             <Itinerary itinerary={adventure?.itinerary} color={adventure.color} />
 
-            <section className="mt-24 h-[480px] w-full bg-stone-300">
+            <section className="h-screen w-full py-24 md:py-32">
                 <Map routeMap={adventure.routeMap} color={adventure.color} />
             </section>
 
@@ -68,6 +59,15 @@ const AdventurePage = ({ adventure }) => {
             />
 
             <ActionsMenu adventure={adventure} setOpenServices={setOpenServices} />
+
+            <ServicesSlideOver
+                title={adventure.title}
+                includedServices={includedServices}
+                notIncludedServices={notIncludedServices}
+                addOnServices={addOnServices}
+                open={openServices}
+                setOpen={setOpenServices}
+            />
         </Page>
     );
 };

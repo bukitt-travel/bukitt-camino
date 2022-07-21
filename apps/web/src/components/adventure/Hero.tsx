@@ -10,7 +10,7 @@ const Hero = ({ adventure, setOpen }) => {
 
     return (
         <section
-            className="flex min-h-screen flex-col py-12 md:py-24"
+            className="flex min-h-screen flex-col py-24 md:py-32"
             style={{
                 backgroundColor: adventure.color,
             }}
@@ -41,7 +41,9 @@ const Hero = ({ adventure, setOpen }) => {
             </div>
 
             <div className="mt-12 flex justify-center">
-                <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
+                <a href="#intro">
+                    <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
+                </a>
             </div>
         </section>
     );

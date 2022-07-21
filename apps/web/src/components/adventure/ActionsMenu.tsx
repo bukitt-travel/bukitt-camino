@@ -15,7 +15,7 @@ const ActionsMenu = ({ adventure, setOpenServices }) => {
     const { toggleBooking } = useStore();
 
     return (
-        <nav className="fixed left-0 bottom-0 right-0 flex flex-col items-center justify-between gap-y-2 bg-stone-900 py-4 px-6 text-stone-100 md:flex-row">
+        <nav className="fixed left-0 bottom-0 right-0 flex flex-col items-center justify-between gap-y-2 bg-stone-900 py-4 px-3 text-stone-100 md:flex-row">
             <div className="flex gap-x-2 md:flex-col">
                 <p className="font-serif text-lg font-medium uppercase md:text-2xl">
                     {adventure.title}

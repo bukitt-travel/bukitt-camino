@@ -7,7 +7,7 @@ const Introduction = ({
     tagline,
     difficulty,
     price,
-    priceAddon,
+    priceSingleSupplement,
     group,
     color,
     duration,
@@ -15,7 +15,7 @@ const Introduction = ({
     setOpen,
 }) => {
     return (
-        <section className="mx-auto my-12 max-w-5xl px-6 md:my-24 md:px-0">
+        <section className="mx-auto max-w-5xl py-24 px-3 md:py-32 md:px-0" id="intro">
             <h2
                 className="tw-subheading"
                 style={{
@@ -31,7 +31,7 @@ const Introduction = ({
                 <Details
                     difficulty={difficulty}
                     price={price}
-                    priceAddon={priceAddon}
+                    priceSingleSupplement={priceSingleSupplement}
                     group={group}
                     duration={duration}
                     distance={distance}

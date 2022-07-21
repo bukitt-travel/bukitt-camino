@@ -1,10 +1,10 @@
-import { RiBookOpenLine } from 'react-icons/ri';
+import { RiProfileLine } from 'react-icons/ri';
 
 export default {
     name: 'about',
     title: 'About',
     type: 'document',
-    icon: RiBookOpenLine,
+    icon: RiProfileLine,
     fields: [
         {
             name: 'title',
@@ -12,22 +12,14 @@ export default {
             type: 'string',
         },
         {
-            title: 'Slug',
-            name: 'slug',
-            type: 'slug',
-            options: {
-                source: 'title',
-                maxLength: 200, // will be ignored if slugify is set
-                slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
-            },
+            name: 'infoCamino',
+            title: 'Camino',
+            type: 'section',
         },
         {
-            name: 'image',
-            title: 'Image',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
+            name: 'founder',
+            title: 'Founder',
+            type: 'section',
         },
     ],
 };

@@ -15,7 +15,9 @@ const Hero = () => {
                 </h2>
             </div>
 
-            <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-50 hover:scale-105 hover:fill-stone-900" />
+            <a href="#adventures">
+                <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-50 hover:scale-105 hover:fill-stone-900" />
+            </a>
         </section>
     );
 };

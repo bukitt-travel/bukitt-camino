@@ -10,7 +10,7 @@ const Header = ({ openMobileMenu, setOpenMobileMenu, navLinks }) => {
     const { toggleBooking } = useStore();
 
     return (
-        <nav className="mx-auto grid h-24 grid-cols-3 items-center border-b px-3 md:px-6">
+        <nav className="mx-auto grid h-24 grid-cols-3 items-center border-b px-3 md:px-3">
             <div className="col-span-1 hidden justify-start space-x-6 lg:flex">
                 {navLinks.map((navLink) => (
                     <div key={navLink.id}>

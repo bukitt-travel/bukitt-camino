@@ -36,7 +36,7 @@ const BookingSlideOver = () => {
                     >
                         <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
                             <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 py-6 shadow-xl">
-                                <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-6">
+                                <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-3">
                                     <div className="flex items-start justify-between">
                                         <Dialog.Title className="font-serif text-lg font-medium">
                                             {' '}
@@ -56,7 +56,7 @@ const BookingSlideOver = () => {
                                     </div>
                                 </div>
 
-                                <div className="relative mx-auto max-w-xl py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+                                <div className="relative mx-auto max-w-xl py-24 px-4 sm:px-3 lg:px-8 lg:py-32">
                                     <svg
                                         className="absolute left-full translate-x-1/2 transform"
                                         width={404}
@@ -309,7 +309,7 @@ const BookingSlideOver = () => {
                                             <div className="sm:col-span-2">
                                                 <button
                                                     type="submit"
-                                                    className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-stone-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2"
+                                                    className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-stone-600 px-3 py-3 text-base font-medium text-white shadow-sm hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2"
                                                 >
                                                     Let&apos;s talk
                                                 </button>

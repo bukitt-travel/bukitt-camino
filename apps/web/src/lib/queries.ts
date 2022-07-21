@@ -1,4 +1,3 @@
-import { transportation } from './../../../studio/data/index';
 import { groq } from 'next-sanity';
 
 // Fields
@@ -11,7 +10,7 @@ const adventureFields = groq`
 	"image": image.asset->url,
 	"color": color.hex,
 	price,
-	priceAddon,
+	priceSingleSupplement,
 	group,
 	difficulty,
 	location,
@@ -88,6 +87,14 @@ const gearFields = groq`
 	"image": image.asset->url
 `;
 
+const aboutFields = groq`
+	"id": _id,
+	_updatedAt,
+	infoCamino,
+	founder,
+	"image": image.asset->url
+`;
+
 // Queries
 
 export const homePageQuery = groq`
@@ -123,6 +130,14 @@ export const storiesPageQuery = groq`
 {
 "stories": *[_type == "story"] {
 	${storyFields}
+	}
+}
+`;
+
+export const aboutPageQuery = groq`
+{
+"about": *[_type == "about"][0] {
+	${aboutFields}
 	}
 }
 `;
