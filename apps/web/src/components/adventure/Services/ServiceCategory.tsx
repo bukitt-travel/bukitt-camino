@@ -27,9 +27,24 @@ const ServiceCategory = ({ label, services }) => {
                                                         height={1}
                                                     />
                                                 </div>
-                                                <span className="text-base font-medium lg:text-lg">
-                                                    {service.title}
-                                                </span>
+
+                                                <div className="flex items-baseline gap-x-2">
+                                                    <p className="text-base font-semibold uppercase lg:text-base">
+                                                        {service.title}
+                                                    </p>
+                                                    {service?.category === 'add on' &&
+                                                        service?.price && (
+                                                            <p className="mt-2">
+                                                                <span className="text-xs italic">
+                                                                    from
+                                                                </span>
+                                                                <span className="text-sm font-medium">
+                                                                    {' '}
+                                                                    ${service.price}
+                                                                </span>
+                                                            </p>
+                                                        )}
+                                                </div>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
                                                 <ChevronDownIcon

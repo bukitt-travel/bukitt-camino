@@ -23,6 +23,7 @@ const adventureFields = groq`
 		title,
 		description,
 		category,
+		price,
 		"icon": icon.asset->url
 	},
 	"features": features[]{

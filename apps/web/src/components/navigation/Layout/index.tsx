@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
             <div>
                 <Header setOpenMobileMenu={setIsOpenMobileMenu} navLinks={navLinks} />
                 <div className="min-h-screen">{children}</div>
-                <Footer />
+                <Footer navLinks={navLinks} />
             </div>
             <BookingSlideOver />
             <MobileMenu open={isOpenMobileMenu} setOpen={setIsOpenMobileMenu} navLinks={navLinks} />

@@ -16,17 +16,18 @@ export default {
             type: 'text',
         },
         {
-            name: 'price',
-            title: 'Price',
-            type: 'number',
-        },
-        {
             name: 'category',
             title: 'Category',
             type: 'string',
             options: {
                 list: [...serviceCategory],
             },
+        },
+        {
+            name: 'price',
+            title: 'Price',
+            type: 'number',
+            hidden: ({ parent }) => parent.category !== 'add on',
         },
         {
             name: 'icon',
