@@ -18,7 +18,7 @@ const adventureFields = groq`
 	duration,
 	distance,
 	summary,
-	tagline,
+	slogan,
 	"services": services[]{
 		title,
 		description,

@@ -103,8 +103,8 @@ export default {
             of: [{ type: 'service' }],
         },
         {
-            name: 'tagline',
-            title: 'Tagline',
+            name: 'slogan',
+            title: 'Slogan',
             type: 'string',
         },
         {

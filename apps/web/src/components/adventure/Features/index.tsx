@@ -14,7 +14,7 @@ const Features = ({ features, color }) => {
                     color: color,
                 }}
             >
-                Trip Highlights
+                Highlights
             </h2>
             <Tab.Group>
                 <Tab.List

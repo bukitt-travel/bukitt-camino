@@ -29,7 +29,7 @@ const AdventurePage = ({ adventure }) => {
             <Hero adventure={adventure} setOpen={setOpenServices} />
 
             <Introduction
-                tagline={adventure.tagline}
+                slogan={adventure.slogan}
                 summary={adventure.summary}
                 group={adventure.group}
                 price={adventure.price}
