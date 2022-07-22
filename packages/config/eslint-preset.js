@@ -4,5 +4,6 @@ module.exports = {
 	extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
 	rules: {
 		"@typescript-eslint/no-var-requires": 0,
+		"@typescript-eslint/ban-ts-comment": 0,
 	},
 };

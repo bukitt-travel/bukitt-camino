@@ -6,7 +6,8 @@ import { useStore } from '@/lib/store';
 
 import NavLink from '@/components/navigation/NavLink';
 
-const Header = ({ openMobileMenu, setOpenMobileMenu, navLinks }) => {
+const Header = ({ setOpenMobileMenu, navLinks }) => {
+    // @ts-expect-error need to find types for useStore()
     const { toggleBooking } = useStore();
 
     return (

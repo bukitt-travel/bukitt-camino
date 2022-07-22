@@ -12,6 +12,7 @@ import {
 import { useStore } from '@/lib/store';
 
 const ActionsMenu = ({ adventure, setOpenServices }) => {
+    // @ts-expect-error need to find types for useStore()
     const { toggleBooking } = useStore();
 
     return (

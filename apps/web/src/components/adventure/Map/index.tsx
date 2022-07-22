@@ -38,7 +38,7 @@ const RouteMap = ({ routeMap, color }) => {
                     </div>
                 </Marker>
             )),
-        [],
+        [color, routeMap],
     );
 
     return (
@@ -47,7 +47,9 @@ const RouteMap = ({ routeMap, color }) => {
             mapStyle={process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL}
             mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
             initialViewState={{
+                // @ts-expect-error need to find types for useStore()
                 latitude: center.latitude,
+                // @ts-expect-error need to find types for useStore()
                 longitude: center.longitude,
                 zoom: 7,
                 bearing: 0,

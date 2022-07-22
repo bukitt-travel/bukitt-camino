@@ -12,11 +12,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <div>
-                <Header
-                    openMobileMenu={isOpenMobileMenu}
-                    setOpenMobileMenu={setIsOpenMobileMenu}
-                    navLinks={navLinks}
-                />
+                <Header setOpenMobileMenu={setIsOpenMobileMenu} navLinks={navLinks} />
                 <div className="min-h-screen">{children}</div>
                 <Footer />
             </div>

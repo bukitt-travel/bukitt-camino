@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { useStore } from '@/lib/store';
 
 const BookingSlideOver = () => {
+    // @ts-expect-error need to find types for useStore()
     const { bookingIsOpen, toggleBooking } = useStore();
     const [agreed, setAgreed] = useState(false);
 

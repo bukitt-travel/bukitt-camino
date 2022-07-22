@@ -2,33 +2,32 @@ import { useLayoutEffect } from 'react';
 import create from 'zustand';
 import createContext from 'zustand/context';
 
+// Standard interface and functions
+interface IState {
+    bookingIsOpen: boolean;
+    toggleBooking: (bookingIsOpen: boolean) => void;
+}
+
 let store;
 
-const getDefaultInitialState = () => ({
+const getDefaultInitialState = (): { bookingIsOpen: boolean } => ({
     bookingIsOpen: false,
 });
 
 const zustandContext = createContext();
 
 export const Provider = zustandContext.Provider;
-// An example of how to get types
-/** @type {import('zustand/index').UseStore<typeof initialState>} */
 export const useStore = zustandContext.useStore;
 
 export const initializeStore = (preloadedState = {}) => {
-    return create<any>((set) => ({
+    return create<IState>((set) => ({
         ...getDefaultInitialState(),
         ...preloadedState,
-        toggleBooking: (bookingIsOpen) => {
-            set({
-                bookingIsOpen: !!bookingIsOpen,
-            });
+        toggleBooking: () => {
+            set((state) => ({
+                bookingIsOpen: !state.bookingIsOpen,
+            }));
         },
-        // // reset: () => {
-        // //     set({
-        // //         count: getDefaultInitialState().count,
-        // //     });
-        // // },
     }));
 };
 
