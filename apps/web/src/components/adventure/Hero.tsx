@@ -10,13 +10,13 @@ const Hero = ({ adventure, setOpen }) => {
 
     return (
         <section
-            className="flex min-h-screen flex-col py-24 md:py-32"
+            className="flex min-h-screen flex-col py-12 md:py-32"
             style={{
                 backgroundColor: adventure.color,
             }}
         >
             <div className="text-center">
-                <h2 className="flex items-baseline justify-center gap-x-1 text-2xl font-medium md:gap-x-2 md:text-3xl">
+                <h2 className="flex items-baseline justify-center gap-x-1 text-xl font-medium md:gap-x-2 md:text-3xl">
                     <RiMapPin3Line />
                     <span>{adventure.location}</span>
                 </h2>
@@ -40,9 +40,9 @@ const Hero = ({ adventure, setOpen }) => {
                 />
             </div>
 
-            <div className="mt-12 flex justify-center">
+            <div className="mt-6 flex justify-center lg:mt-12">
                 <a href="#intro">
-                    <CaminoIcon className="tw-transition mt-6 w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
+                    <CaminoIcon className="tw-transition w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
                 </a>
             </div>
         </section>

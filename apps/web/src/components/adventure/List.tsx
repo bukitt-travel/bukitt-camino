@@ -13,7 +13,7 @@ const List = ({ adventures }) => {
                 const title = adventure.title.split(' ');
                 return (
                     <div
-                        className="h-fit py-24 odd:mt-0 odd:text-left even:text-right md:py-32 md:even:mt-48"
+                        className="h-fit py-12 odd:mt-0 odd:text-left even:text-right md:py-32 md:even:mt-48"
                         style={{
                             backgroundColor: adventure.color,
                         }}

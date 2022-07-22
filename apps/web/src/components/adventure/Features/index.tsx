@@ -71,11 +71,11 @@ const Features = ({ features, color }) => {
                             </div>
 
                             <div className="col-span-1">
-                                <div className="mb-2 text-2xl font-semibold uppercase md:hidden">
+                                <div className="mb-2 text-xl font-semibold uppercase md:hidden lg:text-2xl">
                                     {feature.title}
                                 </div>
                                 {feature.image && (
-                                    <div className="prose prose-2xl w-full font-serif">
+                                    <div className="prose prose-lg w-full font-serif lg:prose-2xl">
                                         <PortableText value={feature.description} />
                                     </div>
                                 )}
