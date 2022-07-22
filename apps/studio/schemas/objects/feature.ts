@@ -19,7 +19,7 @@ export default {
         {
             name: 'description',
             title: 'Description',
-            type: 'complexPortableText',
+            type: 'simplePortableText',
         },
         {
             name: 'image',

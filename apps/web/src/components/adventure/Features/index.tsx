@@ -7,7 +7,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Features = ({ features, color }) => {
     return (
-        <div className="mx-auto w-full max-w-5xl px-3 py-16 md:py-32 md:px-0">
+        <div className="mx-auto w-full max-w-7xl px-3 py-16 md:py-32 md:px-0">
             <h2
                 className="tw-subheading mb-6 text-center md:mb-24 lg:mb-12"
                 style={{
@@ -40,7 +40,7 @@ const Features = ({ features, color }) => {
                                     height={1}
                                 />
                             </div>
-                            <div className="mt-2 hidden text-lg font-medium uppercase md:block">
+                            <div className="mt-2 hidden text-lg font-semibold uppercase md:block">
                                 {feature.title}
                             </div>
                         </Tab>
@@ -75,7 +75,7 @@ const Features = ({ features, color }) => {
                                     {feature.title}
                                 </div>
                                 {feature.image && (
-                                    <div className="prose w-full prose-p:text-xl">
+                                    <div className="prose prose-2xl w-full font-serif">
                                         <PortableText value={feature.description} />
                                     </div>
                                 )}
