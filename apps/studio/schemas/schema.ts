@@ -28,6 +28,7 @@ import feature from './objects/feature';
 import stage from './objects/stage';
 import place from './objects/place';
 import section from './objects/section';
+import level from './objects/level';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -53,6 +54,7 @@ export default createSchema({
         feature,
         stage,
         section,
+        level,
         portableComplex,
         portableSimple,
     ]),

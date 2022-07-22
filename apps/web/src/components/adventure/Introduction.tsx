@@ -5,7 +5,7 @@ import Details from '@/components/adventure/Details';
 const Introduction = ({
     summary,
     tagline,
-    difficulty,
+    level,
     price,
     priceSingleSupplement,
     group,
@@ -29,7 +29,7 @@ const Introduction = ({
                     <PortableText value={summary} />
                 </div>
                 <Details
-                    difficulty={difficulty}
+                    level={level}
                     price={price}
                     priceSingleSupplement={priceSingleSupplement}
                     group={group}

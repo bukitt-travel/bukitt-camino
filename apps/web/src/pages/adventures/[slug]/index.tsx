@@ -34,7 +34,7 @@ const AdventurePage = ({ adventure }) => {
                 group={adventure.group}
                 price={adventure.price}
                 priceSingleSupplement={adventure.priceSingleSupplement}
-                difficulty={adventure.difficulty}
+                level={adventure.level}
                 color={adventure.color}
                 duration={adventure.duration}
                 distance={adventure.distance}

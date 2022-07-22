@@ -1,9 +1,3 @@
-export const difficulty = [
-    { title: 'Beginner', value: 'beginner' },
-    { title: 'Intermediate', value: 'intermediate' },
-    { title: 'Advance', value: 'advance' },
-];
-
 export const serviceCategory = [
     { title: 'Included', value: 'included' },
     { title: 'Not Included', value: 'not included' },
@@ -34,4 +28,10 @@ export const activity = [
     { title: 'Day Trip', value: 'day trip' },
     { title: 'Check-in and Transfer', value: 'check-in and transfer' },
     { title: 'Check-out and Transfer', value: 'check-out and transfer' },
+];
+
+export const level = [
+    { title: 'Beginner', value: 'beginner' },
+    { title: 'Intermediate', value: 'intermediate' },
+    { title: 'Expert', value: 'expert' },
 ];

@@ -1,5 +1,5 @@
 import { RiCompass3Line } from 'react-icons/ri';
-import { difficulty, status } from '../../data';
+import { status } from '../../data';
 
 export default {
     name: 'adventure',
@@ -55,12 +55,9 @@ export default {
             description: 'Min. number of person per group.',
         },
         {
-            name: 'difficulty',
-            title: 'Difficulty',
-            type: 'string',
-            options: {
-                list: [...difficulty],
-            },
+            name: 'level',
+            title: 'Level',
+            type: 'level',
         },
 
         {

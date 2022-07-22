@@ -12,7 +12,7 @@ const adventureFields = groq`
 	price,
 	priceSingleSupplement,
 	group,
-	difficulty,
+	level,
 	location,
 	availability,
 	duration,
