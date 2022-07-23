@@ -74,19 +74,19 @@ const ServicesSlideOver = ({
                                                 <></>
                                             )}
 
-                                            {notIncludedServices?.length ? (
+                                            {addOnServices?.length ? (
                                                 <ServiceCategory
-                                                    label="Not Included"
-                                                    services={notIncludedServices}
+                                                    label="Add-Ons"
+                                                    services={addOnServices}
                                                 />
                                             ) : (
                                                 <></>
                                             )}
 
-                                            {addOnServices?.length ? (
+                                            {notIncludedServices?.length ? (
                                                 <ServiceCategory
-                                                    label="Add-Ons"
-                                                    services={addOnServices}
+                                                    label="Not Included"
+                                                    services={notIncludedServices}
                                                 />
                                             ) : (
                                                 <></>

@@ -118,10 +118,10 @@ export default {
             type: 'color',
         },
         {
-            name: 'features',
-            title: 'Features',
+            name: 'highlights',
+            title: 'Highlights',
             type: 'array',
-            of: [{ type: 'feature' }],
+            of: [{ type: 'highlight' }],
         },
         {
             name: 'itinerary',

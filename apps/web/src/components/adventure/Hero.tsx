@@ -1,49 +1,39 @@
 import Image from 'next/image';
-import { RiMapPin3Line } from 'react-icons/ri';
-
-import CaminoIcon from '@/components/icons/CaminoIcon';
 
 import { urlForImage } from '@/lib/sanity';
 
-const Hero = ({ adventure, setOpen }) => {
+const Hero = ({ adventure }) => {
     const title = adventure.title.split(' ');
 
     return (
         <section
-            className="flex min-h-screen flex-col py-12 md:py-32"
+            className="lg:tw-hero-full-desktop tw-hero-full-mobile flex flex-col py-12 px-3 text-stone-50 lg:px-24 lg:py-24"
             style={{
                 backgroundColor: adventure.color,
             }}
         >
             <div className="text-center">
-                <h2 className="flex items-baseline justify-center gap-x-1 text-xl font-medium md:gap-x-2 md:text-3xl">
-                    <RiMapPin3Line />
+                <h2 className="px-3 text-xs uppercase tracking-widest lg:mt-2 lg:px-12 lg:text-2xl">
                     <span>{adventure.location}</span>
                 </h2>
-                <h1 className="relative z-10 mt-1.5 flex flex-col font-serif text-5xl font-bold uppercase md:mt-6 md:text-9xl">
-                    {title.map((word, idx) => (
-                        <span key={idx}>{word}</span>
-                    ))}
+                <h1 className="relative z-10 mt-1.5 flex flex-col font-serif lg:mt-3 lg:text-9xl">
+                    <span className="text-5xl font-bold uppercase lg:text-8xl">{title[0]}</span>
+                    <span className="font-serif text-6xl font-light italic lg:text-9xl">
+                        {title[1]}
+                    </span>
                 </h1>
             </div>
 
-            <div className="z-0 mx-auto -mt-6 w-full max-w-4xl md:-mt-24">
+            <div className="z-0 mx-auto -mt-6 w-full max-w-2xl md:-mt-24">
                 <Image
                     src={urlForImage(adventure.image).url()}
                     alt="Camino de Santiago"
                     layout="responsive"
-                    width={1}
-                    height={1}
+                    width={4}
+                    height={3}
                     objectFit="cover"
                     objectPosition="center"
-                    className="rounded-full"
                 />
-            </div>
-
-            <div className="mt-6 flex justify-center lg:mt-12">
-                <a href="#intro">
-                    <CaminoIcon className="tw-transition w-24 rotate-180 cursor-pointer fill-stone-900 hover:scale-105 hover:fill-stone-50" />
-                </a>
             </div>
         </section>
     );

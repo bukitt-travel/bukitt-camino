@@ -44,7 +44,6 @@ export default AboutPage;
 
 export async function getStaticProps() {
     const data = await sanityClient.fetch(aboutPageQuery);
-    console.log(data);
     return {
         props: {
             about: data.about,

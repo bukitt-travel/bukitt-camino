@@ -26,12 +26,16 @@ const adventureFields = groq`
 		price,
 		"icon": icon.asset->url
 	},
-	"features": features[]{
+	"highlights": highlights[]{
 		title,
 		description,
+		"gallery": gallery.images[]{
+			"image": asset->url,
+			alt,
+			caption
+		},
 		"icon": icon.asset->url,
-		"image": image.asset->url
-	},
+ 	},
 	"itinerary": itinerary[]{
 		"id": itinerary._key,
 		locationFrom,

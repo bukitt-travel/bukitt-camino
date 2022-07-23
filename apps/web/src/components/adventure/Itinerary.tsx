@@ -67,7 +67,6 @@ const Itinerary = ({ itinerary, color }) => {
                                                     ? 'font-semibold'
                                                     : 'opacity-50',
                                             )}
-                                            style={{ color: color }}
                                         >
                                             <Tab className="outline-none [&:not(:focus-visible)]:focus:outline-none">
                                                 <span className="absolute inset-0" />

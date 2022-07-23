@@ -8,7 +8,7 @@ import ServicesSlideOver from '@/components/adventure/ServicesSlideOver';
 import Introduction from '@/components/adventure/Introduction';
 import ActionsMenu from '@/components/adventure/ActionsMenu';
 import Hero from '@/components/adventure/Hero';
-import Features from '@/components/adventure/Features';
+import Highlights from '@/components/adventure/Highlights';
 import Itinerary from '@/components/adventure/Itinerary';
 import Map from '@/components/adventure/Map';
 import Services from '@/components/adventure/Services';
@@ -26,7 +26,7 @@ const AdventurePage = ({ adventure }) => {
 
     return (
         <Page metaTitle={adventure?.title} metaDescription={adventure?.summary}>
-            <Hero adventure={adventure} setOpen={setOpenServices} />
+            <Hero adventure={adventure} />
 
             <Introduction
                 slogan={adventure.slogan}
@@ -41,8 +41,8 @@ const AdventurePage = ({ adventure }) => {
                 setOpen={setOpenServices}
             />
 
-            {adventure.features && (
-                <Features features={adventure.features} color={adventure.color} />
+            {adventure.highlights && (
+                <Highlights highlights={adventure.highlights} color={adventure.color} />
             )}
 
             <Itinerary itinerary={adventure?.itinerary} color={adventure.color} />
@@ -58,7 +58,7 @@ const AdventurePage = ({ adventure }) => {
                 color={adventure.color}
             />
 
-            <ActionsMenu adventure={adventure} setOpenServices={setOpenServices} />
+            <ActionsMenu setOpenServices={setOpenServices} />
 
             <ServicesSlideOver
                 title={adventure.title}

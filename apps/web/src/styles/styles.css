@@ -28,7 +28,10 @@
     .tw-summary {
         @apply prose font-serif prose-p:text-lg md:prose-p:text-3xl;
     }
-    .tw-hero-full {
+    .tw-hero-full-desktop {
         min-height: calc(100vh - 96px);
+    }
+    .tw-hero-full-mobile {
+        min-height: calc(100vh - 64px);
     }
 }

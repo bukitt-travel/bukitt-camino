@@ -17,6 +17,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'age',
+            title: 'Age',
+            type: 'number',
+        },
+        {
             name: 'quote',
             title: 'Quote',
             type: 'simplePortableText',

@@ -24,11 +24,13 @@ import story from './documents/story';
 import portableComplex from './objects/portableComplex';
 import portableSimple from './objects/portableSimple';
 import service from './objects/service';
-import feature from './objects/feature';
+import highlight from './objects/highlight';
 import stage from './objects/stage';
 import place from './objects/place';
 import section from './objects/section';
 import level from './objects/level';
+import imageGallery from './objects/imageGallery';
+import imageCustom from './objects/imageCustom';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -51,10 +53,12 @@ export default createSchema({
         place,
         // When added to this list, object types can be used as
         // { type: 'typename' } in other document schemas
-        feature,
+        highlight,
         stage,
         section,
         level,
+        imageGallery,
+        imageCustom,
         portableComplex,
         portableSimple,
     ]),
