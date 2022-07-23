@@ -50,6 +50,7 @@ export default {
             title: 'Stage Number',
             type: 'number',
             description: 'Number of the route stage.',
+            hidden: ({ parent }) => parent.activity !== 'route stage',
         },
         {
             name: 'distance',
@@ -63,12 +64,9 @@ export default {
             type: 'text',
         },
         {
-            name: 'image',
-            title: 'Image',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
+            name: 'gallery',
+            title: 'Gallery',
+            type: 'imageGallery',
         },
     ],
     preview: {
@@ -78,16 +76,18 @@ export default {
             from: 'locationFrom',
             start: 'dayFrom',
             end: 'dayTo',
+            stageNumber: 'stageNumber',
         },
-        prepare: ({ from, to, distance, start, end }) => {
+        prepare: ({ from, to, distance, start, end, stageNumber }) => {
             from = from ? from : '';
             to = to ? `- ${to}` : '';
-            start = start ? `day ${start}` : '';
+            start = start ? `Day ${start}` : '';
             end = end ? ` - ${end}` : '';
             distance = distance ? `${distance}km /` : '';
+            stageNumber = stageNumber ? `Stage ${stageNumber} / ` : '';
             return {
                 title: `${from} ${to}`,
-                subtitle: `${distance} ${start} ${end}`,
+                subtitle: `${stageNumber} ${distance} ${start} ${end}`,
             };
         },
     },

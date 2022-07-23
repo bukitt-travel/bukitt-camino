@@ -13,7 +13,7 @@ const List = ({ adventures }) => {
                 const title = adventure.title.split(' ');
                 return (
                     <div
-                        className="h-fit py-12 text-center odd:mt-0 md:py-32 md:even:mt-48 lg:odd:text-left lg:even:text-right"
+                        className="h-fit py-12 text-center odd:mt-0 md:py-24 md:even:mt-48 lg:odd:text-left lg:even:text-right"
                         style={{
                             backgroundColor: adventure.color,
                         }}
@@ -34,7 +34,7 @@ const List = ({ adventures }) => {
                                     </span>
                                 </h2>
 
-                                <div className="z-0 -mt-6 px-12 md:-mt-12">
+                                <div className="z-0 -mt-6 px-12 md:-mt-16">
                                     {adventure.image && (
                                         <Image
                                             src={urlForImage(adventure.image).url()}

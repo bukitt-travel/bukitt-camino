@@ -47,7 +47,11 @@ const adventureFields = groq`
 		activity,
 		stageNumber,
 		description,
-		image
+		"gallery": gallery.images[]{
+			"image": asset->url,
+			alt,
+			caption
+		},
 	},
 	"routeMap": routeMap[]{
 		"id": routeMap._key,

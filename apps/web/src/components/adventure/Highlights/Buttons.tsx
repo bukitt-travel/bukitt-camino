@@ -1,7 +1,6 @@
-export const PrevButton = ({ enabled, onClick, color }) => (
+export const PrevButton = ({ enabled, onClick }) => (
     <button
-        className="absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full border-2 border-stone-50 bg-transparent fill-stone-50 p-1.5 outline-none lg:left-6 lg:h-8 lg:w-8 lg:p-2"
-        style={{ backgroundColor: color }}
+        className="absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full bg-stone-900 fill-stone-50 p-1.5 outline-none lg:left-6 lg:h-8 lg:w-8 lg:p-2"
         onClick={onClick}
         disabled={!enabled}
     >
@@ -11,10 +10,9 @@ export const PrevButton = ({ enabled, onClick, color }) => (
     </button>
 );
 
-export const NextButton = ({ enabled, onClick, color }) => (
+export const NextButton = ({ enabled, onClick }) => (
     <button
-        className="absolute top-1/2 right-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full border-2 border-stone-50 bg-transparent fill-stone-50 p-1.5 outline-none lg:right-6 lg:h-8 lg:w-8 lg:p-2"
-        style={{ backgroundColor: color }}
+        className="absolute top-1/2 right-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full bg-stone-900 fill-stone-50 p-1.5 outline-none lg:right-6 lg:h-8 lg:w-8 lg:p-2"
         onClick={onClick}
         disabled={!enabled}
     >

@@ -6,8 +6,7 @@ import { urlForImage } from '@/lib/sanity';
 
 import { PrevButton, NextButton } from '@/components/adventure/Highlights/Buttons';
 
-const Slider = ({ gallery, color }) => {
-    console.log(gallery);
+const Slider = ({ gallery }) => {
     const [viewportRef, embla] = useEmblaCarousel({
         loop: true,
         skipSnaps: false,
@@ -50,8 +49,8 @@ const Slider = ({ gallery, color }) => {
                     ))}
                 </div>
             </div>
-            <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} color={color} />
-            <NextButton onClick={scrollNext} enabled={nextBtnEnabled} color={color} />
+            <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+            <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
         </div>
     );
 };

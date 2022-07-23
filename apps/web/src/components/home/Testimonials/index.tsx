@@ -78,10 +78,10 @@ const Testimonials = ({ testimonials }) => {
                                         className="rounded-full"
                                     />
                                 </div>
-                                <h2 className="mt-1 text-base font-medium uppercase md:mt-2 md:text-xl">
+                                <h2 className="mt-1 text-sm font-semibold uppercase text-slate-700 md:mt-2 md:text-xl">
                                     {testimonial.name}
                                 </h2>
-                                <h2 className="text-sm italic md:text-base">
+                                <h2 className="text-sm italic text-slate-500 md:text-base">
                                     {testimonial.location}
                                 </h2>
                             </div>

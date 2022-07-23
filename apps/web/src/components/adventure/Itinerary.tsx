@@ -1,12 +1,9 @@
 import { useEffect, useId, useState } from 'react';
-import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 import { RiTrainLine, RiBus2Line, RiPlaneLine, RiWalkLine } from 'react-icons/ri';
 
-import { urlForImage } from '@/lib/sanity';
-
-import Container from '@/components/shared/Container';
+import Slider from '@/components/adventure/Highlights/Slider';
 import DiamondIcon from '@/components/icons/DiamondIcon';
 
 const Itinerary = ({ itinerary, color }) => {
@@ -115,21 +112,7 @@ const Itinerary = ({ itinerary, color }) => {
 
                                 <div className="mt-4 grid w-full grid-cols-1 gap-x-6 lg:mt-12 lg:grid-cols-2">
                                     <div className="col-span-1">
-                                        {stage.image && (
-                                            <Image
-                                                src={urlForImage(stage.image)
-                                                    .width(1080)
-                                                    .height(1080)
-                                                    .url()}
-                                                alt=""
-                                                layout="responsive"
-                                                width={1}
-                                                height={1}
-                                                objectFit="cover"
-                                                objectPosition="center"
-                                                className="bg-stone-200"
-                                            />
-                                        )}
+                                        {stage?.gallery && <Slider gallery={stage?.gallery} />}
                                     </div>
                                     <div className="col-span-1 mt-4 lg:mt-0">
                                         <div>
