@@ -34,25 +34,27 @@ const Slider = ({ gallery }) => {
                 <div className="tw-embla-container -ml-2 flex select-none">
                     {gallery.map((image, idx) => (
                         <div className="relative min-w-full" key={idx}>
-                            <div className="relative overflow-hidden">
-                                <Image
-                                    src={urlForImage(image.image).url()}
-                                    layout="responsive"
-                                    height={1}
-                                    width={1}
-                                    objectFit="cover"
-                                    objectPosition="center"
-                                    alt={image.alt ?? ''}
-                                    className="bg-stone-200"
-                                />
-                            </div>
+                            <Image
+                                src={urlForImage(image?.image).url()}
+                                layout="responsive"
+                                height={1}
+                                width={1}
+                                objectFit="cover"
+                                objectPosition="center"
+                                alt={image.alt ?? ''}
+                                className="bg-stone-200"
+                            />
                         </div>
                     ))}
                 </div>
             </div>
 
-            <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-            <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+            {gallery && gallery.length > 1 && (
+                <>
+                    <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+                    <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+                </>
+            )}
         </div>
     );
 };
