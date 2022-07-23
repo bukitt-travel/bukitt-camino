@@ -14,7 +14,7 @@ import Value from '@/components/adventure/Details/Value';
 import ValueSmall from '@/components/adventure/Details/ValueSmall';
 import DetailContainer from '@/components/adventure/Details/DetailContainer';
 
-const Details = ({ level, price, group, distance, duration, setOpen }) => {
+const Details = ({ level, price, priceSingleSupplement, group, distance, duration, setOpen }) => {
     return (
         <section className="col-span-1 flex flex-col divide-y divide-dashed divide-stone-900 divide-opacity-50 md:col-span-2">
             <DetailContainer>
@@ -25,10 +25,10 @@ const Details = ({ level, price, group, distance, duration, setOpen }) => {
                 <ValueContainer>
                     <ValueSmall>from</ValueSmall>
                     <Value> ${price}</Value>
-                    {/* <div className="text-sm">
+                    <div className="text-sm">
                         <span className="font-medium">+ ${priceSingleSupplement} </span>
                         <span className="text-xs text-stone-500">single supplement</span>
-                    </div> */}
+                    </div>
                 </ValueContainer>
             </DetailContainer>
 
