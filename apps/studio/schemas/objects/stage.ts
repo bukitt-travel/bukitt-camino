@@ -57,6 +57,7 @@ export default {
             title: 'Distance',
             type: 'number',
             validation: (Rule) => Rule.min(0).max(1000),
+            hidden: ({ parent }) => parent.activity !== 'route stage',
         },
         {
             name: 'description',

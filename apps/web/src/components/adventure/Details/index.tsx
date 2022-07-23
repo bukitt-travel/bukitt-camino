@@ -14,7 +14,7 @@ import Value from '@/components/adventure/Details/Value';
 import ValueSmall from '@/components/adventure/Details/ValueSmall';
 import DetailContainer from '@/components/adventure/Details/DetailContainer';
 
-const Details = ({ level, price, priceSingleSupplement, group, distance, duration, setOpen }) => {
+const Details = ({ level, price, group, distance, duration, setOpen }) => {
     return (
         <section className="col-span-1 flex flex-col divide-y divide-dashed divide-stone-900 divide-opacity-50 md:col-span-2">
             <DetailContainer>
