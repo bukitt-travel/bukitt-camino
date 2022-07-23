@@ -57,9 +57,7 @@ const Highlights = ({ highlights, color }) => {
                             )}
                         >
                             <div className="col-span-1 bg-stone-200">
-                                {highlight.gallery && (
-                                    <Slider gallery={highlight.gallery}  />
-                                )}
+                                {highlight.gallery && <Slider gallery={highlight.gallery} />}
                             </div>
 
                             <div className="col-span-1">

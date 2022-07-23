@@ -112,8 +112,9 @@ const Itinerary = ({ itinerary, color }) => {
 
                                 <div className="mt-4 grid w-full grid-cols-1 gap-x-6 lg:mt-12 lg:grid-cols-2">
                                     <div className="col-span-1 bg-stone-200">
-                                        {stage?.gallery && <Slider gallery={stage?.gallery} />}
+                                        {stage.gallery && <Slider gallery={stage.gallery} />}
                                     </div>
+
                                     <div className="col-span-1 mt-4 lg:mt-0">
                                         <div>
                                             {stage.activity === 'route stage' && (
