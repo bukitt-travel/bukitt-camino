@@ -42,7 +42,7 @@ const Slider = ({ gallery }) => {
                                     width={1}
                                     objectFit="cover"
                                     objectPosition="center"
-                                    alt="A cool cat."
+                                    alt={image.alt ?? ''}
                                     className="bg-stone-200"
                                 />
                             </div>
@@ -51,12 +51,8 @@ const Slider = ({ gallery }) => {
                 </div>
             </div>
 
-            {gallery && gallery.length > 1 && (
-                <>
-                    <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-                    <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-                </>
-            )}
+            <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+            <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
         </div>
     );
 };
