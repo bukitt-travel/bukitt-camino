@@ -41,11 +41,9 @@ const AdventurePage = ({ adventure }) => {
                 setOpen={setOpenServices}
             />
 
-            {adventure.highlights && (
-                <Highlights highlights={adventure.highlights} color={adventure.color} />
-            )}
+            <Highlights highlights={adventure.highlights} color={adventure.color} />
 
-            <Itinerary itinerary={adventure?.itinerary} color={adventure.color} />
+            <Itinerary itinerary={adventure.itinerary} color={adventure.color} />
 
             <section className="h-screen w-full py-24 md:py-32">
                 <Map routeMap={adventure.routeMap} color={adventure.color} />

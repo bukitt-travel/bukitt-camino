@@ -32,8 +32,8 @@ const Slider = ({ gallery }) => {
         <div className="relative">
             <div className="w-full overflow-hidden" ref={viewportRef}>
                 <div className="tw-embla-container -ml-2 flex select-none">
-                    {gallery.map((image, index) => (
-                        <div className="relative min-w-full" key={index}>
+                    {gallery.map((image, idx) => (
+                        <div className="relative min-w-full" key={idx}>
                             <div className="relative overflow-hidden">
                                 <Image
                                     src={urlForImage(image.image).url()}

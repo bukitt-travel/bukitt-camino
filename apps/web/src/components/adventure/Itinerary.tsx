@@ -47,7 +47,7 @@ const Itinerary = ({ itinerary, color }) => {
                     <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
                         {({ selectedIndex }) =>
                             itinerary?.map((stage, stageIndex) => (
-                                <div key={stage.dateTime} className="relative lg:pl-8">
+                                <div key={stageIndex} className="relative lg:pl-8">
                                     <DiamondIcon
                                         className={clsx(
                                             'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
@@ -80,9 +80,9 @@ const Itinerary = ({ itinerary, color }) => {
                 <Tab.Panels className="lg:col-span-3">
                     {itinerary?.map((stage) => (
                         <Tab.Panel
-                            key={stage.id}
-                            className="[&:not(:focus-visible)]:focus:outline-none"
-                            unmount={false}
+                            key={stage._key}
+                            // // className="[&:not(:focus-visible)]:focus:outline-none"
+                            // // unmount={false}
                         >
                             <section>
                                 <div className="text-center text-sm font-medium uppercase tracking-wider text-stone-700 lg:text-left lg:text-lg">
