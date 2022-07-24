@@ -16,7 +16,7 @@ export default {
         {
             name: 'description',
             title: 'Description',
-            type: 'text',
+            type: 'simplePortableText',
         },
         {
             name: 'image',
@@ -27,4 +27,8 @@ export default {
             },
         },
     ],
+    options: {
+        collapsible: true,
+        collapsed: true,
+    },
 };
