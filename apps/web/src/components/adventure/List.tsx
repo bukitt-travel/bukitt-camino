@@ -29,7 +29,7 @@ const List = ({ adventures }) => {
                                     <span className="text-5xl font-bold uppercase lg:text-8xl">
                                         {title[0]}
                                     </span>
-                                    <span className="font-serif text-6xl font-light italic lg:text-9xl">
+                                    <span className="text-6xl font-light italic lg:text-9xl">
                                         {title[1]}
                                     </span>
                                 </h2>

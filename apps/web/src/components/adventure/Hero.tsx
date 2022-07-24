@@ -33,6 +33,7 @@ const Hero = ({ adventure }) => {
                     height={3}
                     objectFit="cover"
                     objectPosition="center"
+                    priority
                 />
             </div>
         </section>

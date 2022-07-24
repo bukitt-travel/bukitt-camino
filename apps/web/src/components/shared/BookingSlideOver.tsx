@@ -36,10 +36,10 @@ const BookingSlideOver = () => {
                         leaveTo="translate-x-full"
                     >
                         <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
-                            <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl ">
+                            <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl">
                                 <div className="bg-stone-900 text-stone-50">
-                                    <div className="flex items-center justify-between px-3 ">
-                                        <Dialog.Title className="flex h-16 items-center font-serif text-lg font-medium">
+                                    <div className="flex items-center justify-between px-3">
+                                        <Dialog.Title className="flex h-16 items-center font-serif text-lg font-medium lg:h-24 lg:text-2xl">
                                             {' '}
                                             Contact Us{' '}
                                         </Dialog.Title>
