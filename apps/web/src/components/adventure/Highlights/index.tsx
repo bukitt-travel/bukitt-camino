@@ -9,7 +9,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Highlights = ({ highlights, color }) => {
     return (
-        <div className="mx-auto w-full max-w-7xl px-3 py-16 md:py-32 md:px-0">
+        <div className="mx-auto w-full max-w-5xl px-3 py-16 md:py-32 md:px-0">
             <h2
                 className="tw-subheading mb-6 text-center md:mb-24 lg:mb-12"
                 style={{
@@ -40,6 +40,8 @@ const Highlights = ({ highlights, color }) => {
                                     layout="responsive"
                                     width={1}
                                     height={1}
+                                    objectFit="contain"
+                                    objectPosition="center"
                                 />
                             </div>
                             <div className="mt-2 hidden text-lg font-semibold uppercase md:block">
@@ -56,8 +58,10 @@ const Highlights = ({ highlights, color }) => {
                                 'grid grid-cols-1 gap-x-12 gap-y-6 bg-stone-50 p-3 md:gap-y-0 lg:grid-cols-2',
                             )}
                         >
-                            <div className="col-span-1 bg-stone-200">
-                                {highlight.gallery && <Slider gallery={highlight.gallery} />}
+                            <div className="col-span-1">
+                                {highlight.gallery && (
+                                    <Slider gallery={highlight.gallery} color={color} />
+                                )}
                             </div>
 
                             <div className="col-span-1">
@@ -65,7 +69,7 @@ const Highlights = ({ highlights, color }) => {
                                     {highlight.title}
                                 </div>
                                 {highlight.description && (
-                                    <div className="prose prose-lg w-full font-serif lg:prose-2xl">
+                                    <div className="prose prose-lg w-full lg:prose-xl">
                                         <PortableText value={highlight.description} />
                                     </div>
                                 )}

@@ -6,7 +6,7 @@ import { urlForImage } from '@/lib/sanity';
 
 import { PrevButton, NextButton } from '@/components/adventure/Highlights/Buttons';
 
-const Slider = ({ gallery }) => {
+const Slider = ({ gallery, color }) => {
     const [viewportRef, embla] = useEmblaCarousel({
         loop: true,
         skipSnaps: false,
@@ -31,18 +31,17 @@ const Slider = ({ gallery }) => {
     return (
         <div className="relative">
             <div className="w-full overflow-hidden" ref={viewportRef}>
-                <div className="tw-embla-container -ml-2 flex select-none">
+                <div className="tw-embla-container flex select-none">
                     {gallery.map((image, idx) => (
                         <div className="relative min-w-full" key={idx}>
                             <Image
-                                src={urlForImage(image?.image).url()}
+                                src={urlForImage(image?.image.url).url()}
                                 layout="responsive"
-                                height={1}
                                 width={1}
+                                height={1}
                                 objectFit="cover"
                                 objectPosition="center"
                                 alt={image.alt ?? ''}
-                                className="bg-stone-200"
                             />
                         </div>
                     ))}
@@ -51,8 +50,8 @@ const Slider = ({ gallery }) => {
 
             {gallery && gallery.length > 1 && (
                 <>
-                    <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-                    <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+                    <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} color={color} />
+                    <NextButton onClick={scrollNext} enabled={nextBtnEnabled} color={color} />
                 </>
             )}
         </div>

@@ -30,9 +30,15 @@ const adventureFields = groq`
 		title,
 		description,
 		"gallery": gallery.images[]{
-			"image": asset->url,
-			alt,
-			caption
+			"image": asset->{
+				url,
+				"width": metadata.dimensions.width,
+				"height": metadata.dimensions.height,
+				"aspectRatio": metadata.dimensions.aspectRatio,
+				url,
+				alt,
+				caption
+			},
 		},
 		"icon": icon.asset->url,
  	},
@@ -48,9 +54,15 @@ const adventureFields = groq`
 		stageNumber,
 		description,
 		"gallery": gallery.images[]{
-			"image": asset->url,
-			alt,
-			caption
+			"image": asset->{
+				url,
+				"width": metadata.dimensions.width,
+				"height": metadata.dimensions.height,
+				"aspectRatio": metadata.dimensions.aspectRatio,
+				url,
+				alt,
+				caption
+			},
 		},
 	},
 	"routeMap": routeMap[]{
