@@ -1,17 +1,17 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { RiMenu4Line, RiSendPlaneLine } from 'react-icons/ri';
 
 import { useStore } from '@/lib/store';
 
 import NavLink from '@/components/navigation/NavLink';
+import Logo from '@/components/icons/Logo';
 
 const Header = ({ setOpenMobileMenu, navLinks }) => {
     // @ts-expect-error need to find types for useStore()
     const { toggleBooking } = useStore();
 
     return (
-        <nav className="mx-auto grid h-16 grid-cols-3 items-center border-b px-3 md:px-3 lg:h-24">
+        <nav className="z-50 mx-auto grid h-16 grid-cols-3 items-center border-b p-3  lg:h-24">
             <div className="col-span-1 hidden justify-start space-x-6 lg:flex">
                 {navLinks.map((navLink) => (
                     <div key={navLink.id}>
@@ -25,17 +25,8 @@ const Header = ({ setOpenMobileMenu, navLinks }) => {
 
             <div className="col-span-1 flex justify-center">
                 <Link href="/">
-                    <a className="tw-transition w-12 hover:scale-95 md:w-16">
-                        <Image
-                            src="/logo.png"
-                            className="inline-block"
-                            layout="responsive"
-                            width={1}
-                            height={1}
-                            alt="Bukitt Camino"
-                            priority
-                            unoptimized
-                        />
+                    <a className="tw-transition w-32 hover:scale-95 md:w-48">
+                        <Logo />
                     </a>
                 </Link>
             </div>

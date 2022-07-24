@@ -8,7 +8,7 @@ import { urlForImage } from '@/lib/sanity';
 const ServiceCategory = ({ label, services }) => {
     return (
         <div className="mt-6 border-b border-dashed border-stone-900 py-6">
-            <h2 className="font-serif text-2xl font-medium lg:text-3xl">{label}</h2>
+            <h2 className="font-serif text-3xl font-medium lg:text-4xl">{label}</h2>
             <dl className="mt-6 space-y-6 divide-y divide-dashed divide-stone-900 divide-opacity-50">
                 {services &&
                     services?.map((service) => (
@@ -29,21 +29,9 @@ const ServiceCategory = ({ label, services }) => {
                                                 </div>
 
                                                 <div className="flex items-baseline gap-x-2">
-                                                    <p className="text-base font-semibold uppercase lg:text-base">
+                                                    <p className="text-sm font-semibold uppercase lg:text-base">
                                                         {service.title}
                                                     </p>
-                                                    {service?.category === 'add on' &&
-                                                        service?.price && (
-                                                            <p className="mt-2">
-                                                                <span className="text-xs italic">
-                                                                    from
-                                                                </span>
-                                                                <span className="text-sm font-medium">
-                                                                    {' '}
-                                                                    ${service.price}
-                                                                </span>
-                                                            </p>
-                                                        )}
                                                 </div>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
@@ -67,6 +55,15 @@ const ServiceCategory = ({ label, services }) => {
                                     >
                                         <Disclosure.Panel as="dd" className="mt-4 pr-12">
                                             <p className="text-base">{service.description}</p>
+                                            {service?.category === 'add on' && service?.price && (
+                                                <p className="mt-2">
+                                                    <span className="text-xs italic">from</span>
+                                                    <span className="text-sm font-medium">
+                                                        {' '}
+                                                        ${service.price}
+                                                    </span>
+                                                </p>
+                                            )}
                                         </Disclosure.Panel>
                                     </Transition>
                                 </>

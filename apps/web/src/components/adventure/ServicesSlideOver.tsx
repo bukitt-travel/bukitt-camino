@@ -40,10 +40,10 @@ const ServicesSlideOver = ({
                                 leaveTo="translate-x-full"
                             >
                                 <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 py-6 shadow-xl">
-                                        <div className="border-b-2 border-stone-900 px-4 pb-6 sm:px-3">
-                                            <div className="flex items-start justify-between">
-                                                <Dialog.Title className="font-serif text-lg font-medium">
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl ">
+                                        <div className="bg-stone-900 text-stone-50">
+                                            <div className="flex items-center justify-between px-3 ">
+                                                <Dialog.Title className="flex h-16 items-center font-serif text-lg font-medium">
                                                     {' '}
                                                     {title} Details{' '}
                                                 </Dialog.Title>

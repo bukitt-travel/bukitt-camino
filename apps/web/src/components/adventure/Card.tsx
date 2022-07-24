@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiMapPin2Fill } from 'react-icons/ri';
 
 import { urlForImage } from '@/lib/sanity';
 

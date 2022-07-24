@@ -94,7 +94,7 @@ const Testimonials = ({ testimonials }) => {
                 {scrollSnaps.map((_, idx) => (
                     <button
                         className={`h-2 w-2 rounded-full ${
-                            idx === selectedIndex ? 'bg-stone-500' : 'bg-stone-300'
+                            idx === selectedIndex ? 'bg-yellow-500' : 'bg-stone-300'
                         }`}
                         key={idx}
                         onClick={() => scrollTo(idx)}
@@ -106,99 +106,3 @@ const Testimonials = ({ testimonials }) => {
 };
 
 export default Testimonials;
-
-// // // import { useState, useEffect, useCallback } from 'react';
-// // // import Image from 'next/image';
-// // // import useEmblaCarousel from 'embla-carousel-react';
-// // // import { mediaByIndex } from '../media';
-// // // import { PortableText } from '@portabletext/react';
-
-// // // import { urlForImage } from '@/lib/sanity';
-
-// // // import { DotButton, PrevButton, NextButton } from '@/components/home/Testimonials/Buttons';
-
-// // // const Testimonials = ({ slides }) => {
-// // //     const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false });
-// // //     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-// // //     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-// // //     const [selectedIndex, setSelectedIndex] = useState(0);
-// // //     const [scrollSnaps, setScrollSnaps] = useState([]);
-
-// // //     const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-// // //     const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
-// // //     const scrollTo = useCallback((index) => embla && embla.scrollTo(index), [embla]);
-
-// // //     const onSelect = useCallback(() => {
-// // //         if (!embla) return;
-// // //         setSelectedIndex(embla.selectedScrollSnap());
-// // //         setPrevBtnEnabled(embla.canScrollPrev());
-// // //         setNextBtnEnabled(embla.canScrollNext());
-// // //     }, [embla, setSelectedIndex]);
-
-// // //     useEffect(() => {
-// // //         if (!embla) return;
-// // //         onSelect();
-// // //         setScrollSnaps(embla.scrollSnapList());
-// // //         embla.on('select', onSelect);
-// // //     }, [embla, setScrollSnaps, onSelect]);
-
-// // //     return (
-// // //         <>
-// // //             <div className="relative mx-auto max-w-2xl bg-stone-200 p-5">
-// // //                 <div ref={viewportRef} className="w-full overflow-hidden">
-// // //                     <div className="tw-embla-container -ml-2 flex select-none">
-// // //                         {slides.map((slide, idx) => (
-// // //                             <div className="relative min-w-full pl-2" key={idx}>
-// // //                                 <div className="relative h-48 overflow-hidden">
-// // //                                     <PortableText value={slide.description} />
-// // //                                     {/* <img
-// // //                                         className="embla__slide__img"
-// // //                                         src={mediaByIndex(index)}
-// // //                                         alt="A cool cat."
-// // //                                     /> */}
-// // //                                 </div>
-// // //                             </div>
-// // //                         ))}
-// // //                     </div>
-// // //                 </div>
-// // //                 <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-// // //                 <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-// // //             </div>
-
-// // //             <div className="flex list-none justify-center pt-2">
-// // //                 {scrollSnaps.map((_, index) => (
-// // //                     <DotButton
-// // //                         key={index}
-// // //                         selected={index === selectedIndex}
-// // //                         onClick={() => scrollTo(index)}
-// // //                     />
-// // //                 ))}
-// // //             </div>
-// // //         </>
-// // //         <section className="mx-auto flex min-h-screen max-w-3xl items-center justify-center text-center">
-// // //             {slides.map((slide) => (
-// // //                 <div key={slide.id} className="flex flex-col items-center">
-// // //                     <div className="font-serif text-4xl">
-// // //                         <PortableText value={slide.quote} />
-// // //                     </div>
-// // //                     <div className="mt-6 w-24 rounded-full bg-stone-200">
-// // //                         <Image
-// // //                             src={urlForImage(slide.image).url()}
-// // //                             alt=""
-// // //                             layout="responsive"
-// // //                             width={1}
-// // //                             height={1}
-// // //                             objectFit="cover"
-// // //                             objectPosition="center"
-// // //                             className="rounded-full"
-// // //                         />
-// // //                     </div>
-// // //                     <div className="mt-2 text-lg font-medium uppercase">{slide.name}</div>
-// // //                     <div className="text-base italic text-stone-700">{slide.location}</div>
-// // //                 </div>
-// // //             ))}
-// // //         </section>
-// // //     );
-// // // };
-
-// // // export default Testimonials;
