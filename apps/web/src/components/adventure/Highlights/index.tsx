@@ -11,7 +11,7 @@ const Highlights = ({ highlights, color }) => {
     return (
         <div className="mx-auto w-full max-w-5xl px-3 py-16 md:py-32 md:px-0">
             <h2
-                className="tw-subheading mb-6 text-center md:mb-24 lg:mb-12"
+                className="tw-subheading text-center"
                 style={{
                     color: color,
                 }}

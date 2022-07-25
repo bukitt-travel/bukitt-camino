@@ -35,7 +35,7 @@ const Slider = ({ gallery, color }) => {
                     {gallery.map((image, idx) => (
                         <div className="relative min-w-full" key={idx}>
                             <Image
-                                src={urlForImage(image?.image.url).url()}
+                                src={urlForImage(image).url()}
                                 layout="responsive"
                                 width={1}
                                 height={1}

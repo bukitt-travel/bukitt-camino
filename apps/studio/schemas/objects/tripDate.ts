@@ -1,4 +1,5 @@
 import { RiCalendar2Line } from 'react-icons/ri';
+import { availability } from '../../data';
 
 export default {
     name: 'tripDate',
@@ -22,6 +23,14 @@ export default {
             options: {
                 dateFormat: 'MMMM Do YYYY',
                 calendarTodayLabel: 'Today',
+            },
+        },
+        {
+            name: 'availability',
+            title: 'Availability',
+            type: 'string',
+            options: {
+                list: [...availability],
             },
         },
     ],

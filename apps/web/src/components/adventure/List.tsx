@@ -13,11 +13,11 @@ const List = ({ adventures }) => {
                 const title = adventure.title.split(' ');
                 return (
                     <div
+                        key={adventure.id}
                         className="h-fit py-12 text-center odd:mt-0 md:py-24 md:even:mt-48 lg:odd:text-left lg:even:text-right"
                         style={{
                             backgroundColor: adventure.color,
                         }}
-                        key={adventure.id}
                     >
                         <Link href={`/adventures/${adventure.slug}`} passHref>
                             <a className="group">

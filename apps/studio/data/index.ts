@@ -35,3 +35,10 @@ export const level = [
     { title: 'Intermediate', value: 'intermediate' },
     { title: 'Expert', value: 'expert' },
 ];
+
+export const availability = [
+    { title: 'Sold Out', value: 'sold out' },
+    { title: 'Last Spots', value: 'last spots' },
+    { title: 'Cancelled', value: 'cancelled' },
+    { title: 'Postponed', value: 'postponed' },
+];

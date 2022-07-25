@@ -1,65 +1,59 @@
 import { format, isBefore } from 'date-fns';
 import clsx from 'clsx';
-import { TbPlaneDeparture, TbPlaneArrival } from 'react-icons/tb';
 
 const Dates = ({ dates, color }) => {
+    console.log(dates);
     const todayDate = format(new Date(), 'MM-dd-yyyy');
     const formattedDates = dates.map((date) => ({
         startDate: format(new Date(date.startDate), 'MM-dd-yyyy'),
         endDate: format(new Date(date.endDate), 'MM-dd-yyyy'),
+        availability: date.availability,
     }));
     return (
-        <section className="mx-auto max-w-7xl text-center">
-            <div>
-                <table className="min-w-full divide-y divide-stone-300">
-                    <thead style={{ backgroundColor: color }}>
-                        <tr>
-                            <th
-                                scope="col"
-                                className="py-3.5 pl-4 pr-3 text-center text-xs font-semibold uppercase text-stone-900 sm:pl-6 lg:text-lg"
+        <section className="mx-auto max-w-lg text-center">
+            <h2 className="tw-subheading" style={{ color: color }}>
+                Available Dates
+            </h2>
+            <div className="mt-12 divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 p-3">
+                {formattedDates.map((date) => (
+                    <div key={date._key} e="flex h-24 flex-col place-content-center">
+                        <div className="flex items-center justify-center gap-x-2">
+                            <div
+                                className={clsx(
+                                    isBefore(new Date(todayDate), new Date(date.startDate))
+                                        ? ''
+                                        : 'font-normal line-through opacity-50',
+                                    'whitespace-nowrap text-lg font-medium text-stone-900 lg:text-xl',
+                                )}
                             >
-                                <TbPlaneDeparture className="w-full text-4xl" />
-                                <p className="mt-2 hidden lg:block">Start Date</p>
-                            </th>
-                            <th
-                                scope="col"
-                                className="py-3.5 pl-4 pr-3 text-center text-xs font-semibold uppercase text-stone-900 sm:pl-6 lg:text-lg"
+                                {format(new Date(date.startDate), 'MMM d y')}
+                            </div>
+                            <div> - </div>
+                            <div
+                                className={clsx(
+                                    isBefore(new Date(todayDate), new Date(date.endDate))
+                                        ? ''
+                                        : 'font-normal line-through opacity-50',
+                                    'whitespace-nowrap text-lg font-medium text-stone-900 lg:text-xl',
+                                )}
                             >
-                                <TbPlaneArrival className="w-full text-4xl" />
-                                <p className="mt-2 hidden lg:block">End Date</p>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody className="bg-white">
-                        {formattedDates.map((date, idx) => (
-                            <tr
-                                key={date.email}
-                                className={idx % 2 === 0 ? undefined : 'bg-stone-50'}
-                            >
-                                <td
-                                    className={clsx(
-                                        isBefore(new Date(todayDate), new Date(date.startDate))
-                                            ? ''
-                                            : 'font-normal line-through opacity-50',
-                                        'whitespace-nowrap p-4 text-lg font-semibold text-stone-900 lg:text-xl',
-                                    )}
-                                >
-                                    {format(new Date(date.startDate), 'do MMM y')}
-                                </td>
-                                <td
-                                    className={clsx(
-                                        isBefore(new Date(todayDate), new Date(date.endDate))
-                                            ? ''
-                                            : 'font-normal line-through opacity-50',
-                                        'whitespace-nowrap p-4 text-lg font-semibold text-stone-900 lg:text-xl',
-                                    )}
-                                >
-                                    {format(new Date(date.endDate), 'do MMM y')}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                                {format(new Date(date.endDate), 'MMM d y')}
+                            </div>
+                        </div>
+                        {date.availability && (
+                            <div>
+                                {date.availability === 'last spots' && (
+                                    <p
+                                        className="text-sm font-bold uppercase tracking-wider"
+                                        style={{ color: color }}
+                                    >
+                                        Last Spots
+                                    </p>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                ))}
             </div>
         </section>
     );

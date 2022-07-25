@@ -30,17 +30,7 @@ const adventureFields = groq`
 	"highlights": highlights[]{
 		title,
 		description,
-		"gallery": gallery.images[]{
-			"image": asset->{
-				url,
-				"width": metadata.dimensions.width,
-				"height": metadata.dimensions.height,
-				"aspectRatio": metadata.dimensions.aspectRatio,
-				url,
-				alt,
-				caption
-			},
-		},
+		"gallery": gallery.images,
 		"icon": icon.asset->url,
  	},
 	"itinerary": itinerary[]{
@@ -54,17 +44,7 @@ const adventureFields = groq`
 		activity,
 		stageNumber,
 		description,
-		"gallery": gallery.images[]{
-			"image": asset->{
-				url,
-				"width": metadata.dimensions.width,
-				"height": metadata.dimensions.height,
-				"aspectRatio": metadata.dimensions.aspectRatio,
-				url,
-				alt,
-				caption
-			},
-		},
+		"gallery": gallery.images,
 	},
 	"routeMap": routeMap[]{
 		"id": routeMap._key,
@@ -99,8 +79,8 @@ const testimonialFields = groq`
 	name,
 	location,
 	quote,
-	"image": image.asset->url
-`;
+	image
+	,`;
 
 const gearFields = groq`
 	"id": _id,

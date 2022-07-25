@@ -59,8 +59,8 @@ const Testimonials = ({ testimonials }) => {
                 <div className="flex">
                     {testimonials.map((testimonial) => (
                         <div
-                            className="relative mx-10 flex w-full flex-none flex-wrap lg:flex-nowrap"
                             key={testimonial.id}
+                            className="relative mx-10 flex w-full flex-none flex-wrap lg:flex-nowrap"
                         >
                             <div className="flex flex-col items-center justify-center text-center">
                                 <div className="font-serif text-xl md:text-3xl">
@@ -74,7 +74,7 @@ const Testimonials = ({ testimonials }) => {
                                         width={1}
                                         objectFit="cover"
                                         objectPosition="center"
-                                        alt="cover image"
+                                        alt={testimonial.image.alt}
                                         className="rounded-full"
                                     />
                                 </div>
@@ -93,11 +93,11 @@ const Testimonials = ({ testimonials }) => {
             <div className="mt-5 flex items-center justify-center space-x-2">
                 {scrollSnaps.map((_, idx) => (
                     <button
+                        key={idx}
+                        onClick={() => scrollTo(idx)}
                         className={`h-2 w-2 rounded-full ${
                             idx === selectedIndex ? 'bg-yellow-500' : 'bg-stone-300'
                         }`}
-                        key={idx}
-                        onClick={() => scrollTo(idx)}
                     />
                 ))}
             </div>

@@ -16,7 +16,7 @@ import DetailContainer from '@/components/adventure/Details/DetailContainer';
 
 const Details = ({ level, price, priceSingleSupplement, group, distance, duration, setOpen }) => {
     return (
-        <section className="col-span-1 flex flex-col divide-y divide-dashed divide-stone-900 divide-opacity-50 md:col-span-2">
+        <section className="col-span-1 flex flex-col divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 p-3 md:col-span-2">
             <DetailContainer>
                 <LabelContainer>
                     <IoPricetag className="h-5 w-5" />

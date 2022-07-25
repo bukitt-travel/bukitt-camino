@@ -24,7 +24,7 @@ const Introduction = ({
             >
                 {slogan}
             </h2>
-            <div className="mt-6 grid grid-cols-1 gap-x-24 gap-y-12 md:mt-24 md:grid-cols-5">
+            <div className="grid grid-cols-1 gap-x-24 gap-y-12 md:grid-cols-5">
                 <div className="prose col-span-1 font-serif prose-p:text-lg md:col-span-3 md:prose-p:text-3xl">
                     <PortableText value={summary} />
                 </div>

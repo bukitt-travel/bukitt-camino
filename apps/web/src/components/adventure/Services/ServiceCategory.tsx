@@ -58,7 +58,7 @@ const ServiceCategory = ({ label, services }) => {
                                             {service?.category === 'add on' && service?.price && (
                                                 <p className="mt-2">
                                                     <span className="text-xs italic">from</span>
-                                                    <span className="text-sm font-medium">
+                                                    <span className="text-sm font-bold">
                                                         {' '}
                                                         ${service.price}
                                                     </span>
