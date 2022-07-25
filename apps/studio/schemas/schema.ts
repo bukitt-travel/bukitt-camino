@@ -22,7 +22,7 @@ import section from './objects/section';
 import level from './objects/level';
 import imageGallery from './objects/imageGallery';
 import imageCustom from './objects/imageCustom';
-import teamMember from './objects/teamMember';
+import tripDate from './objects/tripDate';
 
 export default createSchema({
     name: 'default',
@@ -40,8 +40,8 @@ export default createSchema({
         highlight,
         stage,
         section,
+        tripDate,
         level,
-        teamMember,
         imageGallery,
         imageCustom,
         portableComplex,

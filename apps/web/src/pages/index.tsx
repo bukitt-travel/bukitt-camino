@@ -8,9 +8,6 @@ import Testimonials from '@/components/home/Testimonials';
 import Gear from '@/components/home/Gear';
 
 const HomePage = ({ adventures, testimonials, gear }) => {
-    // // const SLIDE_COUNT = testimonials.length;
-    // // const slides = Array.from(Array(SLIDE_COUNT).keys());
-
     return (
         <Page
             metaTitle="Home"

@@ -19,6 +19,7 @@ const adventureFields = groq`
 	distance,
 	summary,
 	slogan,
+	dates,
 	"services": services[]{
 		title,
 		description,
@@ -88,6 +89,7 @@ const storyFields = groq`
 	"slug": slug.current,
 	category,
 	"image": image.asset->url,
+	summary,
 	content
 `;
 
@@ -138,8 +140,19 @@ export const individualAdventureQuery = groq`
   }
 }`;
 
+export const individualStoryQuery = groq`
+{
+  "story": *[_type == "story" && slug.current == $slug] | order(_updatedAt desc) [0] {
+    ${storyFields}
+  }
+}`;
+
 export const adventuresPathsQuery = groq`*[_type == "adventure" && defined(slug.current)][].slug.current
 `;
+
+export const storiesPathsQuery = groq`*[_type == "story" && defined(slug.current)][].slug.current
+`;
+
 export const faqPageQuery = groq`
 {
 "faq": *[_type == "faq"] {

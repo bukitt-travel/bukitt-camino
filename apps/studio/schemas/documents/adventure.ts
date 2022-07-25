@@ -79,22 +79,10 @@ export default {
             },
         },
         {
-            name: 'startDate',
-            title: 'Start Date',
-            type: 'date',
-            options: {
-                dateFormat: 'MM-DD-YYYY',
-                calendarTodayLavel: 'Today',
-            },
-        },
-        {
-            name: 'endDate',
-            title: 'End Date',
-            type: 'date',
-            options: {
-                dateFormat: 'MM-DD-YYYY',
-                calendarTodayLavel: 'Today',
-            },
+            name: 'dates',
+            title: 'Dates',
+            type: 'array',
+            of: [{ type: 'tripDate' }],
         },
         {
             name: 'services',

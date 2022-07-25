@@ -6,7 +6,7 @@ import { urlForImage } from '@/lib/sanity';
 const List = ({ adventures }) => {
     return (
         <section
-            className="mx-auto my-12 grid max-w-screen-2xl grid-cols-1 gap-y-12 px-3 text-stone-50 md:my-24 md:grid-cols-2 md:gap-x-6 md:px-3"
+            className="mx-auto my-12 grid max-w-screen-2xl grid-cols-1 gap-y-12 px-3 text-stone-900 md:my-24 md:grid-cols-2 md:gap-x-6 md:px-3"
             id="adventures"
         >
             {adventures.map((adventure) => {

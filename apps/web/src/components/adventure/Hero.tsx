@@ -7,7 +7,7 @@ const Hero = ({ adventure }) => {
 
     return (
         <section
-            className="lg:tw-hero-full-desktop tw-hero-full-mobile flex flex-col py-12 px-3 text-stone-50 lg:px-24 lg:py-24"
+            className="lg:tw-hero-full-desktop tw-hero-full-mobile flex flex-col py-12 px-3 text-stone-900 lg:px-24 lg:py-24"
             style={{
                 backgroundColor: adventure.color,
             }}
@@ -24,7 +24,7 @@ const Hero = ({ adventure }) => {
                 </h1>
             </div>
 
-            <div className="z-0 mx-auto -mt-6 w-full max-w-2xl md:-mt-24">
+            <div className="z-0 mx-auto -mt-6 w-full max-w-2xl md:-mt-16">
                 <Image
                     src={urlForImage(adventure.image).url()}
                     alt="Camino de Santiago"

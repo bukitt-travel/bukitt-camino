@@ -21,11 +21,5 @@ export default {
             title: 'Founder',
             type: 'section',
         },
-        {
-            name: 'team',
-            title: 'Team',
-            type: 'array',
-            of: [{ type: 'teamMember' }],
-        },
     ],
 };

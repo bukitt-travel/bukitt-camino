@@ -7,6 +7,7 @@ import { storiesPageQuery } from '@/lib/queries';
 import Page from '@/components/shared/Page';
 import CategoryFilters from '@/components/story/CategoryFilters';
 import Card from '@/components/story/Card';
+import Tagline from '@/components/shared/Tagline';
 
 const StoriesPage = ({ allStories }) => {
     const [stories] = useState(allStories);
@@ -29,10 +30,8 @@ const StoriesPage = ({ allStories }) => {
             metaDescription="Read the expert insights of our travel concierge and discover the many secrets of el Camino."
         >
             <section className="mx-auto my-12 max-w-2xl text-center">
-                <h2 className="text-sm font-semibold uppercase text-stone-700">
-                    All the roads lead to Santiago
-                </h2>
-                <h1 className="mt-6 font-serif text-8xl">Camino Stories</h1>
+                <Tagline>The many ways of the pilgrim</Tagline>
+                <h1 className="mt-6 font-serif text-8xl font-bold uppercase">Camino Stories</h1>
             </section>
             <section>
                 <CategoryFilters

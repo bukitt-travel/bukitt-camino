@@ -12,6 +12,7 @@ import Highlights from '@/components/adventure/Highlights';
 import Itinerary from '@/components/adventure/Itinerary';
 import Map from '@/components/adventure/Map';
 import Services from '@/components/adventure/Services';
+import Dates from '@/components/adventure/Dates';
 
 const AdventurePage = ({ adventure }) => {
     const [openServices, setOpenServices] = useState(false);
@@ -40,6 +41,8 @@ const AdventurePage = ({ adventure }) => {
                 distance={adventure.distance}
                 setOpen={setOpenServices}
             />
+
+            <Dates dates={adventure.dates} color={adventure.color} />
 
             <Highlights highlights={adventure.highlights} color={adventure.color} />
 

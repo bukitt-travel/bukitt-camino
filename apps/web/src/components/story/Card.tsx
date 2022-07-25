@@ -13,7 +13,7 @@ const Card = ({ story }) => {
             exit={{ opacity: 0 }}
             className="odd:mt-0 odd:text-left even:mt-12 even:text-right"
         >
-            <Link href={`/${story.slug}`}>
+            <Link href={`stories/${story.slug}`}>
                 <a>
                     <Image
                         src={urlForImage(story.image).url()}

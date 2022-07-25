@@ -10,9 +10,11 @@ import Page from '@/components/shared/Page';
 const FAQ = ({ faq }) => {
     return (
         <Page metaTitle="FAQ" metaDescription="We answer the most impor.">
-            <div className="mx-auto max-w-7xl py-24 px-4 sm:py-24 sm:px-3 lg:px-8">
+            <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-3xl divide-y-2 divide-stone-200">
-                    <h2 className="tw-subheading text-center">FAQ</h2>
+                    <section className="mx-auto my-12 max-w-2xl text-center">
+                        <h1 className="mt-6 font-serif text-8xl font-bold uppercase">FAQ</h1>
+                    </section>
                     <dl className="mt-6 space-y-6 divide-y divide-stone-200">
                         {faq.map((faq) => (
                             <Disclosure as="div" key={faq.question} className="pt-6">
