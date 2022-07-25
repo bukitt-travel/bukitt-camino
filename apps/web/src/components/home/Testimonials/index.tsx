@@ -21,6 +21,7 @@ const Testimonials = ({ testimonials }) => {
         // it's dragged vigorously.
 
         inViewThreshold: 0.7,
+
         // percentage of a slide that need's to be visible
         // inorder to be considered in view, 0.7 is 70%.
     });
@@ -60,13 +61,13 @@ const Testimonials = ({ testimonials }) => {
                     {testimonials.map((testimonial) => (
                         <div
                             key={testimonial.id}
-                            className="relative mx-10 flex w-full flex-none flex-wrap lg:flex-nowrap"
+                            className="relative flex w-full flex-none flex-wrap px-3 lg:mx-10 lg:flex-nowrap lg:px-0"
                         >
                             <div className="flex flex-col items-center justify-center text-center">
                                 <div className="font-serif text-xl md:text-3xl">
                                     <PortableText value={testimonial.quote} />
                                 </div>
-                                <div className="mt-4 w-24 cursor-pointer overflow-hidden md:mt-8">
+                                <div className="mt-2 w-16 cursor-pointer overflow-hidden md:mt-8 lg:mt-4 lg:w-24">
                                     <Image
                                         src={urlForImage(testimonial.image).url()}
                                         layout="responsive"
