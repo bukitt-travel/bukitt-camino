@@ -16,7 +16,7 @@ const Dates = ({ dates, color }) => {
             </h2>
             <div className="mt-12 divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 p-3">
                 {formattedDates.map((date) => (
-                    <div key={date._key} e="flex h-24 flex-col place-content-center">
+                    <div key={date._key} className="flex h-24 flex-col place-content-center">
                         <div className="flex items-center justify-center gap-x-2">
                             <div
                                 className={clsx(
