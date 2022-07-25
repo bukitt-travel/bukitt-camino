@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { navLinks } from '@/data/navigation';
+import { contacts } from '@/data/contacts';
 
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
             <div>
                 <Header setOpenMobileMenu={setIsOpenMobileMenu} navLinks={navLinks} />
                 <div className="min-h-screen">{children}</div>
-                <Footer navLinks={navLinks} />
+                <Footer navLinks={navLinks} contacts={contacts} />
             </div>
             <BookingSlideOver />
             <MobileMenu open={isOpenMobileMenu} setOpen={setIsOpenMobileMenu} navLinks={navLinks} />

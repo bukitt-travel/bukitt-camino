@@ -16,20 +16,7 @@ const ActionsMenu = ({ setOpenServices }) => {
                     <RiInformationLine className="h-6 w-6" />
                 </button>
             </div>
-            <div>
-                <button className="tw-transition rounded-full border-2 border-stone-50 bg-stone-900 p-3 hover:bg-stone-100 hover:text-stone-900 md:block">
-                    <a href="mailto:hello@bukitt.com">
-                        <RiMailLine className="h-6 w-6" />
-                    </a>
-                </button>
-            </div>
-            <div>
-                <button className="tw-transition rounded-full border-2 border-stone-50 bg-stone-900 p-3 hover:bg-stone-100 hover:text-stone-900 md:block">
-                    <a href="tel:3059986034">
-                        <RiPhoneLine className="h-6 w-6" />
-                    </a>
-                </button>
-            </div>
+
             <div>
                 <button
                     className="tw-transition rounded-full border-2 border-stone-50 bg-stone-900 p-3 hover:bg-stone-100 hover:text-stone-900 md:block"
