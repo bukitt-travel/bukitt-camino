@@ -114,7 +114,7 @@ const Itinerary = ({ itinerary, color }) => {
                                 </div>
 
                                 <div className="col-span-1 mt-4 lg:mt-0">
-                                    <div className="mb-2 border-y-2 border-stone-900 py-2">
+                                    <div className="mb-2 border-y border-dashed border-stone-900 py-2">
                                         {stage.activity === 'route stage' && (
                                             <div>
                                                 <div className="flex items-center gap-x-2 text-xl font-medium lg:text-2xl">

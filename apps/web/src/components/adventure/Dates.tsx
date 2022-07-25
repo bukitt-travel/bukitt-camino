@@ -52,7 +52,7 @@ const Dates = ({ dates, color }) => {
                                         className="text-sm font-bold uppercase tracking-wider"
                                         style={{ color: color }}
                                     >
-                                        Last Spots
+                                        Last Spots!
                                     </p>
                                 )}
                             </div>

@@ -15,7 +15,7 @@ import LabelContainer from '@/components/adventure/Details/LabelContainer';
 
 const Details = ({ level, price, priceSingleSupplement, group, distance, duration, setOpen }) => {
     return (
-        <section className="max-screen-2xl font-stone-50 mx-auto grid grid-cols-2 gap-6 bg-stone-50 p-6 text-stone-900 lg:grid-cols-6">
+        <section className="max-screen-2xl font-stone-50 mx-auto grid grid-cols-1 divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 text-stone-900 lg:grid-cols-6 lg:divide-x lg:divide-y-0">
             <DetailContainer>
                 <LabelContainer>
                     <RiCoinsLine className="h-6 w-6" />
