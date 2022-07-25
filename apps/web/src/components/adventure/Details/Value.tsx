@@ -1,5 +1,5 @@
 const Value = ({ children }) => {
-    return <p className="text-lg font-semibold capitalize lg:text-xl">{children}</p>;
+    return <div className="text-base font-semibold capitalize lg:text-xl">{children}</div>;
 };
 
 export default Value;

@@ -1,5 +1,6 @@
 import { format, isBefore } from 'date-fns';
 import clsx from 'clsx';
+import { RiCalendar2Line } from 'react-icons/ri';
 
 const Dates = ({ dates, color }) => {
     console.log(dates);
@@ -10,11 +11,15 @@ const Dates = ({ dates, color }) => {
         availability: date.availability,
     }));
     return (
-        <section className="mx-auto max-w-lg text-center">
-            <h2 className="tw-subheading" style={{ color: color }}>
-                Available Dates
-            </h2>
-            <div className="mt-12 divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 p-3">
+        <section className="text-center md:col-span-2">
+            <div
+                className="flex h-12 items-center justify-center gap-x-2 text-lg font-semibold uppercase"
+                style={{ backgroundColor: color }}
+            >
+                <RiCalendar2Line className="h-6 w-6" />
+                <h3>Available Dates</h3>
+            </div>
+            <div className="divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 px-3">
                 {formattedDates.map((date) => (
                     <div key={date._key} className="flex h-24 flex-col place-content-center">
                         <div className="flex items-center justify-center gap-x-2">

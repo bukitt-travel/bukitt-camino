@@ -1,21 +1,13 @@
 import { PortableText } from '@portabletext/react';
 
-import Details from '@/components/adventure/Details';
+import Dates from '@/components/adventure/Dates';
 
-const Introduction = ({
-    summary,
-    slogan,
-    level,
-    price,
-    priceSingleSupplement,
-    group,
-    color,
-    duration,
-    distance,
-    setOpen,
-}) => {
+const Introduction = ({ summary, slogan, color, dates }) => {
     return (
-        <section className="mx-auto max-w-5xl py-24 px-3 md:py-32 md:px-0" id="intro">
+        <section
+            className="mx-auto max-w-5xl py-24 px-3 text-center md:py-32 md:px-0 lg:text-left"
+            id="intro"
+        >
             <h2
                 className="tw-subheading"
                 style={{
@@ -28,15 +20,7 @@ const Introduction = ({
                 <div className="prose col-span-1 font-serif prose-p:text-lg md:col-span-3 md:prose-p:text-3xl">
                     <PortableText value={summary} />
                 </div>
-                <Details
-                    level={level}
-                    price={price}
-                    priceSingleSupplement={priceSingleSupplement}
-                    group={group}
-                    duration={duration}
-                    distance={distance}
-                    setOpen={setOpen}
-                />
+                <Dates dates={dates} color={color} />
             </div>
         </section>
     );

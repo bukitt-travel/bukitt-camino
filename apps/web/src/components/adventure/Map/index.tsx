@@ -4,7 +4,6 @@ import getCenter from 'geolib/es/getCenter';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { RiMapPin2Fill } from 'react-icons/ri';
 
-// // import Pin from '@/components/adventure/Map/Pin';
 import { useMemo } from 'react';
 
 const RouteMap = ({ routeMap, color }) => {
@@ -32,7 +31,7 @@ const RouteMap = ({ routeMap, color }) => {
                 >
                     <div className="flex cursor-pointer flex-col items-center">
                         <RiMapPin2Fill className="h-6 w-6" style={{ color: color }} />
-                        <div className="mt-1 rounded-full bg-stone-50 py-0.5 px-2 text-xs font-bold text-stone-900">
+                        <div className="mt-1 rounded-full text-xs font-black text-stone-900">
                             {stage.order}
                         </div>
                     </div>

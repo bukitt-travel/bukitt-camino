@@ -12,7 +12,7 @@ import Highlights from '@/components/adventure/Highlights';
 import Itinerary from '@/components/adventure/Itinerary';
 import Map from '@/components/adventure/Map';
 import Services from '@/components/adventure/Services';
-import Dates from '@/components/adventure/Dates';
+import Details from '@/components/adventure/Details';
 
 const AdventurePage = ({ adventure }) => {
     const [openServices, setOpenServices] = useState(false);
@@ -28,21 +28,22 @@ const AdventurePage = ({ adventure }) => {
     return (
         <Page metaTitle={adventure?.title} metaDescription={adventure?.summary}>
             <Hero adventure={adventure} />
-
-            <Introduction
-                slogan={adventure.slogan}
-                summary={adventure.summary}
-                group={adventure.group}
+            <Details
+                level={adventure.level}
                 price={adventure.price}
                 priceSingleSupplement={adventure.priceSingleSupplement}
-                level={adventure.level}
-                color={adventure.color}
+                group={adventure.group}
                 duration={adventure.duration}
                 distance={adventure.distance}
                 setOpen={setOpenServices}
             />
 
-            <Dates dates={adventure.dates} color={adventure.color} />
+            <Introduction
+                slogan={adventure.slogan}
+                summary={adventure.summary}
+                color={adventure.color}
+                dates={adventure.dates}
+            />
 
             <Highlights highlights={adventure.highlights} color={adventure.color} />
 
