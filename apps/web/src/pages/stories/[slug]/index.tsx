@@ -15,15 +15,17 @@ const StoryPage = ({ story }) => {
                 <h1 className="mt-2 font-serif text-5xl font-bold uppercase">{story.title}</h1>
 
                 <div className="mt-6">
-                    <Image
-                        src={urlForImage(story?.image).url()}
-                        alt="Bukitt Founder Mariana Riquezes"
-                        layout="responsive"
-                        width={4}
-                        height={3}
-                        objectFit="cover"
-                        objectPosition="center"
-                    />
+                    {story.image && (
+                        <Image
+                            src={urlForImage(story.image).url()}
+                            alt="Bukitt Founder Mariana Riquezes"
+                            layout="responsive"
+                            width={4}
+                            height={3}
+                            objectFit="cover"
+                            objectPosition="center"
+                        />
+                    )}
                 </div>
                 <h2 className="mt-6 text-2xl">{story.summary}</h2>
                 <div className="rp prose-lg mt-12">

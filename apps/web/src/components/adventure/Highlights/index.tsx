@@ -34,15 +34,17 @@ const Highlights = ({ highlights, color }) => {
                             }
                         >
                             <div className="w-8">
-                                <Image
-                                    src={urlForImage(highlight.icon).url()}
-                                    alt=""
-                                    layout="responsive"
-                                    width={1}
-                                    height={1}
-                                    objectFit="contain"
-                                    objectPosition="center"
-                                />
+                                {highlight.icon && (
+                                    <Image
+                                        src={urlForImage(highlight.icon).url()}
+                                        alt=""
+                                        layout="responsive"
+                                        width={1}
+                                        height={1}
+                                        objectFit="contain"
+                                        objectPosition="center"
+                                    />
+                                )}
                             </div>
                             <div className="mt-2 hidden text-lg font-semibold uppercase md:block">
                                 {highlight.title}

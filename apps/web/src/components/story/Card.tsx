@@ -15,16 +15,18 @@ const Card = ({ story }) => {
         >
             <Link href={`stories/${story.slug}`}>
                 <a>
-                    <Image
-                        src={urlForImage(story.image).url()}
-                        alt="Camino de Santiago"
-                        layout="responsive"
-                        width={4}
-                        height={3}
-                        objectFit="cover"
-                        objectPosition="center"
-                        className="tw-transition"
-                    />
+                    {story.image && (
+                        <Image
+                            src={urlForImage(story.image).url()}
+                            alt="Camino de Santiago"
+                            layout="responsive"
+                            width={4}
+                            height={3}
+                            objectFit="cover"
+                            objectPosition="center"
+                            className="tw-transition"
+                        />
+                    )}
                     <h2 className="mt-4 font-serif text-2xl font-medium uppercase">
                         {story.title}
                     </h2>

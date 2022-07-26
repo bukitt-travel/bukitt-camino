@@ -41,8 +41,8 @@ const Modal = ({ gear, isOpen, setIsOpen, selected }) => {
                                     {gear[selected]?.name}
                                 </Dialog.Title>
 
-                                {gear[selected]?.image && (
-                                    <div className="mx-auto max-w-sm pt-12">
+                                <div className="mx-auto max-w-sm pt-12">
+                                    {gear[selected]?.image && (
                                         <Image
                                             src={urlForImage(gear[selected]?.image).url()}
                                             alt="Camino de Santiago"
@@ -52,8 +52,8 @@ const Modal = ({ gear, isOpen, setIsOpen, selected }) => {
                                             objectFit="cover"
                                             objectPosition="center"
                                         />
-                                    </div>
-                                )}
+                                    )}
+                                </div>
                                 <div className="mt-8">
                                     <p className="text-base text-stone-700">
                                         <PortableText value={gear[selected]?.description} />

@@ -7,7 +7,7 @@ const adventureFields = groq`
 	_updatedAt,
 	title,
 	"slug": slug.current,
-	"image": image.asset->url,
+	image,
 	"color": color.hex,
 	price,
 	priceSingleSupplement,
@@ -25,13 +25,13 @@ const adventureFields = groq`
 		description,
 		category,
 		price,
-		"icon": icon.asset->url
+		icon
 	},
 	"highlights": highlights[]{
 		title,
 		description,
 		"gallery": gallery.images,
-		"icon": icon.asset->url,
+		icon,
  	},
 	"itinerary": itinerary[]{
 		"id": itinerary._key,
@@ -68,7 +68,7 @@ const storyFields = groq`
 	title,
 	"slug": slug.current,
 	category,
-	"image": image.asset->url,
+	image,
 	summary,
 	content
 `;
@@ -87,7 +87,7 @@ const gearFields = groq`
 	_updatedAt,
 	name,
 	description,
-	"image": image.asset->url
+	image
 `;
 
 const aboutFields = groq`
@@ -95,7 +95,7 @@ const aboutFields = groq`
 	_updatedAt,
 	infoCamino,
 	founder,
-	"image": image.asset->url
+	image
 `;
 
 // Queries

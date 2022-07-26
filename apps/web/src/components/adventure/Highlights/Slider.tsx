@@ -32,19 +32,20 @@ const Slider = ({ gallery, color }) => {
         <div className="relative">
             <div className="w-full overflow-hidden" ref={viewportRef}>
                 <div className="tw-embla-container flex select-none">
-                    {gallery.map((image, idx) => (
-                        <div className="relative min-w-full" key={idx}>
-                            <Image
-                                src={urlForImage(image).url()}
-                                layout="responsive"
-                                width={1}
-                                height={1}
-                                objectFit="cover"
-                                objectPosition="center"
-                                alt={image.alt ?? ''}
-                            />
-                        </div>
-                    ))}
+                    {gallery &&
+                        gallery.map((image, idx) => (
+                            <div className="relative min-w-full" key={idx}>
+                                <Image
+                                    src={urlForImage(image).url()}
+                                    layout="responsive"
+                                    width={1}
+                                    height={1}
+                                    objectFit="cover"
+                                    objectPosition="center"
+                                    alt={image.alt ?? ''}
+                                />
+                            </div>
+                        ))}
                 </div>
             </div>
 

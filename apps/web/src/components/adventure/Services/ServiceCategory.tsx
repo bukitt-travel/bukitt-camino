@@ -19,13 +19,15 @@ const ServiceCategory = ({ label, services }) => {
                                         <Disclosure.Button className="flex w-full items-start justify-between text-left">
                                             <div className="flex items-center gap-x-2">
                                                 <div className="h-6 w-6 lg:h-8 lg:w-8">
-                                                    <Image
-                                                        src={urlForImage(service.icon).url()}
-                                                        alt="Icon"
-                                                        layout="responsive"
-                                                        width={1}
-                                                        height={1}
-                                                    />
+                                                    {service.icon && (
+                                                        <Image
+                                                            src={urlForImage(service.icon).url()}
+                                                            alt="Icon"
+                                                            layout="responsive"
+                                                            width={1}
+                                                            height={1}
+                                                        />
+                                                    )}
                                                 </div>
 
                                                 <div className="flex items-baseline gap-x-2">

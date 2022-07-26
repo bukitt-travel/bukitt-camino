@@ -22,17 +22,19 @@ const Gear = ({ gear }) => {
                     className="tw-transition bg-stone-200 hover:bg-stone-100"
                     onClick={() => handleModalToggle(idx)}
                 >
-                    <Image
-                        key={idx}
-                        src={urlForImage(item.image).url()}
-                        alt="gear"
-                        layout="responsive"
-                        width={1}
-                        height={1}
-                        objectFit="cover"
-                        objectPosition="center"
-                        className="tw-transition md:grayscale md:hover:grayscale-0"
-                    />
+                    {item.image && (
+                        <Image
+                            key={idx}
+                            src={urlForImage(item.image).url()}
+                            alt="gear"
+                            layout="responsive"
+                            width={1}
+                            height={1}
+                            objectFit="cover"
+                            objectPosition="center"
+                            className="tw-transition md:grayscale md:hover:grayscale-0"
+                        />
+                    )}
                 </button>
             ))}
             <Modal gear={gear} isOpen={isOpen} setIsOpen={setIsOpen} selected={selected} />

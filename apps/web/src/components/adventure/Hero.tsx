@@ -25,16 +25,18 @@ const Hero = ({ adventure }) => {
             </div>
 
             <div className="z-0 mx-auto -mt-6 w-full max-w-2xl md:-mt-16">
-                <Image
-                    src={urlForImage(adventure.image).url()}
-                    alt="Camino de Santiago"
-                    layout="responsive"
-                    width={4}
-                    height={3}
-                    objectFit="cover"
-                    objectPosition="center"
-                    priority
-                />
+                {adventure.image && (
+                    <Image
+                        src={urlForImage(adventure.image).url()}
+                        alt="Camino de Santiago"
+                        layout="responsive"
+                        width={4}
+                        height={3}
+                        objectFit="cover"
+                        objectPosition="center"
+                        priority
+                    />
+                )}
             </div>
         </section>
     );

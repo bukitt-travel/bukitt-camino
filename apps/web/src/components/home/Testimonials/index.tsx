@@ -68,16 +68,18 @@ const Testimonials = ({ testimonials }) => {
                                     <PortableText value={testimonial.quote} />
                                 </div>
                                 <div className="mt-2 w-16 cursor-pointer overflow-hidden md:mt-8 lg:mt-4 lg:w-24">
-                                    <Image
-                                        src={urlForImage(testimonial.image).url()}
-                                        layout="responsive"
-                                        height={1}
-                                        width={1}
-                                        objectFit="cover"
-                                        objectPosition="center"
-                                        alt={testimonial.image.alt}
-                                        className="rounded-full"
-                                    />
+                                    {testimonial.image && (
+                                        <Image
+                                            src={urlForImage(testimonial.image).url()}
+                                            layout="responsive"
+                                            height={1}
+                                            width={1}
+                                            objectFit="cover"
+                                            objectPosition="center"
+                                            alt={testimonial.image.alt}
+                                            className="rounded-full"
+                                        />
+                                    )}
                                 </div>
                                 <h2 className="mt-1 text-sm font-semibold uppercase text-slate-700 md:mt-2 md:text-xl">
                                     {testimonial.name}
