@@ -29,14 +29,14 @@ const Slider = ({ gallery, color }) => {
     }, [embla, onSelect]);
 
     return (
-        <div className="relative">
+        <div className="relative bg-stone-200">
             <div className="w-full overflow-hidden" ref={viewportRef}>
                 <div className="tw-embla-container flex select-none">
                     {gallery &&
                         gallery.map((image, idx) => (
                             <div className="relative min-w-full" key={idx}>
                                 <Image
-                                    src={urlForImage(image).url()}
+                                    src={urlForImage(image).width(1080).height(1080).url()}
                                     layout="responsive"
                                     width={1}
                                     height={1}

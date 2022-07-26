@@ -1,7 +1,7 @@
 export default {
     name: 'imageCustom',
-    type: 'image',
     title: 'Image Custom',
+    type: 'image',
     options: {
         hotspot: true,
     },
