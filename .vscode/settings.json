@@ -1,3 +1,4 @@
 {
-	"git.ignoreLimitWarning": true
+  "eslint.workingDirectories": ["../apps/web/", "../apps/studio"],
+  "git.ignoreLimitWarning": true
 }

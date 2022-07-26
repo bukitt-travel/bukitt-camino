@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import { RiCalendar2Line } from 'react-icons/ri';
 
 const Dates = ({ dates, color }) => {
-    console.log(dates);
     const todayDate = format(new Date(), 'MM-dd-yyyy');
     const formattedDates = dates.map((date) => ({
         startDate: format(new Date(date.startDate), 'MM-dd-yyyy'),
