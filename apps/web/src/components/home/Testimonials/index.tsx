@@ -70,7 +70,10 @@ const Testimonials = ({ testimonials }) => {
                                 <div className="mt-2 w-16 cursor-pointer overflow-hidden md:mt-8 lg:mt-4 lg:w-24">
                                     {testimonial.image && (
                                         <Image
-                                            src={urlForImage(testimonial.image).url()}
+                                            src={urlForImage(testimonial.image)
+                                                .width(640)
+                                                .height(640)
+                                                .url()}
                                             layout="responsive"
                                             height={1}
                                             width={1}

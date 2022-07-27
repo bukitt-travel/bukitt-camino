@@ -44,7 +44,10 @@ const Modal = ({ gear, isOpen, setIsOpen, selected }) => {
                                 <div className="mx-auto max-w-sm pt-12">
                                     {gear[selected]?.image && (
                                         <Image
-                                            src={urlForImage(gear[selected]?.image).url()}
+                                            src={urlForImage(gear[selected]?.image)
+                                                .width(1080)
+                                                .height(1080)
+                                                .url()}
                                             alt="Camino de Santiago"
                                             layout="responsive"
                                             width={4}

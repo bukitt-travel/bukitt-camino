@@ -36,7 +36,10 @@ const Highlights = ({ highlights, color }) => {
                             <div className="w-8">
                                 {highlight.icon && (
                                     <Image
-                                        src={urlForImage(highlight.icon).url()}
+                                        src={urlForImage(highlight.icon)
+                                            .width(240)
+                                            .height(240)
+                                            .url()}
                                         alt=""
                                         layout="responsive"
                                         width={1}

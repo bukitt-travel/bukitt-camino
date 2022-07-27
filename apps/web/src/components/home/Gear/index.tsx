@@ -25,7 +25,7 @@ const Gear = ({ gear }) => {
                     {item.image && (
                         <Image
                             key={idx}
-                            src={urlForImage(item.image).url()}
+                            src={urlForImage(item.image).width(1080).height(1080).url()}
                             alt="gear"
                             layout="responsive"
                             width={1}

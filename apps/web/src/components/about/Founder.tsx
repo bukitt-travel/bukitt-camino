@@ -21,7 +21,7 @@ const Founder = ({ founder }) => {
             <div className="col-span-3">
                 {founder?.image && (
                     <Image
-                        src={urlForImage(founder.image).url()}
+                        src={urlForImage(founder.image).width(1080).height(1080).url()}
                         alt="Bukitt Founder Mariana Riquezes"
                         layout="responsive"
                         width={1}

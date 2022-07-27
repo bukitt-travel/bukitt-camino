@@ -23,7 +23,7 @@ const Card = ({ adventure, title, className }) => {
                     <div className="z-0 -mt-12 px-24">
                         {adventure.image && (
                             <Image
-                                src={urlForImage(adventure.image).url()}
+                                src={urlForImage(adventure.image).width(1920).height(1440).url()}
                                 alt="Camino de Santiago"
                                 layout="responsive"
                                 width={4}

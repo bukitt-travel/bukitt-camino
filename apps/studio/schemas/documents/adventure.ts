@@ -82,12 +82,6 @@ export default {
             of: [{ type: 'tripDate' }],
         },
         {
-            name: 'services',
-            title: 'Services',
-            type: 'array',
-            of: [{ type: 'service' }],
-        },
-        {
             name: 'slogan',
             title: 'Slogan',
             type: 'string',
@@ -102,6 +96,7 @@ export default {
             title: 'Color',
             type: 'color',
         },
+
         {
             name: 'highlights',
             title: 'Highlights',
@@ -119,6 +114,12 @@ export default {
             title: 'Route Map',
             type: 'array',
             of: [{ type: 'place' }],
+        },
+        {
+            name: 'services',
+            title: 'Services',
+            type: 'array',
+            of: [{ type: 'service' }],
         },
     ],
 };

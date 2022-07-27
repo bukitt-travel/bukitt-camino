@@ -17,7 +17,7 @@ const StoryPage = ({ story }) => {
                 <div className="mt-6">
                     {story.image && (
                         <Image
-                            src={urlForImage(story.image).url()}
+                            src={urlForImage(story.image).width(1920).height(1440).url()}
                             alt="Bukitt Founder Mariana Riquezes"
                             layout="responsive"
                             width={4}

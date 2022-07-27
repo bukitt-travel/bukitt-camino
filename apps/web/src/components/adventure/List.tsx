@@ -37,11 +37,14 @@ const List = ({ adventures }) => {
                                 <div className="z-0 -mt-6 px-12 md:-mt-16">
                                     {adventure.image && (
                                         <Image
-                                            src={urlForImage(adventure.image).url()}
+                                            src={urlForImage(adventure.image)
+                                                .width(1080)
+                                                .height(1080)
+                                                .url()}
                                             alt="Camino de Santiago"
                                             layout="responsive"
-                                            width={4}
-                                            height={4}
+                                            width={1}
+                                            height={1}
                                             objectFit="cover"
                                             objectPosition="center"
                                             className="tw-transition md:grayscale md:group-hover:grayscale-0"
