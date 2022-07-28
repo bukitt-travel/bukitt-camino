@@ -3,12 +3,12 @@ import clsx from 'clsx';
 import { RiCalendar2Line } from 'react-icons/ri';
 
 const Dates = ({ dates, color }) => {
-    const todayDate = format(new Date(), 'MM-dd-yyyy');
-    const formattedDates = dates.map((date) => ({
-        startDate: format(new Date(date.startDate), 'MM-dd-yyyy'),
-        endDate: format(new Date(date.endDate), 'MM-dd-yyyy'),
-        availability: date.availability,
-    }));
+    const todayDate = format(new Date(), 'MMM d y');
+    // // const formattedDates = dates.map((date) => ({
+    // //     startDate: format(new Date(date.startDate), 'MM-dd-yyyy'),
+    // //     endDate: format(new Date(date.endDate), 'MM-dd-yyyy'),
+    // //     availability: date.availability,
+    // // }));
     return (
         <section className="text-center md:col-span-2">
             <div
@@ -19,7 +19,7 @@ const Dates = ({ dates, color }) => {
                 <h3>Available Dates</h3>
             </div>
             <div className="divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 px-3">
-                {formattedDates.map((date) => (
+                {dates.map((date) => (
                     <div key={date._key} className="flex h-24 flex-col place-content-center">
                         <div className="flex items-center justify-center gap-x-2">
                             <div
@@ -31,6 +31,7 @@ const Dates = ({ dates, color }) => {
                                 )}
                             >
                                 {format(new Date(date.startDate), 'MMM d y')}
+                                {/* {date.startDate} */}
                             </div>
                             <div> - </div>
                             <div
@@ -42,6 +43,7 @@ const Dates = ({ dates, color }) => {
                                 )}
                             >
                                 {format(new Date(date.endDate), 'MMM d y')}
+                                {/* {date.endDate} */}
                             </div>
                         </div>
                         {date.availability && (

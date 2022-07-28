@@ -11,19 +11,11 @@ export default {
             name: 'startDate',
             title: 'Start Date',
             type: 'date',
-            options: {
-                dateFormat: 'MMMM Do YYYY',
-                calendarTodayLabel: 'Today',
-            },
         },
         {
             name: 'endDate',
             title: 'End Date',
             type: 'date',
-            options: {
-                dateFormat: 'MMMM Do YYYY',
-                calendarTodayLabel: 'Today',
-            },
         },
         {
             name: 'availability',

@@ -6,7 +6,8 @@ import { urlForImage } from '@/lib/sanity';
 
 import { PrevButton, NextButton } from '@/components/adventure/Highlights/Buttons';
 
-const Slider = ({ gallery, color }) => {
+const Slider = ({ gallery, color, blurHash }) => {
+    console.log(blurHash);
     const [viewportRef, embla] = useEmblaCarousel({
         loop: true,
         skipSnaps: false,
@@ -43,6 +44,8 @@ const Slider = ({ gallery, color }) => {
                                     objectFit="cover"
                                     objectPosition="center"
                                     alt={image.alt ?? ''}
+                                    placeholder="blur"
+                                    blurDataURL="dHE:MC?vWTIU0d?co#IU?wo~j{t7?vxvx[ogNZ%MtQWE"
                                 />
                             </div>
                         ))}

@@ -65,7 +65,11 @@ const Highlights = ({ highlights, color }) => {
                         >
                             <div className="col-span-1">
                                 {highlight.gallery && (
-                                    <Slider gallery={highlight.gallery} color={color} />
+                                    <Slider
+                                        gallery={highlight.gallery}
+                                        blurHash={highlight.blurHash}
+                                        color={color}
+                                    />
                                 )}
                             </div>
 

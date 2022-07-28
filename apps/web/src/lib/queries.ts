@@ -31,6 +31,7 @@ const adventureFields = groq`
 		title,
 		description,
 		"gallery": gallery.images,
+		"blurHash": gallery.images[].asset->metadata.blurHash,
 		icon,
  	},
 	"itinerary": itinerary[]{
@@ -45,6 +46,7 @@ const adventureFields = groq`
 		stageNumber,
 		description,
 		"gallery": gallery.images,
+		"blurHash": gallery.images[].asset->metadata.blurHash,
 	},
 	"routeMap": routeMap[]{
 		"id": routeMap._key,
