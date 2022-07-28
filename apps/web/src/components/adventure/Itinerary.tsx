@@ -123,7 +123,7 @@ const Itinerary = ({ itinerary, color }) => {
                                             </div>
                                         )}
                                         {stage.activity === 'check-in and transfer' && (
-                                            <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                            <div className="flex items-center gap-x-2 border-y border-dashed border-stone-900 py-2 text-2xl font-medium">
                                                 {stage.transportation === 'train' && (
                                                     <RiTrainLine />
                                                 )}

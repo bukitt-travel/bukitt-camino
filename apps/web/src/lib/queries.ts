@@ -93,6 +93,7 @@ const aboutFields = groq`
 	_updatedAt,
 	infoCamino,
 	founder,
+	features,
 	image
 `;
 

@@ -1,11 +1,9 @@
-import Image from 'next/image';
-import { PortableText } from '@portabletext/react';
-
 import { sanityClient } from '@/lib/sanity.server';
 import { aboutPageQuery } from '@/lib/queries';
 
 import Page from '@/components/shared/Page';
 import Founder from '@/components/about/Founder';
+import Features from '@/components/about/Features';
 
 const AboutPage = ({ about }) => {
     return (
@@ -13,7 +11,9 @@ const AboutPage = ({ about }) => {
             metaTitle="About"
             metaDescription="Meet your Santiago Sherpa and the team behind Bukitt Camino, your deluxe ."
         >
-            <Founder founder={about.founder} />
+			<Founder founder={about.founder} />
+			
+            <Features features={about.features} />
         </Page>
     );
 };

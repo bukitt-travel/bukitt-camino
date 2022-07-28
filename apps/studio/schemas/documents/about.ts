@@ -21,5 +21,11 @@ export default {
             title: 'Founder',
             type: 'section',
         },
+        {
+            name: 'features',
+            title: 'Features',
+            type: 'array',
+            of: [{ type: 'section' }],
+        },
     ],
 };
