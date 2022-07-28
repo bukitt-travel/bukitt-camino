@@ -19,8 +19,8 @@ const Dates = ({ dates, color }) => {
                 <h3>Available Dates</h3>
             </div>
             <div className="divide-y divide-dashed divide-stone-900 divide-opacity-50 bg-stone-50 px-3">
-                {dates.map((date) => (
-                    <div key={date._key} className="flex h-24 flex-col place-content-center">
+                {dates.map((date, idx) => (
+                    <div key={idx} className="flex h-24 flex-col place-content-center">
                         <div className="flex items-center justify-center gap-x-2">
                             <div
                                 className={clsx(

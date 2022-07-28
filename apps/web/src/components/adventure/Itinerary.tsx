@@ -77,8 +77,8 @@ const Itinerary = ({ itinerary, color }) => {
                     </Tab.List>
                 </div>
                 <Tab.Panels className="bg-stone-50 lg:col-span-3">
-                    {itinerary?.map((stage) => (
-                        <Tab.Panel key={stage._key} className="p-3">
+                    {itinerary?.map((stage, idx) => (
+                        <Tab.Panel key={idx} className="p-3">
                             <div>
                                 <div className="text-center text-sm font-medium uppercase tracking-wider text-stone-700 lg:text-left lg:text-lg">
                                     {stage.dayTo && (
@@ -109,11 +109,7 @@ const Itinerary = ({ itinerary, color }) => {
                             <div className="mt-4 grid w-full grid-cols-1 gap-x-6 lg:mt-12 lg:grid-cols-2">
                                 <div className="col-span-1">
                                     {stage.gallery && (
-                                        <Slider
-                                            gallery={stage.gallery}
-                                            color={color}
-                                            blurHash={stage.blurHash}
-                                        />
+                                        <Slider gallery={stage.gallery} color={color} />
                                     )}
                                 </div>
 

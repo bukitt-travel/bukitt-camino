@@ -23,9 +23,9 @@ const Highlights = ({ highlights, color }) => {
                     className="flex gap-x-1 bg-stone-900/20 p-1"
                     style={{ background: color }}
                 >
-                    {highlights?.map((highlight) => (
+                    {highlights?.map((highlight, idx) => (
                         <Tab
-                            key={highlight._key}
+                            key={idx}
                             className={({ selected }) =>
                                 clsx(
                                     'tw-transition flex w-full flex-col items-center justify-center py-2 text-sm text-stone-900',
@@ -56,20 +56,16 @@ const Highlights = ({ highlights, color }) => {
                     ))}
                 </Tab.List>
                 <Tab.Panels className="mt-2">
-                    {highlights?.map((highlight) => (
+                    {highlights?.map((highlight, idx) => (
                         <Tab.Panel
-                            key={highlight._key}
+                            key={idx}
                             className={clsx(
                                 'grid grid-cols-1 gap-x-12 gap-y-6 bg-stone-50 p-3 md:gap-y-0 lg:grid-cols-2',
                             )}
                         >
                             <div className="col-span-1">
                                 {highlight.gallery && (
-                                    <Slider
-                                        gallery={highlight.gallery}
-                                        blurHash={highlight.blurHash}
-                                        color={color}
-                                    />
+                                    <Slider gallery={highlight.gallery} color={color} />
                                 )}
                             </div>
 

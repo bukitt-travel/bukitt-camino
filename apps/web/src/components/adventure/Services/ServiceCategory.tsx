@@ -11,8 +11,8 @@ const ServiceCategory = ({ label, services }) => {
             <h2 className="font-serif text-3xl font-medium lg:text-4xl">{label}</h2>
             <dl className="mt-6 space-y-6 divide-y divide-dashed divide-stone-900 divide-opacity-50">
                 {services &&
-                    services?.map((service) => (
-                        <Disclosure as="div" key={service._key} className="pt-6">
+                    services?.map((service, idx) => (
+                        <Disclosure as="div" key={idx} className="pt-6">
                             {({ open }) => (
                                 <>
                                     <dt className="text-lg">

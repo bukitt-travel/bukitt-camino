@@ -18,9 +18,9 @@ const RouteMap = ({ routeMap, color }) => {
 
     const pins = useMemo(
         () =>
-            routeMap.map((stage) => (
+            routeMap.map((stage, idx) => (
                 <Marker
-                    key={stage.id}
+                    key={idx}
                     longitude={stage.coordinates.lng}
                     latitude={stage.coordinates.lat}
                     anchor="bottom"
