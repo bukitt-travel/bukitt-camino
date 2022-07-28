@@ -91,7 +91,7 @@ const gearFields = groq`
 const aboutFields = groq`
 	"id": _id,
 	_updatedAt,
-	infoCamino,
+	camino,
 	founder,
 	features,
 	image

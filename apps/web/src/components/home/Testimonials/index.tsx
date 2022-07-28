@@ -55,7 +55,9 @@ const Testimonials = ({ testimonials }) => {
     }, [embla, setScrollSnaps, onSelect]);
 
     return (
-        <div className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center">
+        <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center">
+            <h2 className="tw-subheading text-center">Our costumers</h2>
+
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
                     {testimonials.map((testimonial) => (
@@ -102,12 +104,12 @@ const Testimonials = ({ testimonials }) => {
                         key={idx}
                         onClick={() => scrollTo(idx)}
                         className={`h-2 w-2 rounded-full ${
-                            idx === selectedIndex ? 'bg-yellow-500' : 'bg-stone-300'
+                            idx === selectedIndex ? 'bg-stone-900' : 'bg-stone-300'
                         }`}
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

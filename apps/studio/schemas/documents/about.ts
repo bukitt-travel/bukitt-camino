@@ -12,7 +12,7 @@ export default {
             type: 'string',
         },
         {
-            name: 'infoCamino',
+            name: 'camino',
             title: 'Camino',
             type: 'section',
         },

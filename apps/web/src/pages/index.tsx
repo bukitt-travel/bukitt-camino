@@ -3,7 +3,7 @@ import { homePageQuery } from '@/lib/queries';
 
 import Page from '@/components/shared/Page';
 import Hero from '@/components/home/Hero';
-import Adventures from '@/components/adventure/List';
+import Adventures from '@/components/home/Adventures';
 import Testimonials from '@/components/home/Testimonials';
 import Gear from '@/components/home/Gear';
 

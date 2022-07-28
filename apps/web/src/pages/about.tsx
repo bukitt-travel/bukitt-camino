@@ -4,6 +4,7 @@ import { aboutPageQuery } from '@/lib/queries';
 import Page from '@/components/shared/Page';
 import Founder from '@/components/about/Founder';
 import Features from '@/components/about/Features';
+import Camino from '@/components/about/Camino';
 
 const AboutPage = ({ about }) => {
     return (
@@ -11,9 +12,9 @@ const AboutPage = ({ about }) => {
             metaTitle="About"
             metaDescription="Meet your Santiago Sherpa and the team behind Bukitt Camino, your deluxe ."
         >
-			<Founder founder={about.founder} />
-			
+            <Camino camino={about.camino} />
             <Features features={about.features} />
+            <Founder founder={about.founder} />
         </Page>
     );
 };
