@@ -55,7 +55,7 @@ const Testimonials = ({ testimonials }) => {
     }, [embla, setScrollSnaps, onSelect]);
 
     return (
-        <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center">
+        <section className="mx-6 flex min-h-screen max-w-3xl flex-col items-center justify-center lg:mx-auto">
             <h2 className="tw-subheading text-center">Our costumers</h2>
 
             <div className="overflow-hidden" ref={emblaRef}>
@@ -63,7 +63,7 @@ const Testimonials = ({ testimonials }) => {
                     {testimonials.map((testimonial) => (
                         <div
                             key={testimonial.id}
-                            className="relative flex w-full flex-none flex-wrap px-3 lg:mx-10 lg:flex-nowrap lg:px-0"
+                            className="relative flex w-full flex-none flex-wrap lg:flex-nowrap"
                         >
                             <div className="flex flex-col items-center justify-center text-center">
                                 <div className="font-serif text-xl md:text-3xl">
