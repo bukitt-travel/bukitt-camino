@@ -109,7 +109,11 @@ const Itinerary = ({ itinerary, color }) => {
                             <div className="mt-4 grid w-full grid-cols-1 gap-x-6 lg:mt-12 lg:grid-cols-2">
                                 <div className="col-span-1">
                                     {stage.gallery && (
-                                        <Slider gallery={stage.gallery} color={color} />
+                                        <Slider
+                                            gallery={stage.gallery}
+                                            color={color}
+                                            blurHash={stage.blurHash}
+                                        />
                                     )}
                                 </div>
 
