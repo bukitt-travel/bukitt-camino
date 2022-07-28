@@ -114,65 +114,49 @@ const Itinerary = ({ itinerary, color }) => {
                                 </div>
 
                                 <div className="col-span-1 mt-4 lg:mt-0">
-                                    <div className="mb-2 border-y border-dashed border-stone-900 py-2">
+                                    <div className="">
                                         {stage.activity === 'route stage' && (
-                                            <div>
-                                                <div className="flex items-center gap-x-2 text-xl font-medium lg:text-2xl">
-                                                    <RiWalkLine />
-                                                    <span>Stage {stage.stageNumber}:</span>
-                                                    <span>{stage.distance} km</span>
-                                                </div>
+                                            <div className="mb-2 flex items-center gap-x-2 border-y border-dashed border-stone-900 py-2 text-xl font-medium lg:text-2xl">
+                                                <RiWalkLine />
+                                                <span>Stage {stage.stageNumber}:</span>
+                                                <span>{stage.distance} km</span>
                                             </div>
                                         )}
                                         {stage.activity === 'check-in and transfer' && (
-                                            <div>
-                                                <div className="flex items-center gap-x-2 text-2xl font-medium">
-                                                    {stage.transportation === 'train' && (
-                                                        <RiTrainLine />
-                                                    )}
-                                                    {stage.transportation === 'car' && (
-                                                        <RiBus2Line />
-                                                    )}
-                                                    {stage.transportation === 'plane' && (
-                                                        <RiPlaneLine />
-                                                    )}
-                                                    <span>Check-in and Transfer</span>
-                                                </div>
+                                            <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                {stage.transportation === 'train' && (
+                                                    <RiTrainLine />
+                                                )}
+                                                {stage.transportation === 'car' && <RiBus2Line />}
+                                                {stage.transportation === 'plane' && (
+                                                    <RiPlaneLine />
+                                                )}
+                                                <span>Check-in and Transfer</span>
                                             </div>
                                         )}
                                         {stage.activity === 'check-out and transfer' && (
-                                            <div>
-                                                <div className="flex items-center gap-x-2 text-2xl font-medium">
-                                                    {stage.transportation === 'train' && (
-                                                        <RiTrainLine />
-                                                    )}
-                                                    {stage.transportation === 'car' && (
-                                                        <RiBus2Line />
-                                                    )}
-                                                    {stage.transportation === 'plane' && (
-                                                        <RiPlaneLine />
-                                                    )}
-                                                    <span>Check-out and Transfer</span>
-                                                </div>
+                                            <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                {stage.transportation === 'train' && (
+                                                    <RiTrainLine />
+                                                )}
+                                                {stage.transportation === 'car' && <RiBus2Line />}
+                                                {stage.transportation === 'plane' && (
+                                                    <RiPlaneLine />
+                                                )}
+                                                <span>Check-out and Transfer</span>
                                             </div>
                                         )}
                                         {stage.activity === 'day trip' && (
-                                            <div>
-                                                <div className="flex items-center gap-x-2 text-2xl font-medium">
-                                                    {stage.transportation === 'train' && (
-                                                        <RiTrainLine />
-                                                    )}
-                                                    {stage.transportation === 'car' && (
-                                                        <RiBus2Line />
-                                                    )}
-                                                    {stage.transportation === 'plane' && (
-                                                        <RiPlaneLine />
-                                                    )}
-                                                    {stage.transportation === 'walk' && (
-                                                        <RiWalkLine />
-                                                    )}
-                                                    <span>Day Trip</span>
-                                                </div>
+                                            <div className="flex items-center gap-x-2 text-2xl font-medium">
+                                                {stage.transportation === 'train' && (
+                                                    <RiTrainLine />
+                                                )}
+                                                {stage.transportation === 'car' && <RiBus2Line />}
+                                                {stage.transportation === 'plane' && (
+                                                    <RiPlaneLine />
+                                                )}
+                                                {stage.transportation === 'walk' && <RiWalkLine />}
+                                                <span>Day Trip</span>
                                             </div>
                                         )}
                                     </div>

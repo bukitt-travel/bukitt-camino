@@ -67,7 +67,7 @@ const Testimonials = ({ testimonials }) => {
                                 <div className="font-serif text-xl md:text-3xl">
                                     <PortableText value={testimonial.quote} />
                                 </div>
-                                <div className="mt-2 w-16 cursor-pointer overflow-hidden md:mt-8 lg:mt-4 lg:w-24">
+                                <div className="mt-2 w-16 cursor-pointer overflow-hidden rounded-full bg-stone-200 md:mt-8 lg:mt-4 lg:w-24">
                                     {testimonial.image && (
                                         <Image
                                             src={urlForImage(testimonial.image)

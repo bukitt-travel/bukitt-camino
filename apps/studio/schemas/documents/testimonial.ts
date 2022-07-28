@@ -17,11 +17,6 @@ export default {
             type: 'string',
         },
         {
-            name: 'age',
-            title: 'Age',
-            type: 'number',
-        },
-        {
             name: 'quote',
             title: 'Quote',
             type: 'simplePortableText',
@@ -32,4 +27,11 @@ export default {
             type: 'imageCustom',
         },
     ],
+    preview: {
+        select: {
+            title: 'name',
+            subtitle: 'location',
+            media: 'image',
+        },
+    },
 };
