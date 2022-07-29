@@ -43,6 +43,7 @@
         "react-map-gl": "^7.0.18",
         "react-photo-gallery": "^8.0.0",
         "react-youtube": "^9.0.3",
+        "sharp": "^0.30.7",
         "zustand": "4.0.0"
     },
     "devDependencies": {
