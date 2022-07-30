@@ -5,7 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Adventures = ({ adventures }) => {
     return (
-        <section className="max-w-screen-2xl py-12 px-3 lg:px-6 lg:py-24">
+        <section className="mx-auto max-w-7xl py-12 px-3 lg:px-6 lg:py-24">
             <h2 className="tw-subheading">Our Caminos</h2>
 
             <div
@@ -17,22 +17,22 @@ const Adventures = ({ adventures }) => {
                     return (
                         <div
                             key={adventure.id}
-                            className="h-fit py-12 text-center odd:mt-0 md:py-24 md:even:mt-48 lg:odd:text-left lg:even:text-right"
+                            className="h-fit py-6 px-3 text-center odd:mt-0 lg:p-12 lg:odd:text-left lg:even:mt-48 lg:even:text-right"
                             style={{
                                 backgroundColor: adventure.color,
                             }}
                         >
                             <Link href={`/adventures/${adventure.slug}`} passHref>
                                 <a className="group">
-                                    <h3 className="px-3 text-xs uppercase tracking-widest lg:mt-2 lg:px-12 lg:text-2xl">
+                                    <h3 className="text-xs uppercase tracking-widest lg:text-xl">
                                         {adventure.location}
                                     </h3>
 
-                                    <h2 className="relative z-10 mt-1 flex flex-col px-3 font-serif md:mt-3 md:px-12">
-                                        <span className="text-5xl font-bold uppercase lg:text-8xl">
+                                    <h2 className="relative z-10 mt-1 flex flex-col font-serif md:mt-2">
+                                        <span className="text-5xl font-bold uppercase lg:text-7xl">
                                             {title[0]}
                                         </span>
-                                        <span className="text-6xl font-light italic lg:text-9xl">
+                                        <span className="text-6xl font-light italic lg:text-8xl">
                                             {title[1]}
                                         </span>
                                     </h2>

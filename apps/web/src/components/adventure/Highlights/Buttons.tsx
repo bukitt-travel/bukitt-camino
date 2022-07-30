@@ -1,6 +1,6 @@
 export const PrevButton = ({ enabled, onClick, color }) => (
     <button
-        className="absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full bg-stone-50 p-1.5 outline-none lg:left-2 lg:h-8 lg:w-8 lg:p-2"
+        className="absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full border-2 border-stone-900 bg-stone-50 p-1.5 outline-none lg:left-2 lg:h-8 lg:w-8 lg:p-2"
         onClick={onClick}
         disabled={!enabled}
         style={{ backgroundColor: color }}
@@ -13,7 +13,7 @@ export const PrevButton = ({ enabled, onClick, color }) => (
 
 export const NextButton = ({ enabled, onClick, color }) => (
     <button
-        className="absolute top-1/2 right-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full bg-stone-900 p-1.5 outline-none lg:right-2 lg:h-8 lg:w-8 lg:p-2"
+        className="absolute top-1/2 right-2 z-10 h-6 w-6 -translate-y-1/2 transform cursor-pointer touch-manipulation items-center justify-center rounded-full border-2 border-stone-900 bg-stone-900 p-1.5 outline-none lg:right-2 lg:h-8 lg:w-8 lg:p-2"
         onClick={onClick}
         disabled={!enabled}
         style={{ backgroundColor: color }}

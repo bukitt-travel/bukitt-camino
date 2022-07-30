@@ -33,40 +33,48 @@ const Modal = ({ gear, isOpen, setIsOpen, selected }) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                <Dialog.Title
-                                    as="h3"
-                                    className="font-serif text-3xl font-medium text-stone-900"
-                                >
-                                    {gear[selected]?.name}
-                                </Dialog.Title>
+                            <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-stone-50 text-left align-middle shadow-xl transition-all">
+                                <div className="flex items-center justify-between bg-stone-900 px-3 text-stone-50">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="p-3 font-serif text-xl font-medium lg:p-6 lg:text-3xl"
+                                    >
+                                        {gear[selected]?.name}
+                                    </Dialog.Title>
 
-                                <div className="mx-auto max-w-sm pt-12">
-                                    {gear[selected]?.image && (
-                                        <Image
-                                            src={urlForImage(gear[selected]?.image)
-                                                .width(1080)
-                                                .height(1080)
-                                                .url()}
-                                            alt="Camino de Santiago"
-                                            layout="responsive"
-                                            width={4}
-                                            height={3}
-                                            objectFit="cover"
-                                            objectPosition="center"
-                                        />
-                                    )}
+                                    <div className="flex items-center">
+                                        <button
+                                            type="button"
+                                            className="tw-transition hover:opacity-50"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            <span className="sr-only">Close panel</span>
+                                            <RiCloseLine className="h-6 w-6" aria-hidden="true" />
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="mt-8">
-                                    <p className="text-base text-stone-700">
+
+                                <div className="p-6">
+                                    <div className="mx-auto max-w-sm">
+                                        {gear[selected]?.image && (
+                                            <Image
+                                                src={urlForImage(gear[selected]?.image)
+                                                    .width(1080)
+                                                    .height(1080)
+                                                    .url()}
+                                                alt="Camino de Santiago"
+                                                layout="responsive"
+                                                width={1}
+                                                height={1}
+                                                objectFit="cover"
+                                                objectPosition="center"
+                                            />
+                                        )}
+                                    </div>
+                                    <div className="prose mt-8">
                                         <PortableText value={gear[selected]?.description} />
-                                    </p>
+                                    </div>
                                 </div>
-
-                                <RiCloseLine
-                                    onClick={() => setIsOpen(false)}
-                                    className="absolute top-0 right-0 mr-2 mt-2 h-6 w-6 cursor-pointer hover:opacity-75"
-                                />
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

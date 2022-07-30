@@ -8,7 +8,7 @@ import { urlForImage } from '@/lib/sanity';
 const ServiceCategory = ({ label, services }) => {
     return (
         <div className="mt-6 border-b border-dashed border-stone-900 py-6">
-            <h2 className="font-serif text-3xl font-medium lg:text-4xl">{label}</h2>
+            <h2 className="font-serif text-2xl font-medium lg:text-3xl">{label}</h2>
             <dl className="mt-6 space-y-6 divide-y divide-dashed divide-stone-900 divide-opacity-50">
                 {services &&
                     services?.map((service, idx) => (

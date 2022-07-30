@@ -14,7 +14,7 @@ const Footer = ({ navLinks, contacts }) => {
                         {contacts.map((contact) => (
                             <li
                                 key={contact.id}
-                                className="tw-transition rounded-full border-2 border-stone-50 bg-stone-50 p-1 text-stone-900 hover:border-stone-50 hover:bg-stone-900 hover:text-stone-50 lg:p-2"
+                                className="tw-transition rounded-full border-2 border-stone-50 bg-stone-900 p-1 text-stone-50 hover:border-stone-50 hover:bg-stone-50 hover:text-stone-900 lg:p-2"
                             >
                                 <a href={contact.href} target="_blank" rel="noopener noreferrer">
                                     <contact.icon className="h-5 w-5 lg:h-6 lg:w-6" />
