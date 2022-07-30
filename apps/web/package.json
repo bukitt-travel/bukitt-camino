@@ -25,6 +25,7 @@
         "@sanity/client": "^3.3.2",
         "@sanity/image-url": "^1.0.1",
         "@sanity/webhook": "^2.0.0",
+        "@sendgrid/mail": "^7.7.0",
         "autoprefixer": "^10.4.7",
         "clsx": "^1.2.1",
         "date-fns": "^2.29.1",
