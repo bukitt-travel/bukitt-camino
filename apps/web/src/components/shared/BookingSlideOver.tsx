@@ -1,12 +1,11 @@
 import { Fragment, useState } from 'react';
-import { Dialog, Transition, Switch } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import clsx from 'clsx';
 
 import { useStore } from '@/lib/store';
 import InquiryForm from '../forms/InquiryForm';
 
-const BookingSlideOver = () => {
+const BookingSlideOver = ({ adventures }) => {
     // @ts-expect-error need to find types for useStore()
     const { bookingIsOpen, toggleBooking } = useStore();
     const [agreed, setAgreed] = useState(false);
@@ -58,7 +57,7 @@ const BookingSlideOver = () => {
                                 </div>
 
                                 <section className="px-6 py-12 lg:p-12">
-                                    <InquiryForm />
+                                    <InquiryForm adventures={adventures} />
                                 </section>
                             </div>
                         </Dialog.Panel>

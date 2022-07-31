@@ -17,7 +17,7 @@ const Adventures = ({ adventures }) => {
                     return (
                         <div
                             key={adventure.id}
-                            className="h-fit py-6 px-3 text-center odd:mt-0 lg:p-12 lg:odd:text-left lg:even:mt-48 lg:even:text-right"
+                            className="h-fit py-6 px-3 text-center odd:mt-0 lg:p-12 lg:odd:text-left lg:even:mt-24 lg:even:text-right"
                             style={{
                                 backgroundColor: adventure.color,
                             }}

@@ -6,6 +6,7 @@ import Hero from '@/components/home/Hero';
 import Adventures from '@/components/home/Adventures';
 import Testimonials from '@/components/home/Testimonials';
 import Gear from '@/components/home/Gear';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
 const HomePage = ({ adventures, testimonials, gear }) => {
     return (
@@ -20,6 +21,8 @@ const HomePage = ({ adventures, testimonials, gear }) => {
             <Testimonials testimonials={testimonials} />
 
             <Gear gear={gear} />
+
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };

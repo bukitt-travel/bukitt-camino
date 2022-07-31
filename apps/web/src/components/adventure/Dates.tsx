@@ -4,11 +4,7 @@ import { RiCalendar2Line } from 'react-icons/ri';
 
 const Dates = ({ dates, color }) => {
     const todayDate = format(new Date(), 'MMM d y');
-    // // const formattedDates = dates.map((date) => ({
-    // //     startDate: format(new Date(date.startDate), 'MM-dd-yyyy'),
-    // //     endDate: format(new Date(date.endDate), 'MM-dd-yyyy'),
-    // //     availability: date.availability,
-    // // }));
+
     return (
         <section className="text-center md:col-span-2">
             <div
