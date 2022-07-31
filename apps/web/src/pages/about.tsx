@@ -5,8 +5,9 @@ import Page from '@/components/shared/Page';
 import Founder from '@/components/about/Founder';
 import Features from '@/components/about/Features';
 import Camino from '@/components/about/Camino';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
-const AboutPage = ({ about }) => {
+const AboutPage = ({ about, adventures }) => {
     return (
         <Page
             metaTitle="About"
@@ -15,6 +16,7 @@ const AboutPage = ({ about }) => {
             <Camino camino={about.camino} />
             <Features features={about.features} />
             <Founder founder={about.founder} />
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };
@@ -26,6 +28,7 @@ export async function getStaticProps() {
     return {
         props: {
             about: data.about,
+            adventures: data.adventures,
         },
         revalidate: 10,
     };

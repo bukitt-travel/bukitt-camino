@@ -6,8 +6,9 @@ import { sanityClient } from '@/lib/sanity.server';
 import { individualStoryQuery, storiesPathsQuery } from '@/lib/queries';
 
 import Page from '@/components/shared/Page';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
-const StoryPage = ({ story }) => {
+const StoryPage = ({ story, adventures }) => {
     return (
         <Page metaTitle={story.title} metaDescription={story.summary}>
             <div className="mx-auto max-w-2xl py-24">
@@ -32,6 +33,7 @@ const StoryPage = ({ story }) => {
                     <PortableText value={story.content} />
                 </div>
             </div>
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };
@@ -48,13 +50,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const { story } = await sanityClient.fetch(individualStoryQuery, {
+    const { story, adventures } = await sanityClient.fetch(individualStoryQuery, {
         slug: params.slug,
     });
 
     return {
         props: {
             story,
+            adventures,
         },
         revalidate: 10,
     };

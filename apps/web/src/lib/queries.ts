@@ -53,6 +53,11 @@ const adventureFields = groq`
 	}
 `;
 
+const bookingsFields = groq`
+	title,
+	dates,
+`;
+
 const faqFields = groq`
 	"id": _id,
 	_updatedAt,
@@ -104,7 +109,7 @@ export const homePageQuery = groq`
 "adventures": *[_type == "adventure"] {
 	${adventureFields}
 	},
-"testimonials": *[_type == "testimonial"] {
+ "testimonials": *[_type == "testimonial"] {
 	${testimonialFields}
 	},
 "gear": *[_type == "gear"] {
@@ -123,7 +128,10 @@ export const individualStoryQuery = groq`
 {
   "story": *[_type == "story" && slug.current == $slug] | order(_updatedAt desc) [0] {
     ${storyFields}
-  }
+  },
+  "adventures": *[_type == "adventure"] {
+	${bookingsFields}
+	},
 }`;
 
 export const adventuresPathsQuery = groq`*[_type == "adventure" && defined(slug.current)][].slug.current
@@ -136,14 +144,20 @@ export const faqPageQuery = groq`
 {
 "faq": *[_type == "faq"] {
 	${faqFields}
-	}
+	},
+"adventures": *[_type == "adventure"] {
+	${bookingsFields}
+	},
 }`;
 
 export const storiesPageQuery = groq`
 {
 "stories": *[_type == "story"] {
 	${storyFields}
-	}
+	},
+"adventures": *[_type == "adventure"] {
+	${bookingsFields}
+	},
 }
 `;
 
@@ -151,6 +165,9 @@ export const aboutPageQuery = groq`
 {
 "about": *[_type == "about"][0] {
 	${aboutFields}
-	}
+	},
+"adventures": *[_type == "adventure"] {
+	${bookingsFields}
+	},
 }
 `;

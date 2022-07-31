@@ -8,8 +8,9 @@ import Page from '@/components/shared/Page';
 import CategoryFilters from '@/components/story/CategoryFilters';
 import Card from '@/components/story/Card';
 import Tagline from '@/components/shared/Tagline';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
-const StoriesPage = ({ allStories }) => {
+const StoriesPage = ({ allStories, adventures }) => {
     const [stories] = useState(allStories);
     const [filteredStories, setFilteredStories] = useState(allStories);
     const [storyCategoryFilters] = useState(['guides', 'customer', 'spotlight']);
@@ -55,6 +56,7 @@ const StoriesPage = ({ allStories }) => {
                     </AnimatePresence>
                 </motion.ul>
             </section>
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };
@@ -66,6 +68,7 @@ export async function getStaticProps() {
     return {
         props: {
             allStories: data.stories,
+            adventures: data.adventures,
         },
         revalidate: 10,
     };

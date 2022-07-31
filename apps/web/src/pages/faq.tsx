@@ -8,8 +8,9 @@ import { faqPageQuery } from '@/lib/queries';
 
 import Page from '@/components/shared/Page';
 import Tagline from '@/components/shared/Tagline';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
-const FAQ = ({ faq }) => {
+const FAQ = ({ faq, adventures }) => {
     return (
         <Page metaTitle="FAQ" metaDescription="We answer the most impor.">
             <div className="mx-auto max-w-7xl">
@@ -60,6 +61,7 @@ const FAQ = ({ faq }) => {
                     </dl>
                 </div>
             </div>
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };
@@ -71,6 +73,7 @@ export async function getStaticProps() {
     return {
         props: {
             faq: data.faq,
+            adventures: data.adventures,
         },
         revalidate: 10,
     };

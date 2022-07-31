@@ -62,8 +62,6 @@ const InquiryForm = ({ adventures }) => {
             isBefore(new Date(), new Date(date?.startDate)),
         );
 
-        console.log(filteredDates);
-
         setAdventureDates(
             filteredDates?.map((date) => ({
                 fullDate: `${format(new Date(date.startDate), 'MMM d y')} - ${format(
@@ -210,9 +208,11 @@ const InquiryForm = ({ adventures }) => {
                                 {...register('adventure')}
                                 className="peer h-10 w-full border-0 border-b border-dashed border-stone-900 bg-transparent pt-2 text-sm italic text-stone-700 placeholder-transparent focus:border-stone-500 focus:outline-none focus:ring-0"
                             >
-                                <option disabled value="default">
-                                    -- Pick your Camino --
-                                </option>
+                                {adventures.length > 1 && (
+                                    <option disabled value="default">
+                                        -- Pick your Camino --
+                                    </option>
+                                )}
 
                                 {adventures.map((adventure, idx) => (
                                     <option key={idx} value={adventure.title}>

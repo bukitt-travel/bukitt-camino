@@ -13,8 +13,10 @@ import Itinerary from '@/components/adventure/Itinerary';
 import Map from '@/components/adventure/Map';
 import Services from '@/components/adventure/Services';
 import Details from '@/components/adventure/Details';
+import BookingSlideOver from '@/components/shared/BookingSlideOver';
 
 const AdventurePage = ({ adventure }) => {
+    const adventures = [adventure];
     const [openServices, setOpenServices] = useState(false);
 
     const includedServices = adventure?.services?.filter(
@@ -70,6 +72,8 @@ const AdventurePage = ({ adventure }) => {
                 open={openServices}
                 setOpen={setOpenServices}
             />
+
+            <BookingSlideOver adventures={adventures} />
         </Page>
     );
 };
