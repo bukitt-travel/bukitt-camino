@@ -12,6 +12,21 @@ export default {
             type: 'string',
         },
         {
+            name: 'order',
+            title: 'Order',
+            type: 'number',
+        },
+        {
+            name: 'brand',
+            title: 'Brand',
+            type: 'string',
+        },
+        {
+            name: 'model',
+            title: 'Model',
+            type: 'string',
+        },
+        {
             name: 'description',
             title: 'Description',
             type: 'simplePortableText',
@@ -22,4 +37,23 @@ export default {
             type: 'imageCustom',
         },
     ],
+
+    preview: {
+        select: {
+            name: 'name',
+            brand: 'brand',
+            model: 'model',
+            order: 'order',
+        },
+        prepare: ({ name, brand, model, order }) => {
+            name = name ? name : '';
+            model = model ? model : '';
+            brand = brand ? `by ${brand}` : '';
+            order = order ? order : '';
+            return {
+                title: name,
+                subtitle: `${order} ${model} ${brand}`,
+            };
+        },
+    },
 };

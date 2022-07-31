@@ -89,6 +89,9 @@ const gearFields = groq`
 	"id": _id,
 	_updatedAt,
 	name,
+	order,
+	brand,
+	model,
 	description,
 	image
 `;
@@ -112,7 +115,7 @@ export const homePageQuery = groq`
  "testimonials": *[_type == "testimonial"] {
 	${testimonialFields}
 	},
-"gear": *[_type == "gear"] {
+"gear": *[_type == "gear"] | order(order asc) {
 	${gearFields}
 	},
 }`;
@@ -166,6 +169,14 @@ export const aboutPageQuery = groq`
 "about": *[_type == "about"][0] {
 	${aboutFields}
 	},
+"adventures": *[_type == "adventure"] {
+	${bookingsFields}
+	},
+}
+`;
+
+export const errorPageQuery = groq`
+{
 "adventures": *[_type == "adventure"] {
 	${bookingsFields}
 	},

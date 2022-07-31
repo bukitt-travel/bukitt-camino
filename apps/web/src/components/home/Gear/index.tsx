@@ -16,7 +16,7 @@ const Gear = ({ gear }) => {
 
     return (
         <section className="py-12 lg:py-24">
-            <h2 className="tw-subheading text-center">Packing list</h2>
+            <h2 className="tw-subheading text-center">Packing List</h2>
 
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-6 p-6 md:grid-cols-3">
                 {gear.map((item, idx) => (

@@ -71,8 +71,20 @@ const Modal = ({ gear, isOpen, setIsOpen, selected }) => {
                                             />
                                         )}
                                     </div>
-                                    <div className="prose mt-8">
-                                        <PortableText value={gear[selected]?.description} />
+                                    <div>
+                                        <div className="mt-3 flex flex-col border-y border-dashed border-stone-900 border-opacity-50 py-1.5 text-stone-900 lg:mt-6 lg:py-3">
+                                            <span className="inline-block text-3xl font-bold uppercase">
+                                                {gear[selected]?.model}
+                                            </span>
+                                            <span className="inline-block text-base font-medium text-stone-700 lg:text-lg">
+                                                <span className="text-xs lg:text-sm">by</span>{' '}
+                                                {gear[selected]?.brand}
+                                            </span>
+                                        </div>
+
+                                        <div className="prose mt-1.5 lg:mt-3">
+                                            <PortableText value={gear[selected]?.description} />
+                                        </div>
                                     </div>
                                 </div>
                             </Dialog.Panel>
