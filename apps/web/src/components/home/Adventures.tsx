@@ -6,7 +6,7 @@ import { urlForImage } from '@/lib/sanity';
 const Adventures = ({ adventures }) => {
     return (
         <section className="mx-auto max-w-7xl py-12 px-3 lg:px-6 lg:py-24">
-            <h2 className="tw-subheading">Our Caminos</h2>
+            <h2 className="tw-subheading text-center">Our Caminos</h2>
 
             <div
                 className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-y-12 text-stone-900 md:grid-cols-2 md:gap-x-6"
