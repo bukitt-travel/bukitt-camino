@@ -55,10 +55,10 @@ const Testimonials = ({ testimonials }) => {
     }, [embla, setScrollSnaps, onSelect]);
 
     return (
-        <section className="mx-6 flex min-h-screen max-w-3xl flex-col items-center justify-center lg:mx-auto">
+        <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center">
             <h2 className="tw-subheading text-center">Our costumers</h2>
 
-            <div className="overflow-hidden" ref={emblaRef}>
+            <div className="w-11/12 overflow-hidden lg:w-full" ref={emblaRef}>
                 <div className="flex">
                     {testimonials.map((testimonial) => (
                         <div
@@ -69,7 +69,7 @@ const Testimonials = ({ testimonials }) => {
                                 <div className="font-serif text-xl md:text-3xl">
                                     <PortableText value={testimonial.quote} />
                                 </div>
-                                <div className="mt-2 w-16 cursor-pointer overflow-hidden rounded-full bg-stone-200 md:mt-8 lg:mt-4 lg:w-24">
+                                <div className="mt-4 w-16 overflow-hidden rounded-full bg-stone-200 lg:mt-6 lg:w-24">
                                     {testimonial.image && (
                                         <Image
                                             src={urlForImage(testimonial.image)
@@ -98,7 +98,7 @@ const Testimonials = ({ testimonials }) => {
                 </div>
             </div>
 
-            <div className="mt-5 flex items-center justify-center space-x-2">
+            <div className="mt-2 flex items-center justify-center space-x-2 lg:mt-4">
                 {scrollSnaps.map((_, idx) => (
                     <button
                         key={idx}
