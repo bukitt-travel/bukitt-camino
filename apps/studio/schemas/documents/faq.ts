@@ -16,5 +16,16 @@ export default {
             title: 'Answer',
             type: 'simplePortableText',
         },
+        {
+            name: 'order',
+            title: 'Order',
+            type: 'number',
+        },
     ],
+    preview: {
+        select: {
+            title: 'question',
+            subtitle: 'order',
+        },
+    },
 };

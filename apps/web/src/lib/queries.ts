@@ -145,7 +145,7 @@ export const storiesPathsQuery = groq`*[_type == "story" && defined(slug.current
 
 export const faqPageQuery = groq`
 {
-"faq": *[_type == "faq"] {
+"faq": *[_type == "faq"] | order(order asc) {
 	${faqFields}
 	},
 "adventures": *[_type == "adventure"] {
