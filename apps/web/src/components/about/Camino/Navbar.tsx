@@ -44,6 +44,7 @@ const NavBar = () => {
 
         return () => {
             window.removeEventListener('resize', updateActiveIndex);
+            // @ts-ignore
             window.removeEventListener('scroll', updateActiveIndex, { passive: true });
         };
     }, []);
