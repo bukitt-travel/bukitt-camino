@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/solid';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 import clsx from 'clsx';
 
 import { urlForImage } from '@/lib/sanity';
@@ -37,7 +37,7 @@ const ServiceCategory = ({ label, services }) => {
                                                 </div>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
-                                                <ChevronDownIcon
+                                                <RiArrowDropDownLine
                                                     className={clsx(
                                                         open ? '-rotate-180' : 'rotate-0',
                                                         'tw-transition h-6 w-6 hover:opacity-50',

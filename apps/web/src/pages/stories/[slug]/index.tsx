@@ -11,7 +11,7 @@ import BookingSlideOver from '@/components/shared/BookingSlideOver';
 const StoryPage = ({ story, adventures }) => {
     return (
         <Page metaTitle={story.title} metaDescription={story.summary}>
-            <div className="mx-auto max-w-2xl py-24">
+            <div className="mx-auto max-w-2xl py-12">
                 <h2 className="text-lg font-semibold uppercase text-stone-700">{story.category}</h2>
                 <h1 className="mt-2 font-serif text-5xl font-bold uppercase">{story.title}</h1>
 

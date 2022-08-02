@@ -51,7 +51,7 @@ const AdventurePage = ({ adventure }) => {
 
             <Itinerary itinerary={adventure.itinerary} color={adventure.color} />
 
-            <section className="h-screen w-full py-24 md:py-32">
+            <section className="h-screen w-full py-16">
                 <Map routeMap={adventure.routeMap} color={adventure.color} />
             </section>
 

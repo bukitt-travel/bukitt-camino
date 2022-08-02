@@ -69,21 +69,11 @@ const RouteMap = ({ routeMap, color }) => {
                     closeButton={false}
                     onClose={() => setPopupInfo(null)}
                 >
-                    <div className="space-y-2 font-serif">
+                    <div className="font-serif">
                         {popupInfo.location && (
-                            <p className="space-x-2">
-                                <span className="text-xl font-medium">{popupInfo.location}</span>
-                            </p>
+                            <span className="text-xl font-medium">{popupInfo.location}</span>
                         )}
                     </div>
-                    {popupInfo.coordinates.alt && (
-                        <div className="mt-2 text-base">
-                            <span>Altitude</span>{' '}
-                            <span className="font-bold">
-                                {popupInfo.coordinates.alt.toFixed(0)}m
-                            </span>
-                        </div>
-                    )}
                 </Popup>
             )}
         </Map>

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { PortableText } from '@portabletext/react';
 import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/outline';
+import { RiArrowDownSLine } from 'react-icons/ri';
 
 import { sanityClient } from '@/lib/sanity.server';
 import { faqPageQuery } from '@/lib/queries';
@@ -30,7 +30,7 @@ const FAQ = ({ faq, adventures }) => {
                                                     {faq.question}
                                                 </span>
                                                 <span className="ml-6 flex h-7 items-center">
-                                                    <ChevronDownIcon
+                                                    <RiArrowDownSLine
                                                         className={clsx(
                                                             open ? '-rotate-180' : 'rotate-0',
                                                             'tw-transition h-6 w-6 transform',

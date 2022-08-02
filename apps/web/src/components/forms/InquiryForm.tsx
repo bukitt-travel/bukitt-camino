@@ -1,8 +1,8 @@
-import { format, isBefore } from 'date-fns';
 import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
+import { AnimatePresence, motion } from 'framer-motion';
 import * as yup from 'yup';
+import { format, isBefore } from 'date-fns';
 import clsx from 'clsx';
 import { RiShieldCheckLine } from 'react-icons/ri';
 import { Switch } from '@headlessui/react';

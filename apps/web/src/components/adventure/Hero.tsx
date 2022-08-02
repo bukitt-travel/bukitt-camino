@@ -7,7 +7,7 @@ const Hero = ({ adventure }) => {
 
     return (
         <section
-            className="lg:tw-hero-full-desktop tw-hero-full-mobile flex flex-col py-12 px-3 text-stone-900 lg:px-24 lg:py-24"
+            className="lg:tw-hero-full-desktop tw-hero-full-mobile flex flex-col py-12 px-3 text-stone-900 lg:px-24 lg:py-12"
             style={{
                 backgroundColor: adventure.color,
             }}

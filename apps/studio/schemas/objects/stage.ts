@@ -26,6 +26,7 @@ export default {
             name: 'dayTo',
             title: 'Day To',
             type: 'number',
+            hidden: ({ parent }) => parent.activity === 'route stage',
         },
         {
             name: 'transportation',
@@ -53,10 +54,22 @@ export default {
             hidden: ({ parent }) => parent.activity !== 'route stage',
         },
         {
-            name: 'distance',
-            title: 'Distance',
+            name: 'walkingDistance',
+            title: 'Walking Distance',
             type: 'number',
             validation: (Rule) => Rule.min(0).max(1000),
+            hidden: ({ parent }) => parent.activity !== 'route stage',
+        },
+        {
+            name: 'walkingTime',
+            title: 'Walking Time',
+            type: 'duration',
+            hidden: ({ parent }) => parent.activity !== 'route stage',
+        },
+        {
+            name: 'overnightStay',
+            title: 'Overnight Stay',
+            type: 'string',
             hidden: ({ parent }) => parent.activity !== 'route stage',
         },
         {

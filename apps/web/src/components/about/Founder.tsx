@@ -4,7 +4,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Founder = ({ founder }) => {
     return (
-        <section className="mx-auto my-12 grid max-w-7xl grid-cols-1 gap-y-12 px-3 py-12 md:my-24 md:grid-cols-5 md:gap-x-6 md:px-3 lg:py-24">
+        <section className="mx-auto my-12 grid max-w-7xl grid-cols-1 gap-y-12 px-3 py-12 md:my-24 md:grid-cols-5 md:gap-x-6 md:px-3 lg:py-12">
             <div className="col-span-3">
                 {founder?.image && (
                     <Image

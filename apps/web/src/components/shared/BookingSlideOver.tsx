@@ -1,6 +1,6 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { RiCloseLine } from 'react-icons/ri';
 
 import { useStore } from '@/lib/store';
 import InquiryForm from '../forms/InquiryForm';
@@ -8,7 +8,6 @@ import InquiryForm from '../forms/InquiryForm';
 const BookingSlideOver = ({ adventures }) => {
     // @ts-expect-error need to find types for useStore()
     const { bookingIsOpen, toggleBooking } = useStore();
-    const [agreed, setAgreed] = useState(false);
 
     return (
         <Transition.Root show={bookingIsOpen} as={Fragment}>
@@ -50,7 +49,10 @@ const BookingSlideOver = ({ adventures }) => {
                                                 onClick={() => toggleBooking(false)}
                                             >
                                                 <span className="sr-only">Close panel</span>
-                                                <XIcon className="h-6 w-6" aria-hidden="true" />
+                                                <RiCloseLine
+                                                    className="h-6 w-6"
+                                                    aria-hidden="true"
+                                                />
                                             </button>
                                         </div>
                                     </div>

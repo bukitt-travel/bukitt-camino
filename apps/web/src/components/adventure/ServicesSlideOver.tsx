@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
+import { RiCloseLine } from 'react-icons/ri';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
 
 import ServiceCategory from '@/components/adventure/Services/ServiceCategory';
 
@@ -55,7 +55,7 @@ const ServicesSlideOver = ({
                                                         onClick={() => setOpen(false)}
                                                     >
                                                         <span className="sr-only">Close panel</span>
-                                                        <XIcon
+                                                        <RiCloseLine
                                                             className="h-6 w-6"
                                                             aria-hidden="true"
                                                         />

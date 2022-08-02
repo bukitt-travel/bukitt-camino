@@ -36,9 +36,11 @@ const adventureFields = groq`
 	"itinerary": itinerary[]{
 		locationFrom,
 		locationTo,
-		distance,
 		dayTo,
 		dayFrom,
+		walkingDistance,
+		walkingTime,
+		overnightStay,
 		transportation,
 		activity,
 		stageNumber,

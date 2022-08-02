@@ -9,7 +9,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Highlights = ({ highlights, color }) => {
     return (
-        <div className="mx-auto w-full max-w-5xl px-3 py-16 md:py-32 md:px-0">
+        <section className="mx-auto w-full max-w-5xl py-16">
             <h2
                 className="tw-subheading text-center"
                 style={{
@@ -83,7 +83,7 @@ const Highlights = ({ highlights, color }) => {
                     ))}
                 </Tab.Panels>
             </Tab.Group>
-        </div>
+        </section>
     );
 };
 

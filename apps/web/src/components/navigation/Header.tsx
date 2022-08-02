@@ -11,7 +11,7 @@ const Header = ({ setOpenMobileMenu, navLinks }) => {
     const { toggleBooking } = useStore();
 
     return (
-        <nav className="z-50 mx-auto grid h-16 grid-cols-3 items-center border-b p-3  lg:h-24">
+        <nav className="z-50 mx-auto grid h-16 max-w-screen-2xl grid-cols-3 items-center border-b p-3 lg:h-24">
             <div className="col-span-1 hidden justify-start space-x-6 lg:flex">
                 {navLinks.map((navLink) => (
                     <div key={navLink.id}>
@@ -25,7 +25,7 @@ const Header = ({ setOpenMobileMenu, navLinks }) => {
 
             <div className="col-span-1 flex justify-center">
                 <Link href="/">
-                    <a className="tw-transition w-32 hover:scale-95 md:w-48">
+                    <a className="tw-transition w-32 hover:scale-95 hover:fill-yellow-500 md:w-48">
                         <Logo />
                     </a>
                 </Link>

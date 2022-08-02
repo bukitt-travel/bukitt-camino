@@ -21,10 +21,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <RiCoinsLine className="h-6 w-6" />
                     <Label>Price</Label>
                 </LabelContainer>
-                <div
-                    className="mt-2 flex flex-col text-center lg:mt-4
-				"
-                >
+                <div className="mt-1 flex flex-col text-center lg:mt-2">
                     <h4>
                         <span className="mr-1 text-xs font-light text-stone-700">from</span>
                         <span className="text-lg font-semibold capitalize lg:text-xl">
@@ -44,7 +41,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <Label>Group</Label>
                 </LabelContainer>
 
-                <div className="mt-2 flex items-baseline gap-x-1 lg:mt-4">
+                <div className="mt-1 flex items-baseline gap-x-1 lg:mt-2">
                     <Value>{group}</Value>
                     <ValueSmall> min.</ValueSmall>
                 </div>
@@ -55,7 +52,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <RiFundsLine className="h-6 w-6" />
                     <Label>Level</Label>
                 </LabelContainer>
-                <div className="mt-2 flex items-baseline gap-x-1 lg:mt-4">
+                <div className="mt-1 flex items-baseline gap-x-1 lg:mt-2">
                     <div className="flex-col text-center text-base font-semibold capitalize lg:text-xl">
                         <p>{level.minLevel} / </p>
                         <p>{level.maxLevel}</p>
@@ -68,7 +65,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <RiMapPin2Line className="h-6 w-6" />
                     <Label>Distance</Label>
                 </LabelContainer>
-                <div className="mt-2 flex items-baseline gap-x-1 lg:mt-4">
+                <div className="mt-1 flex items-baseline gap-x-1 lg:mt-2">
                     <Value>{distance}</Value>
                     <ValueSmall> km.</ValueSmall>
                 </div>
@@ -79,7 +76,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <RiTimeLine className="h-6 w-6" />
                     <Label>Duration</Label>
                 </LabelContainer>
-                <div className="mt-2 flex items-baseline gap-x-1 lg:mt-4">
+                <div className="mt-1 flex items-baseline gap-x-1 lg:mt-2">
                     <Value>{duration}</Value>
                     <ValueSmall> days</ValueSmall>
                 </div>
@@ -90,7 +87,7 @@ const Details = ({ level, price, priceSingleSupplement, group, distance, duratio
                     <RiInformationLine className="h-6 w-6" />
                     <Label>Trip Details</Label>
                 </LabelContainer>
-                <div className="mt-2 flex items-baseline gap-x-1 lg:mt-4">
+                <div className="mt-1 flex items-baseline gap-x-1 lg:mt-2">
                     <div onClick={() => setOpen(true)} className="cursor-pointer">
                         <Value>+ details</Value>
                     </div>

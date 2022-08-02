@@ -23,6 +23,7 @@ import level from './objects/level';
 import imageGallery from './objects/imageGallery';
 import imageCustom from './objects/imageCustom';
 import tripDate from './objects/tripDate';
+import duration from './objects/duration';
 
 export default createSchema({
     name: 'default',
@@ -42,6 +43,7 @@ export default createSchema({
         section,
         tripDate,
         level,
+        duration,
         imageGallery,
         imageCustom,
         portableComplex,

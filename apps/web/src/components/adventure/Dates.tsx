@@ -6,7 +6,7 @@ const Dates = ({ dates, color }) => {
     const todayDate = format(new Date(), 'MMM d y');
 
     return (
-        <section className="text-center md:col-span-2">
+        <section className="text-center">
             <div
                 className="flex h-12 items-center justify-center gap-x-2 text-lg font-semibold uppercase"
                 style={{ backgroundColor: color }}
