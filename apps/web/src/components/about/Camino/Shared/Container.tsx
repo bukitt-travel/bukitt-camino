@@ -7,7 +7,7 @@ const styles = {
     lg: 'mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-8',
 };
 
-const Container = ({ size = 'sm', className, ...props }) => {
-    return <div className={clsx(styles[size], className)} {...props} />;
+const Container = ({ size = 'sm', ...props }) => {
+    return <div className={clsx(styles[size])} {...props} />;
 };
 export default Container;

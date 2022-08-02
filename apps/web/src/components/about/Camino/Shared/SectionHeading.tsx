@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 
-const SectionHeading = ({ number, children, className, ...props }) => {
+const SectionHeading = ({ number, children, ...props }) => {
     return (
         <h2
             className={clsx(
-                className,
                 'inline-flex items-center rounded-full py-1 px-4 text-yellow-600 ring-1 ring-inset ring-yellow-600',
             )}
             {...props}
