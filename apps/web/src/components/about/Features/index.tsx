@@ -5,7 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Features = ({ features }) => {
     return (
-        <section className="mx-auto bg-stone-900 py-12 text-stone-50 lg:py-12">
+        <section className="mx-auto bg-stone-900 py-16 text-stone-50 lg:py-32">
             <h2 className="tw-subheading text-center">What sets us apart</h2>
             <div className="grid grid-cols-1 divide-y divide-x-0 divide-dashed divide-stone-50 divide-opacity-50 lg:grid-cols-3 lg:gap-y-0 lg:divide-x lg:divide-y-0">
                 {features.map((feature, idx) => (

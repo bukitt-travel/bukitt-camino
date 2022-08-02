@@ -30,32 +30,34 @@ const StoriesPage = ({ allStories, adventures }) => {
             metaTitle="Stories"
             metaDescription="Read the expert insights of our travel concierge and discover the many secrets of el Camino."
         >
-            <section className="mx-auto my-12 max-w-2xl text-center">
-                <Tagline>The many ways of the pilgrim</Tagline>
-                <h1 className="mt-6 font-serif text-8xl font-bold uppercase">Camino Stories</h1>
-            </section>
-            <section>
-                <CategoryFilters
-                    stories={stories}
-                    setFilteredStories={setFilteredStories}
-                    activeFilter={activeFilter}
-                    setActiveFilter={setActiveFilter}
-                    storyCategoryFilters={storyCategoryFilters}
-                    allStoriesLength={allStoriesLength}
-                    guideStoriesLength={guideStoriesLength}
-                    customerStoriesLength={customerStoriesLength}
-                    spotlightStoriesLength={spotlightStoriesLength}
-                />
-            </section>
-            <section className="mx-auto mt-24 max-w-5xl">
-                <motion.ul layout role="list" className="grid grid-cols-2 gap-12">
-                    <AnimatePresence>
-                        {filteredStories.map((story) => (
-                            <Card key={story.id} story={story} />
-                        ))}
-                    </AnimatePresence>
-                </motion.ul>
-            </section>
+            <div className="py-16 lg:py-32">
+                <section className="mx-auto max-w-2xl text-center">
+                    <Tagline>The many ways of the pilgrim</Tagline>
+                    <h1 className="mt-6 font-serif text-8xl font-bold uppercase">Camino Stories</h1>
+                </section>
+                <section>
+                    <CategoryFilters
+                        stories={stories}
+                        setFilteredStories={setFilteredStories}
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                        storyCategoryFilters={storyCategoryFilters}
+                        allStoriesLength={allStoriesLength}
+                        guideStoriesLength={guideStoriesLength}
+                        customerStoriesLength={customerStoriesLength}
+                        spotlightStoriesLength={spotlightStoriesLength}
+                    />
+                </section>
+                <section className="mx-auto mt-24 max-w-5xl">
+                    <motion.ul layout role="list" className="grid grid-cols-2 gap-12">
+                        <AnimatePresence>
+                            {filteredStories.map((story) => (
+                                <Card key={story.id} story={story} />
+                            ))}
+                        </AnimatePresence>
+                    </motion.ul>
+                </section>
+            </div>
             <BookingSlideOver adventures={adventures} />
         </Page>
     );
