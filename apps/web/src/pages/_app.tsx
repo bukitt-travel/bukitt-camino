@@ -33,11 +33,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             />
 
             <Layout>
-                <AnimatePresence
-                    initial={false}
-                    exitBeforeEnter
-                    onExitComplete={() => window.scrollTo(0, 0)}
-                >
+                <AnimatePresence initial={false} exitBeforeEnter>
                     <Component {...pageProps} canonical={url} key={url} />
                 </AnimatePresence>
             </Layout>

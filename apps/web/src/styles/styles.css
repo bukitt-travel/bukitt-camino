@@ -6,10 +6,7 @@
 
 @layer base {
     html {
-        @apply scroll-smooth;
-    }
-    body {
-        @apply bg-stone-100 text-stone-900;
+        @apply scroll-smooth bg-stone-100 text-stone-900 antialiased;
     }
 }
 

@@ -13,9 +13,9 @@ const AboutPage = ({ about, adventures }) => {
             metaTitle="About"
             metaDescription="Meet your Santiago Sherpa and the team behind Bukitt Camino, your deluxe ."
         >
-            <Camino camino={about.camino} />
-            <Features features={about.features} />
             <Founder founder={about.founder} />
+            <Features features={about.features} />
+            <Camino camino={about.camino} />
             <BookingSlideOver adventures={adventures} />
         </Page>
     );

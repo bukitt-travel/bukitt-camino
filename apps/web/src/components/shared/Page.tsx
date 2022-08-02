@@ -18,7 +18,7 @@ const Page = ({ children, metaTitle, metaDescription }: PageProps) => {
                 exit="exit"
                 variants={pageVariants}
                 transition={{ type: 'easeInOut' }}
-                className="mx-auto min-h-screen max-w-screen-2xl overflow-hidden"
+                className="mx-auto min-h-screen max-w-screen-2xl"
             >
                 {children}
             </motion.main>
