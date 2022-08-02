@@ -55,7 +55,7 @@ const Testimonials = ({ testimonials }) => {
     }, [embla, setScrollSnaps, onSelect]);
 
     return (
-        <section className="mx-auto flex max-w-3xl flex-col items-center justify-center py-12 lg:py-12">
+        <section className="mx-auto flex max-w-3xl flex-col items-center justify-center py-32">
             <h2 className="tw-subheading text-center">Our costumers</h2>
 
             <div className="w-11/12 overflow-hidden lg:w-full" ref={emblaRef}>

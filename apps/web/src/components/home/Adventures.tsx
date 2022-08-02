@@ -5,7 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 
 const Adventures = ({ adventures }) => {
     return (
-        <section className="mx-auto max-w-7xl py-12 px-3 lg:px-6 lg:py-12">
+        <section className="mx-auto max-w-7xl py-12 px-3 pt-32 pb-16">
             <h2 className="tw-subheading text-center">Our Caminos</h2>
 
             <div
@@ -29,10 +29,10 @@ const Adventures = ({ adventures }) => {
                                     </h3>
 
                                     <h2 className="relative z-10 mt-1 flex flex-col font-serif md:mt-2">
-                                        <span className="text-5xl font-bold uppercase lg:text-7xl">
+                                        <span className="text-4xl font-bold uppercase lg:text-7xl">
                                             {title[0]}
                                         </span>
-                                        <span className="text-6xl font-light italic lg:text-8xl">
+                                        <span className="text-5xl font-light italic lg:text-8xl">
                                             {title[1]}
                                         </span>
                                     </h2>
